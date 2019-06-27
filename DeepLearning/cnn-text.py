@@ -30,9 +30,9 @@ import numpy as np
 
 batch_size = 5  ###only one barch
 
-learning_rate = 1e-2
+learning_rate = 1e-1
 
-num_epoches = 20
+num_epoches = 200
 
 
 # In[4]:
@@ -44,13 +44,14 @@ def to_np(x):
 
 
 # In[5]:
-
+'''
 train_X=np.array([[0.129779 ,0.352941 ,0.245902 ,0.527273 ,0.666667 ,0.002290 ,0.000000 ,0.0],  
         [0.148893 ,0.367647 ,0.245902 ,0.527273 ,0.666667 ,0.003811 ,0.000000 ,0.0],
         [0.159960 ,0.426471 ,0.229508 ,0.545454 ,0.666667 ,0.005332 ,0.000000 ,0.0],
         [0.182093 ,0.485294 ,0.229508 ,0.563637 ,0.666667 ,0.008391 ,0.037037 ,0.0],
-        [0.138833 ,0.485294 ,0.229508 ,0.563637 ,0.666667 ,0.009912 ,0.074074 ,0.0]],dtype=np.int64)
-train_Y=np.array([0.148893 ,0.159960 ,0.182093 ,0.138833 ,0.109658],dtype=np.int64)
+        [0.138833 ,0.485294 ,0.229508 ,0.563637 ,0.666667 ,0.009912 ,0.074074 ,0.0]])
+train_Y=np.array([0.148893 ,0.159960 ,0.182093 ,0.138833 ,0.109658])
+
 
 #dtype=np.float32
 # In[4]:
@@ -61,7 +62,7 @@ train_X = train_X.reshape(-1,1, 1, 8)
 
 train_x = torch.from_numpy(train_X)  #5,1,1,8
 train_y = torch.from_numpy(train_Y)  #5,1
-
+'''
 
 # In[6]:
 
@@ -84,7 +85,7 @@ class Cnn(nn.Module):
 
             nn.Conv2d(6, 16, (1,3), stride=(1), padding=(0,1)),
 
-            nn.ReLU(True), nn.MaxPool2d(1, 1))#16,1,7
+            nn.ReLU(True), nn.MaxPool2d(1, 1))#16,1,9
    
             #5*144
 
@@ -101,6 +102,8 @@ class Cnn(nn.Module):
         out = out.view(out.size(0), -1)
 
         out = self.fc(out)
+        
+        out = out.view(5)
 
         return out
 
@@ -118,15 +121,16 @@ if use_gpu:
 
 # 定义loss和optimizer
 
-criterion = nn.CrossEntropyLoss()
-
+#criterion = nn.CrossEntropyLoss()
+criterion = nn.L1Loss()
 optimizer = optim.SGD(model.parameters(), lr=learning_rate)
 
 #logger = Logger('./logs')
 
 
 # In[10]:
-
+train_x = Variable(torch.randn(5,1,1,8))
+train_y = Variable(torch.randn(5))
 
 # 开始训练
 
@@ -138,22 +142,23 @@ for epoch in range(num_epoches):
     
     running_loss=0
     
-    data=(train_x)
     
-    train_x=Variable(data)
+    #train_x=Variable(train_x)
     
-    train_y=Variable(train_y)
+    #train_y=Variable(train_y)
     
-    train_y=train_y.float()
-
+    #train_y=train_y.float()
+    
+    
     out = model(train_x)
+  
 
     loss = criterion(out, train_y)
 
-    running_loss += loss.item() * train_y.size(0)
+   # running_loss += loss.item() * train_y.size(0)
 
     print(
-           out,loss, running_loss
+           out,loss
             )   
 
     # 向后传播
@@ -164,4 +169,6 @@ for epoch in range(num_epoches):
 
     optimizer.step()
 
-       
+# 保存模型
+
+torch.save(model.state_dict(), './cnn.pth')

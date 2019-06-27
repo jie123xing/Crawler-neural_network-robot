@@ -169,7 +169,7 @@ for epoch in range(num_epoches):
         accuracy = (pred == label).float().mean()
 
         running_acc += num_correct.item()
-
+1
         # 向后传播
 
         optimizer.zero_grad()

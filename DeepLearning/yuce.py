@@ -44,11 +44,11 @@ class lstm(nn.Module):
         self.layer1 = nn.LSTM(input_size,hidden_size,num_layer)
         self.layer2 = nn.Linear(hidden_size,output_size)
     def forward(self,x):
-        x,_ = self.layer1(x)
-        s,b,h = x.size()
-        x = x.view(s*b,h)
-        x = self.layer2(x)
-        x = x.view(s,b,-1)
+        x,_ = self.layer1(x)   #x:5,1,4 _[0]:2,1,4=_[1]
+        s,b,h = x.size()    #5,1,4
+        x = x.view(s*b,h)   #5,4
+        x = self.layer2(x)  #5,1
+        x = x.view(s,b,-1)  #5,1,1
         return x
 
 model = lstm(8, 4,1,2)
@@ -65,7 +65,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=1e-2)
 
 
 # 开始训练
-for e in range(1000):
+for e in range(400):
     var_x = Variable(train_x)
     var_y = Variable(train_y)
     # 前向传播

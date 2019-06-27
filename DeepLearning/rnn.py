@@ -86,7 +86,7 @@ class Rnn(nn.Module):
 
         out = out[:, -1, :]  #100,128
 
-        out = self.classifier(out)
+        out = self.classifier(out) #100,10
 
         return out
 
@@ -126,13 +126,13 @@ for epoch in range(num_epoches):
 
     for i, data in enumerate(train_loader, 1):
 
-        img, label = data
+        img, label = data  #img100,1,28,28 label 100
 
         b, c, h, w = img.size()#100,1,28,28
 
         assert c == 1, 'channel must be 1'
 
-        img = img.squeeze(1)
+        img = img.squeeze(1) #img 100 28 28
 
         # img = img.view(b*h, w)
 
