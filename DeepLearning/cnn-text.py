@@ -30,9 +30,9 @@ import numpy as np
 
 batch_size = 5  ###only one barch
 
-learning_rate = 1e-1
+learning_rate = 1e-2
 
-num_epoches = 200
+num_epoches = 10000
 
 
 # In[4]:
@@ -64,6 +64,17 @@ train_x = torch.from_numpy(train_X)  #5,1,1,8
 train_y = torch.from_numpy(train_Y)  #5,1
 '''
 
+train_x=torch.Tensor([[[0.0000, 0.1000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000]],
+
+        [[0.0000, 0.2000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000]],
+
+        [[0.0000, 0.3000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000]],
+
+        [[0.0000, 0.4000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000]],
+
+        [[0.0000, 0.5000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000]]])
+train_x=train_x.view(5,1,1,8)
+train_y=torch.Tensor([[0.1000],[0.2000],[0.3000],[0.4000],[0.5000]])
 # In[6]:
 
 
@@ -103,7 +114,7 @@ class Cnn(nn.Module):
 
         out = self.fc(out)
         
-        out = out.view(5)
+        #out = out.view(5)
 
         return out
 
@@ -122,23 +133,19 @@ if use_gpu:
 # 定义loss和optimizer
 
 #criterion = nn.CrossEntropyLoss()
-criterion = nn.L1Loss()
+criterion = nn.MSELoss()
 optimizer = optim.SGD(model.parameters(), lr=learning_rate)
 
 #logger = Logger('./logs')
 
 
 # In[10]:
-train_x = Variable(torch.randn(5,1,1,8))
-train_y = Variable(torch.randn(5))
+#train_x = Variable(torch.randn(5,1,1,8))
+#train_y = Variable(torch.randn(5))
 
 # 开始训练
 
 for epoch in range(num_epoches):
-
-    print('epoch {}'.format(epoch + 1))
-
-    print('*' * 10)
     
     running_loss=0
     
@@ -150,16 +157,17 @@ for epoch in range(num_epoches):
     #train_y=train_y.float()
     
     
-    out = model(train_x)
+    out = model(Variable(train_x))
   
 
-    loss = criterion(out, train_y)
+    loss = criterion(out, Variable(train_y))
 
    # running_loss += loss.item() * train_y.size(0)
+    if (epoch+1)%1000==0:
+        print('epoch {}'.format(epoch + 1))
 
-    print(
-           out,loss
-            )   
+        print('*' * 10)
+        print(out,loss)   
 
     # 向后传播
 

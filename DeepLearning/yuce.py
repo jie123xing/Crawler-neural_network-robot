@@ -78,6 +78,7 @@ for e in range(400):
     
     if (e + 1) % 100 == 0: # 每 100 次输出结果
         print('Epoch: {}, Loss: {:.5f}'.format(e + 1, loss.item()))
+        print(out)
 
 
 # In[15]:
