@@ -20,6 +20,8 @@ from torchvision import transforms
 from torchvision import datasets
 
 import numpy as np
+
+import pandas as pd
 #from logger import Logger
 
 
@@ -28,11 +30,11 @@ import numpy as np
 
 # 定义超参数
 
-batch_size = 5  ###only one barch
+batch_size = 100  ###only one barch
 
 learning_rate = 1e-2
 
-num_epoches = 10000
+num_epoches = 100
 
 
 # In[4]:
@@ -75,6 +77,19 @@ train_x=torch.Tensor([[[0.0000, 0.1000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 
         [[0.0000, 0.5000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000]]])
 train_x=train_x.view(5,1,1,8)
 train_y=torch.Tensor([[0.1000],[0.2000],[0.3000],[0.4000],[0.5000]])
+
+
+'''
+df = pd.read_csv('formatweather.csv')
+train_x=df.values[:,1:9]   #shape:(43823, 8)
+train_y=df.values[:,9]     #shape:(43823,)
+
+train_x = torch.from_numpy(train_x)  #43823,1,1,8
+train_y = torch.from_numpy(train_y)  #43823,1
+
+train_x=train_x.view(-1,1,1,8)
+train_y=train_y.view(-1,1)
+'''
 # In[6]:
 
 
