@@ -1,4 +1,4 @@
-{
+﻿[{
     "bookshelf": "5shelf",
     "booktitle": "The Casual",
     "publicationtime": -957,
@@ -394,18 +394,6 @@
     "sclass": "英文原版书-小说",
     "bookdetailurl": "http://product.dangdang.com/1075135750.html",
     "localpicurl": "images/5shelf/记忆传授人The G.jpg"
-},{
-    "bookshelf": "5shelf",
-    "booktitle": "Warriors: ",
-    "publicationtime": 1009,
-    "author": "Hunter",
-    "press": "HarperCollins",
-    "bookprice": 188.0,
-    "bookdetail": "正版全新英文原版书籍  ",
-    "Gclass": "法文原版书",
-    "sclass": "英文原版书-小说",
-    "bookdetailurl": "http://product.dangdang.com/1300689725.html",
-    "localpicurl": "images/5shelf/Warriors: .jpg"
 },{
     "bookshelf": "5shelf",
     "booktitle": "PHANTOM PR",
@@ -2316,18 +2304,6 @@
     "localpicurl": "images/5shelf/大生意人4：舍得（政.jpg"
 },{
     "bookshelf": "5shelf",
-    "booktitle": "交手. 大结局 : ",
-    "publicationtime": 591,
-    "author": "何常在",
-    "press": "北京联合出版有限公司",
-    "bookprice": 34.0,
-    "bookdetail": "《问鼎》作者何常在重磅商战力作！职场商",
-    "Gclass": "法文原版书",
-    "sclass": "财经",
-    "bookdetailurl": "http://product.dangdang.com/25582419.html",
-    "localpicurl": "images/5shelf/交手. 大结局 : .jpg"
-},{
-    "bookshelf": "5shelf",
     "booktitle": "大牛市·股殇 2",
     "publicationtime": -819,
     "author": "诸葛就是不亮",
@@ -2806,4 +2782,4 @@
     "sclass": "财经",
     "bookdetailurl": "http://product.dangdang.com/1427359530.html",
     "localpicurl": "images/5shelf/最后一个金融大鳄 邓.jpg"
-},
+}]

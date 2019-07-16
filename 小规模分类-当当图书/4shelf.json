@@ -1,4 +1,4 @@
-{
+﻿[{
     "bookshelf": "4shelf",
     "booktitle": "边城",
     "publicationtime": -1072,
@@ -682,18 +682,6 @@
     "sclass": "乡土",
     "bookdetailurl": "http://product.dangdang.com/24143312.html",
     "localpicurl": "images/4shelf/巴州往事2：预备干部.jpg"
-},{
-    "bookshelf": "4shelf",
-    "booktitle": "几度夕阳红 : 乡村",
-    "publicationtime": 1164,
-    "author": "顾汉昌",
-    "press": "中西书局",
-    "bookprice": 37.9,
-    "bookdetail": "  ",
-    "Gclass": "科普读物",
-    "sclass": "乡土",
-    "bookdetailurl": "http://product.dangdang.com/24156472.html",
-    "localpicurl": "images/4shelf/几度夕阳红 : 乡村.jpg"
 },{
     "bookshelf": "4shelf",
     "booktitle": "边城",
@@ -1560,18 +1548,6 @@
     "localpicurl": "images/4shelf/张居正（全四册）（长.jpg"
 },{
     "bookshelf": "4shelf",
-    "booktitle": "大秦帝国 : 全新插",
-    "publicationtime": -389,
-    "author": "孙皓晖",
-    "press": "上海人民出版社",
-    "bookprice": 566.6,
-    "bookdetail": "（经典6部11卷，2019作者亲自修订",
-    "Gclass": "科普读物",
-    "sclass": "历史",
-    "bookdetailurl": "http://product.dangdang.com/26924362.html",
-    "localpicurl": "images/4shelf/大秦帝国 : 全新插.jpg"
-},{
-    "bookshelf": "4shelf",
     "booktitle": "我的帝王生涯（茅盾文",
     "publicationtime": -1493,
     "author": "苏童",
@@ -1714,18 +1690,6 @@
     "sclass": "历史",
     "bookdetailurl": "http://product.dangdang.com/25578669.html",
     "localpicurl": "images/4shelf/大清相国（王跃文作品.jpg"
-},{
-    "bookshelf": "4shelf",
-    "booktitle": "流血的仕途 : 李斯",
-    "publicationtime": 1464,
-    "author": "曹昇",
-    "press": "中国华侨出版社",
-    "bookprice": 62.8,
-    "bookdetail": "  ",
-    "Gclass": "科普读物",
-    "sclass": "历史",
-    "bookdetailurl": "http://product.dangdang.com/26435638.html",
-    "localpicurl": "images/4shelf/流血的仕途 : 李斯.jpg"
 },{
     "bookshelf": "4shelf",
     "booktitle": "雍正皇帝（全三册）（",
@@ -4846,4 +4810,4 @@
     "sclass": "科幻",
     "bookdetailurl": "http://product.dangdang.com/23807994.html",
     "localpicurl": "images/4shelf/镜子.jpg"
-},
+}]

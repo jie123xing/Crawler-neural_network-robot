@@ -1,4 +1,4 @@
-{
+﻿[{
     "bookshelf": "6shelf",
     "booktitle": "房思琪的初恋乐园",
     "publicationtime": 1432,
@@ -2160,18 +2160,6 @@
     "localpicurl": "images/6shelf/魔戒三部曲（2018.jpg"
 },{
     "bookshelf": "6shelf",
-    "booktitle": "冰与火之歌:纪念版（",
-    "publicationtime": 568,
-    "author": "乔治·R.R.马丁",
-    "press": "重庆出版社",
-    "bookprice": 585.0,
-    "bookdetail": "《权力的游戏》原著小说精装纪念版  ",
-    "Gclass": "网络课程",
-    "sclass": "魔幻",
-    "bookdetailurl": "http://product.dangdang.com/25243843.html",
-    "localpicurl": "images/6shelf/冰与火之歌:纪念版（.jpg"
-},{
-    "bookshelf": "6shelf",
     "booktitle": "克苏鲁神话系列套装（",
     "publicationtime": 930,
     "author": "H.P·洛夫克拉夫特",
@@ -2244,18 +2232,6 @@
     "localpicurl": "images/6shelf/四海鲸骑（全两册）.jpg"
 },{
     "bookshelf": "6shelf",
-    "booktitle": "冰与火之歌:纪念版【",
-    "publicationtime": 1939,
-    "author": "乔治·R.R.马丁",
-    "press": "重庆出版社",
-    "bookprice": 117.0,
-    "bookdetail": "  ",
-    "Gclass": "网络课程",
-    "sclass": "魔幻",
-    "bookdetailurl": "http://product.dangdang.com/25243844.html",
-    "localpicurl": "images/6shelf/冰与火之歌:纪念版【.jpg"
-},{
-    "bookshelf": "6shelf",
     "booktitle": "子不语（怪、力、乱、",
     "publicationtime": 1943,
     "author": "袁枚",
@@ -2326,18 +2302,6 @@
     "sclass": "魔幻",
     "bookdetailurl": "http://product.dangdang.com/23425927.html",
     "localpicurl": "images/6shelf/地海传奇六部曲（套装.jpg"
-},{
-    "bookshelf": "6shelf",
-    "booktitle": "霍比特人:精装插图本",
-    "publicationtime": -505,
-    "author": "托尔金",
-    "press": "上海人民出版社",
-    "bookprice": 66.2,
-    "bookdetail": " 酷暑难耐 更多小说享每满100减50",
-    "Gclass": "网络课程",
-    "sclass": "魔幻",
-    "bookdetailurl": "http://product.dangdang.com/23255289.html",
-    "localpicurl": "images/6shelf/霍比特人:精装插图本.jpg"
 },{
     "bookshelf": "6shelf",
     "booktitle": "克苏鲁神话合集",
@@ -2734,18 +2698,6 @@
     "sclass": "魔幻",
     "bookdetailurl": "http://product.dangdang.com/26437638.html",
     "localpicurl": "images/6shelf/魔兽世界：上古之战三.jpg"
-},{
-    "bookshelf": "6shelf",
-    "booktitle": "冰与火之歌:纪念版【",
-    "publicationtime": -210,
-    "author": "乔治·R.R.马丁",
-    "press": "重庆出版社",
-    "bookprice": 134.3,
-    "bookdetail": "  ",
-    "Gclass": "网络课程",
-    "sclass": "魔幻",
-    "bookdetailurl": "http://product.dangdang.com/26515306.html",
-    "localpicurl": "images/6shelf/冰与火之歌:纪念版【.jpg"
 },{
     "bookshelf": "6shelf",
     "booktitle": "冰与火之歌官方地图集",
@@ -3528,18 +3480,6 @@
     "localpicurl": "images/6shelf/夏日终曲（第90届奥.jpg"
 },{
     "bookshelf": "6shelf",
-    "booktitle": "奇迹:又名奇迹男孩",
-    "publicationtime": 1893,
-    "author": "R·J帕拉西奥",
-    "press": "上海文艺出版社",
-    "bookprice": 40.9,
-    "bookdetail": "同名电影原著小说，孙俪倾情推荐 酷暑难",
-    "Gclass": "网络课程",
-    "sclass": "影视小说",
-    "bookdetailurl": "http://product.dangdang.com/25221469.html",
-    "localpicurl": "images/6shelf/奇迹:又名奇迹男孩.jpg"
-},{
-    "bookshelf": "6shelf",
     "booktitle": "广岛之恋（杜拉斯百年",
     "publicationtime": 1912,
     "author": "玛格丽特·杜拉斯",
@@ -4222,4 +4162,4 @@
     "sclass": "影视小说",
     "bookdetailurl": "http://product.dangdang.com/23726192.html",
     "localpicurl": "images/6shelf/异镇.jpg"
-},
+}]
