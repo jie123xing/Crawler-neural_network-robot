@@ -30,12 +30,12 @@ public class WebaiuiDemo {
 	private static final String URL = "http://openapi.xfyun.cn/v2/aiui";
 	private static final String APPID = "5d2f15c5";
 	private static final String API_KEY = "9d508d85caeece6f62dd5bd6f708110a";
-	private static final String DATA_TYPE = "text";
+	private static final String DATA_TYPE = "audio";
 	private static final String SCENE = "main";
 	private static final String SAMPLE_RATE = "16000";
 	private static final String AUTH_ID = "cbdbacac792b7b2ff4e8821758d7019d";
 	private static final String AUE = "raw";
-	private static final String FILE_PATH = "resource\\bj_weather.txt";
+	private static final String FILE_PATH = "resource\\bj_weather.wav";
 	// 个性化参数，需转义
 	private static final String PERS_PARAM = "{\\\"auth_id\\\":\\\"2894c985bf8b1111c6728db79d3479ae\\\"}";
 	
