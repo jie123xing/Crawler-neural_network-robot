@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f587498f-6ae7-4365-89bd-56a63fc56865" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HELLOWORLD/hello.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/图灵机器人/Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/图灵机器人/tulingrobut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/科大讯飞语音听写/16k_10.pcm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/科大讯飞语音听写/WebIATWS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/科大讯飞语音听写/util/FileUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/科大讯飞语音听写/util/HttpUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/科大讯飞语音听写/util/HttpUtil2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../语音机器人/WebaiuiDemo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../语音机器人/python3AIUImy.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../语音机器人/python3AIUImy.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../语音机器人/图灵机器人.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../语音机器人/图灵机器人.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/bj_weather.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/HELLOWORLD/hello.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IDEA-JAVA/HELLOWORLD/hello.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/图灵机器人/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IDEA-JAVA/图灵机器人/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/图灵机器人/tulingrobut.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IDEA-JAVA/图灵机器人/tulingrobut.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/科大讯飞语音听写/16k_10.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/resource/16k_10.pcm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/科大讯飞语音听写/WebIATWS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/科大讯飞语音听写/WebIATWS.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,8 +71,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/科大讯飞语音听写/WebIATWS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+            <state relative-caret-position="315">
+              <caret line="33" column="48" lean-forward="true" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,14 +162,13 @@
               <item name="IDEA-JAVA" type="b2602c69:ProjectViewProjectNode" />
               <item name="IDEA-JAVA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="科大讯飞语音听写" type="462c0819:PsiDirectoryNode" />
+              <item name="图灵机器人" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IDEA-JAVA" type="b2602c69:ProjectViewProjectNode" />
               <item name="IDEA-JAVA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="科大讯飞语音听写" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IDEA-JAVA" type="b2602c69:ProjectViewProjectNode" />
@@ -186,14 +183,19 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/科大讯飞语音听写" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="I:\程序集\weather1\IDEA-JAVA\resource" />
+      <recent name="I:\程序集\weather1\IDEA-JAVA" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="I:\程序集\weather1\IDEA-JAVA" />
       <recent name="I:\程序集\weather1\IDEA-JAVA\src\科大讯飞语音听写" />
     </key>
   </component>
@@ -209,7 +211,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.tulingrobut">
+  <component name="RunManager" selected="Application.WebIATWS">
+    <configuration name="WebIATWS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="科大讯飞语音听写.WebIATWS" />
+      <module name="IDEA-JAVA" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HELLOWORLD.hello" />
       <module name="IDEA-JAVA" />
@@ -226,6 +235,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WebIATWS" />
         <item itemvalue="Application.tulingrobut" />
         <item itemvalue="Application.hello" />
       </list>
@@ -236,7 +246,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Favorites" side_tool="true" />
@@ -250,7 +259,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32884097" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30592993" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -322,8 +331,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/科大讯飞语音听写/WebIATWS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        <state relative-caret-position="315">
+          <caret line="33" column="48" lean-forward="true" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
