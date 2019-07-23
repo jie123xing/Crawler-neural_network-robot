@@ -27,8 +27,8 @@ public class WebIATWS extends WebSocketListener {
     private static final String apiKey = "3d428d17f8caf60ba387ef02e31c8e39"; //在控制台-我的应用-语音听写（流式版）获取
     private static final String apiSecret = "57bdee21dcbdc4bb1bc1ead16f67ee01"; //在控制台-我的应用-语音听写（流式版）获取
     private static final String appid = "5d2f15c5"; //在控制台-我的应用获取
-    //private static final String file = "resource\\16k_10.pcm"; // 中文
-    private static final String file = "resource\\bj_weather.wav"; // 中文
+    private static final String file = "resource\\16k_10.pcm"; // 中文
+    //private static final String file = "resource\\bj_weather.wav"; // 中文
     public static final int StatusFirstFrame = 0;
     public static final int StatusContinueFrame = 1;
     public static final int StatusLastFrame = 2;
