@@ -1,16 +1,16 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: jyx
-  Date: 2019/7/23
-  Time: 22:33
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <html>
 <head>
   <title>第一个网页</title>
 </head>
 <body>
 测试网页
+今天北京没有下雨
+<p>
+  Today's date: <%= (new java.util.Date()).toLocaleString()%>
+</p>
+返回值: <%="hjiuhiu"
+%>
 </body>
 </html>
