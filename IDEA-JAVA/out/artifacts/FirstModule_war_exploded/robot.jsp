@@ -1,3 +1,13 @@
+<%@ page import="java.io.UnsupportedEncodingException" %>
+<%@ page import="java.io.IOException" %>
+<%@ page import="org.json.JSONObject" %>
+<%@ page import="org.json.JSONException" %>
+<%@ page import="java.io.BufferedReader" %>
+<%@ page import="java.net.MalformedURLException" %>
+<%@ page import="java.net.URL" %>
+<%@ page import="java.net.HttpURLConnection" %>
+<%@ page import="java.io.InputStreamReader" %>
+<%@ page import="java.net.URLEncoder" %>
 <%--
   Created by IntelliJ IDEA.
   User: admin
@@ -5,12 +15,15 @@
   Time: 16:59
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <html>
 <head>
-    <title>robot responst</title>
+    <title>robot</title>
 </head>
 <body>
+
+<%!
 public class Util {
 //存储APIkey
 public static final String API_KEY = "3e661c1a04574ce6aeec858e03a6ad62";
@@ -88,6 +101,13 @@ e.printStackTrace();
 return buffer.toString();
 }
 }
+//util
+Util util = new Util();
+//String myquest;
+String robotresponse=util.getMessage("讲个笑话");
 
+%>
+
+<%="机器人："+robotresponse+"<br>"%>
 </body>
 </html>
