@@ -3,11 +3,8 @@
 <%@ page import="org.json.JSONObject" %>
 <%@ page import="org.json.JSONException" %>
 <%@ page import="java.io.BufferedReader" %>
-<%@ page import="java.net.MalformedURLException" %>
-<%@ page import="java.net.URL" %>
-<%@ page import="java.net.HttpURLConnection" %>
 <%@ page import="java.io.InputStreamReader" %>
-<%@ page import="java.net.URLEncoder" %>
+<%@ page import="java.net.*" %>
 <%--
   Created by IntelliJ IDEA.
   User: admin
@@ -104,10 +101,10 @@ return buffer.toString();
 //util
 Util util = new Util();
 String myquest;
-String robotresponse=util.getMessage(myquest);
+String myresponse;
 %>
-<%myquest=request.getParameter("teststring"); %>
-<%="机器人："+robotresponse+"<br>"%>
-huihui
+<%myquest=request.getParameter("teststring")+"<br>";%>
+<%myresponse=new String(util.getMessage(myquest).getBytes(),"utf-8")+"<br>";%>
+<%="机器人："+myresponse+"<br>"%>
 </body>
 </html>

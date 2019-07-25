@@ -32,5 +32,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" exported="" name="Tomcat 9.0.22" level="application_server_libraries" />
+    <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.0.14" level="application_server_libraries" />
   </component>
 </module>
