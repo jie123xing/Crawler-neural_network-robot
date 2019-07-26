@@ -14,8 +14,10 @@
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>robot</title>
 </head>
 <body>
@@ -36,6 +38,7 @@ public static final String API_URL = "http://www.tuling123.com/openapi/api";
 private String setParameter(String msg) {
 //在接口请求中 中文要用URLEncoder encode成UTF-8
 try {
+    System.out.println(API_URL + "?key=" + API_KEY + "&info=" + URLEncoder.encode(msg, "utf-8"));
 return API_URL + "?key=" + API_KEY + "&info=" + URLEncoder.encode(msg, "utf-8");
 } catch (UnsupportedEncodingException e) {
 e.printStackTrace();
@@ -51,6 +54,7 @@ return null;
 private String getString(String json){
 try {
 JSONObject object = new JSONObject(json);
+System.out.println(object.getString("text"));
 return object.getString("text");
 } catch (JSONException e) {
 e.printStackTrace();
@@ -67,35 +71,30 @@ public String getMessage(String msg){
 return getString(getHTML(setParameter(msg)));
 }
 
-
 private String getHTML(String url) {
-StringBuffer buffer = new StringBuffer();
-BufferedReader bufferedReader = null;
-try {
-//创建URL对象
-URL u = new URL(url);
-//打开连接
-HttpURLConnection connection = (HttpURLConnection) u.openConnection();
-//从连接中拿到InputStream并由BufferedReader进行读取
-bufferedReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-String line = "";
-//循环每次加入一行HTML内容 直到最后一行
-while ((line = bufferedReader.readLine()) != null) {
-buffer.append(line);
-}
-} catch (MalformedURLException e) {
-e.printStackTrace();
-} catch (IOException e) {
-e.printStackTrace();
-}finally {
-try {
-//结束时候关闭释放资源
-bufferedReader.close();
-} catch (IOException e) {
-e.printStackTrace();
-}
-}
-return buffer.toString();
+    try {
+        URL u = new URL(url);
+        URLConnection urlConnection = u.openConnection();
+        HttpURLConnection connection = null;
+        if (urlConnection instanceof HttpURLConnection) {
+            connection = (HttpURLConnection) urlConnection;
+        } else {
+            System.out.println("请输入 URL 地址");
+            return null;
+        }
+        BufferedReader in = new BufferedReader(
+                new InputStreamReader(connection.getInputStream(),"utf-8"));
+        String urlString = "";
+        String current;
+        while ((current = in.readLine()) != null) {
+            urlString += current;
+        }
+        System.out.println("urlString"+urlString);
+        return urlString;
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    return null;
 }
 }
 //util
@@ -103,8 +102,12 @@ Util util = new Util();
 String myquest;
 String myresponse;
 %>
-<%myquest=request.getParameter("teststring")+"<br>";%>
-<%myresponse=new String(util.getMessage(myquest).getBytes(),"utf-8")+"<br>";%>
+<%myquest=request.getParameter("teststring");%>
+<%myresponse=util.getMessage(myquest)+"<br>";%>
+<%--<%myresponse=new String(util.getMessage(myquest).getBytes("gbk"),"utf-8");%>
+已经gbk解码，再gdk编码后用utf-8解码任然错误
+--%>
 <%="机器人："+myresponse+"<br>"%>
+
 </body>
 </html>
