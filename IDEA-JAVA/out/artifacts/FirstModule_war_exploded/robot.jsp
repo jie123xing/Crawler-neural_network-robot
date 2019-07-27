@@ -38,7 +38,7 @@ public static final String API_URL = "http://www.tuling123.com/openapi/api";
 private String setParameter(String msg) {
 //在接口请求中 中文要用URLEncoder encode成UTF-8
 try {
-    System.out.println(API_URL + "?key=" + API_KEY + "&info=" + URLEncoder.encode(msg, "utf-8"));
+    //System.out.println(API_URL + "?key=" + API_KEY + "&info=" + URLEncoder.encode(msg, "utf-8"));
 return API_URL + "?key=" + API_KEY + "&info=" + URLEncoder.encode(msg, "utf-8");
 } catch (UnsupportedEncodingException e) {
 e.printStackTrace();
@@ -54,7 +54,7 @@ return null;
 private String getString(String json){
 try {
 JSONObject object = new JSONObject(json);
-System.out.println(object.getString("text"));
+//System.out.println(object.getString("text"));
 return object.getString("text");
 } catch (JSONException e) {
 e.printStackTrace();
@@ -79,7 +79,7 @@ private String getHTML(String url) {
         if (urlConnection instanceof HttpURLConnection) {
             connection = (HttpURLConnection) urlConnection;
         } else {
-            System.out.println("请输入 URL 地址");
+            //System.out.println("请输入 URL 地址");
             return null;
         }
         BufferedReader in = new BufferedReader(
@@ -89,7 +89,7 @@ private String getHTML(String url) {
         while ((current = in.readLine()) != null) {
             urlString += current;
         }
-        System.out.println("urlString"+urlString);
+        //System.out.println("urlString"+urlString);
         return urlString;
     } catch (IOException e) {
         e.printStackTrace();

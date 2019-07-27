@@ -4,6 +4,8 @@ pageEncoding="UTF-8"%>
 <head>
     <meta charset="utf-8">
     <script>
+        var showContent = $(".myDiv");
+        showContent[0].scrollTop = showContent[0].scrollHeight;
         function loadXMLDoc()
         {
             var xmlhttp;
@@ -24,6 +26,8 @@ pageEncoding="UTF-8"%>
                     document.getElementById("myDiv").innerHTML+="我："+document.getElementById("quest").value+"<br>"
                     document.getElementById("myDiv").innerHTML+=xmlhttp.responseText+"<br>";
                     document.getElementById("quest").value=""
+                    var x=document.getElementById("myDiv")
+                    x.scrollTop =x.scrollHeight;
                 }
             }
             xmlhttp.open("GET","robot.jsp?teststring="+document.getElementById("quest").value,true);
@@ -32,37 +36,37 @@ pageEncoding="UTF-8"%>
         }
     </script>
     <title>智能应答</title>
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 <br>
 <br>
-<div class="panel panel-primary">
-    <div class="panel-heading">
-        <h3 class="panel-title">图灵机器人</h3>
+<div class="max-height:60%">
+    <div style="background-color:#A9A9A9">
+        <h3 class="mx-auto col-md-3 text-white" >图灵机器人</h3>
     </div>
-    <div class="panel-body" id="myDiv">
+    <br>
+    <div id="myDiv" class="col-md-10 offset-md-1 pre-scrollable" style="background-color:#ddd;height:60%;">
 
     </div>
+
 </div>
 <br>
-<br>
 
-<from>
-<div class="form-group">
-    <div class="col-sm-10">
-        <input type="text" class="form-control" id="quest"
-               placeholder="请输入你的问题">
+<div class="col-md-10 offset-md-1">
+    <from action="" onsubmit="loadXMLDoc()">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="输入" id="quest">
+        <div class="input-group-append">
+            <button class="btn btn-success" type="submit" onclick="loadXMLDoc()">发送</button>
+        </div>
     </div>
+    </from>
 </div>
-<div class="form-group">
-    <div class="col-sm-10">
-        <button type="button" class="btn btn-default" onclick="loadXMLDoc()">发送</button>
-    </div>
-</div>
-</from>
-
 </body>
 </html>
