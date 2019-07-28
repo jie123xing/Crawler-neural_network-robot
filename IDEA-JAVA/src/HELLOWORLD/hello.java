@@ -3,7 +3,7 @@ package HELLOWORLD;
 import java.io.UnsupportedEncodingException;
 
 public class hello {
-    public  static void m(String[] args) throws UnsupportedEncodingException {
+    public  static void main(String[] args) throws UnsupportedEncodingException {
         String  c ="北京:周五 07月26日,晴 南风转东南风,最低气温27度，最高气温36度。";
         System.out.println(new String(c.getBytes("utf-8"),"utf-8"));
         System.out.println(new String(c.getBytes("utf-8"),"ISO-8859-1"));

@@ -7,6 +7,15 @@
         <element id="directory" name="classes">
           <element id="module-output" name="FirstModule" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/FirstModule/web/WEB-INF/lib/json.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/FirstModule/web/WEB-INF/lib/gson-2.3.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/FirstModule/web/WEB-INF/lib/okhttp-3.13.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/FirstModule/web/WEB-INF/lib/commons-io-2.4.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/FirstModule/web/WEB-INF/lib/commons-codec-1.6.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/FirstModule/web/WEB-INF/lib/netty-all-4.1.15.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/FirstModule/web/WEB-INF/lib/okio-1.15.0-20180330.135339-9.jar" />
+        </element>
       </element>
     </root>
   </artifact>

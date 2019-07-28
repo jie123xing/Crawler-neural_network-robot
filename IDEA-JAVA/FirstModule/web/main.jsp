@@ -1,25 +1,27 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: admin
-  Date: 2019/7/24
-  Time: 14:14
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="mywebapi_tts.WebTTs" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
-    <title>Using GET and POST Method to Read Form Data</title>
+    <title>文字转音频</title>
 </head>
 <body>
-<center>
-    <h1>Using GET Method to Read Form Data</h1>
-    <ul>
-        <li><p><b>First Name:</b>
-            <%= request.getParameter("first_name")%>
-        </p></li>
-        <li><p><b>Last  Name:</b>
-            <%= request.getParameter("last_name")%>
-        </p></li>
-    </ul>
+<%
+    String TEXT;
+    WebTTs webtts=new WebTTs();
+%>
+<jsp:useBean id="date" class="java.util.Date" />
+<p>日期为：<%= date %>
+
+<jsp:useBean id="WebTTs"
+             class="mywebapi_tts.WebTTs">
+    <jsp:setProperty name="WebTTs" property="TEXT"
+                     value="小强有什么手机软件"/>
+</jsp:useBean>
+
+<p>TEXT:
+    <jsp:getProperty name="webapi_tts" property="TEXT"/>
+</p>
+
+    success
 </body>
 </html>

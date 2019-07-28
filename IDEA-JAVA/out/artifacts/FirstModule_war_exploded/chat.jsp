@@ -59,7 +59,7 @@ pageEncoding="UTF-8"%>
 <br>
 
 <div class="col-md-10 offset-md-1">
-    <from action="" onsubmit="loadXMLDoc()">
+    <from action="robot.jsp" onsubmit="loadXMLDoc()">
     <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="输入" id="quest">
         <div class="input-group-append">

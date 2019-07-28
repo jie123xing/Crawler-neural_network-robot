@@ -38,8 +38,7 @@ public static final String API_URL = "http://www.tuling123.com/openapi/api";
 private String setParameter(String msg) {
 //在接口请求中 中文要用URLEncoder encode成UTF-8
 try {
-    //System.out.println(API_URL + "?key=" + API_KEY + "&info=" + URLEncoder.encode(msg, "utf-8"));
-return API_URL + "?key=" + API_KEY + "&info=" + URLEncoder.encode(msg, "utf-8");
+   return API_URL + "?key=" + API_KEY + "&info=" + URLEncoder.encode(msg, "utf-8");
 } catch (UnsupportedEncodingException e) {
 e.printStackTrace();
 }

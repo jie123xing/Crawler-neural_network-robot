@@ -15,7 +15,6 @@
   <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/web/WEB-INF/classes" />
     <output-test url="file://$MODULE_DIR$/web/WEB-INF/classes" />
-    <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
@@ -32,6 +31,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" exported="" name="Tomcat 9.0.22" level="application_server_libraries" />
-    <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.0.14" level="application_server_libraries" />
+    <orderEntry type="library" exported="" name="Tomcat 8.0.14" level="application_server_libraries" />
   </component>
 </module>
