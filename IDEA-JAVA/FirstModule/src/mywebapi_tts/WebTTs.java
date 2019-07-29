@@ -35,7 +35,7 @@ public class WebTTs implements java.io.Serializable {
 	// 接口密钥（webapi类型应用开通合成服务后，控制台--我的应用---语音合成---相应服务的apikey）
 	private static final String API_KEY = "ec20a25c274fc66d3fbb6a604a4cc41f";
 	// 待合成文本
-	private static String TEXT = "测试音频";
+	private static String TEXT = "上海明天的天气怎么样";
 	// 音频编码(raw合成的音频格式pcm、wav,lame合成的音频格式MP3)
 	private static final String AUE = "raw";
 	// 采样率
@@ -59,8 +59,8 @@ public class WebTTs implements java.io.Serializable {
 	 * //@param args
 	 * @throws IOException
 	 */
-
-	public static void main1() throws IOException {
+	public static void main(String[] args) throws IOException {
+		System.out.println(TEXT);
 		Map<String, String> header = buildHttpHeader();
 		
 		Map<String, Object> resultMap = HttpUtil.doPost2(WEBTTS_URL, header, "text=" + URLEncoder.encode(TEXT, "utf-8"));
@@ -68,7 +68,7 @@ public class WebTTs implements java.io.Serializable {
 		if ("audio/mpeg".equals(resultMap.get("Content-Type"))) { // 合成成功
 			if ("raw".equals(AUE)) {
 				FileUtil.save("FirstModule\\web\\audio\\response\\", resultMap.get("sid") + ".wav", (byte[]) resultMap.get("body"));
-				System.out.println("合成 WebAPI 调用成功，音频保存位置：audio\response\\" + resultMap.get("sid") + ".wav");
+				System.out.println("合成 WebAPI 调用成功，音频保存位置：audio\\response\\" + resultMap.get("sid") + ".wav");
 			} else {
 				FileUtil.save("FirstModule\\web\\audio\\response\\", resultMap.get("sid") + ".mp3", (byte[]) resultMap.get("body"));
 				System.out.println("合成 WebAPI 调用成功，音频保存位置：audio\\response\\" + resultMap.get("sid") + ".mp3");

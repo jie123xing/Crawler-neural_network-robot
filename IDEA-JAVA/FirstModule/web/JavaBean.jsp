@@ -1,4 +1,5 @@
 <%@ page import="com.runoob.StudentsBean" %>
+<%@ page import="javax.xml.soap.Text" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <html>
@@ -30,8 +31,11 @@
 <p>main:
     <%
         StudentsBean a=new StudentsBean();
+        a.setcity("常山456");
     %>
     <%=a.mm()%>
+    <%!String[] args;%>
+    <%StudentsBean.main(args);%>
 </p>
 </body>
 </html>

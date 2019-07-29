@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+<%@ page import="mywebapi_tts.WebTTs" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -25,8 +26,17 @@ pageEncoding="UTF-8"%>
                 {
                     document.getElementById("myDiv").innerHTML+="我："+document.getElementById("quest").value+"<br>"
                     document.getElementById("myDiv").innerHTML+=xmlhttp.responseText+"<br>";
+                    var response=xmlhttp.responseText;
+                    var jsParamValue='aaaa';
+                    form1.jsParam.value=jsParamValue;
                     document.getElementById("quest").value=""
                     var x=document.getElementById("myDiv")
+                    <%!String[] args;%>
+                    <%
+                        WebTTs a=new WebTTs();
+                        a.setTEXT(request.getPrameter("jsPrama"));
+                        WebTTs.main(args);
+                    %>
                     x.scrollTop =x.scrollHeight;
                 }
             }
