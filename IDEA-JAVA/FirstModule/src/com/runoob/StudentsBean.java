@@ -28,8 +28,8 @@ public class StudentsBean implements java.io.Serializable {
     public void setAge(int age) {
         this.age = age;
     }
-    public String mm() throws IOException {
+    public static String  mm() throws IOException {
         System.out.println("我在执行main函数");
-        return "12345678";
+        return "jiaynxing";
     }
 }

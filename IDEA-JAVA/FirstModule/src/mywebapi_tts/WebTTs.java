@@ -29,38 +29,38 @@ import java.util.Map;
 
 public class WebTTs implements java.io.Serializable {
 	// 合成webapi接口地址
-	private final String WEBTTS_URL = "http://api.xfyun.cn/v1/service/v1/tts";
+	private static final String WEBTTS_URL = "http://api.xfyun.cn/v1/service/v1/tts";
 	// 应用APPID（必须为webapi类型应用，并开通语音合成服务，参考帖子如何创建一个webapi应用：http://bbs.xfyun.cn/forum.php?mod=viewthread&tid=36481）
-	private final String APPID = "5d2f15c5";
+	private static final String APPID = "5d2f15c5";
 	// 接口密钥（webapi类型应用开通合成服务后，控制台--我的应用---语音合成---相应服务的apikey）
-	private final String API_KEY = "ec20a25c274fc66d3fbb6a604a4cc41f";
+	private static final String API_KEY = "ec20a25c274fc66d3fbb6a604a4cc41f";
 	// 待合成文本
-	private String TEXT = "测试音频";
+	private static String TEXT = "测试音频";
 	// 音频编码(raw合成的音频格式pcm、wav,lame合成的音频格式MP3)
-	private final String AUE = "raw";
+	private static final String AUE = "raw";
 	// 采样率
-	private final String AUF = "audio/L16;rate=16000";
+	private static final String AUF = "audio/L16;rate=16000";
 	// 语速（取值范围0-100）
-	private final String SPEED = "50";
+	private static final String SPEED = "50";
 	// 音量（取值范围0-100）
-	private final String VOLUME = "50";
+	private static final String VOLUME = "50";
 	// 音调（取值范围0-100）
-	private final String PITCH = "50";
+	private static final String PITCH = "50";
 	// 发音人（登陆开放平台https://www.xfyun.cn/后--我的应用（必须为webapi类型应用）--添加在线语音合成（已添加的不用添加）--发音人管理---添加发音人--修改发音人参数）
-	private final String VOICE_NAME = "xiaoyan";
+	private static final String VOICE_NAME = "xiaoyan";
 	// 引擎类型
-	private final String ENGINE_TYPE = "intp65";
+	private static final String ENGINE_TYPE = "intp65";
 	// 文本类型（webapi是单次只支持1000个字节，具体看您的编码格式，计算一下具体支持多少文字）
-	private final String TEXT_TYPE = "text";
+	private static final String TEXT_TYPE = "text";
 
 	/**
 	 * 合成 WebAPI 调用示例程序
 	 * 
-	 * @param args
+	 * //@param args
 	 * @throws IOException
 	 */
-	public void main(String[] args) throws IOException {
-		
+
+	public static void main1() throws IOException {
 		Map<String, String> header = buildHttpHeader();
 		
 		Map<String, Object> resultMap = HttpUtil.doPost2(WEBTTS_URL, header, "text=" + URLEncoder.encode(TEXT, "utf-8"));
@@ -81,7 +81,7 @@ public class WebTTs implements java.io.Serializable {
 	/**
 	 * 组装http请求头
 	 */
-	private Map<String, String> buildHttpHeader() throws UnsupportedEncodingException {
+	private static Map<String, String> buildHttpHeader() throws UnsupportedEncodingException {
 		String curTime = System.currentTimeMillis() / 1000L + "";
 		String param = "{\"auf\":\"" + AUF + "\",\"aue\":\"" + AUE + "\",\"voice_name\":\"" + VOICE_NAME + "\",\"speed\":\"" + SPEED + "\",\"volume\":\"" + VOLUME + "\",\"pitch\":\"" + PITCH + "\",\"engine_type\":\"" + ENGINE_TYPE + "\",\"text_type\":\"" + TEXT_TYPE + "\"}";
 		String paramBase64 = new String(Base64.encodeBase64(param.getBytes("UTF-8")));
@@ -95,7 +95,7 @@ public class WebTTs implements java.io.Serializable {
 		return header;
 	}
 	//get set
-	public String getTEXT(){
+	public String getTEXT()throws IOException{
 		return TEXT;
 	}
 	public void setTEXT(String TEXT){
