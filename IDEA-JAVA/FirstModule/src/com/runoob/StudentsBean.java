@@ -37,7 +37,8 @@ public class StudentsBean implements java.io.Serializable {
         return "ji789";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)throws IOException {
+        mm();
         System.out.println("我在执行main函数");
         System.out.println(city);
 

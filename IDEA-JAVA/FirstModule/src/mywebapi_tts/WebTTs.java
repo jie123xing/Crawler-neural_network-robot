@@ -60,10 +60,11 @@ public class WebTTs implements java.io.Serializable {
 	 * @throws IOException
 	 */
 	public static void main(String[] args) throws IOException {
-		System.out.println(TEXT);
+		System.out.println("TEXT："+TEXT);
 		Map<String, String> header = buildHttpHeader();
-		
+		System.out.println("header:"+header);
 		Map<String, Object> resultMap = HttpUtil.doPost2(WEBTTS_URL, header, "text=" + URLEncoder.encode(TEXT, "utf-8"));
+		System.out.println("resultMap:"+resultMap);
 		System.out.println("占用内存大小： "+ URLEncoder.encode(TEXT, "utf-8").getBytes().length);
 		if ("audio/mpeg".equals(resultMap.get("Content-Type"))) { // 合成成功
 			if ("raw".equals(AUE)) {
@@ -92,6 +93,7 @@ public class WebTTs implements java.io.Serializable {
 		header.put("X-CurTime", curTime);
 		header.put("X-CheckSum", checkSum);
 		header.put("X-Appid", APPID);
+		System.out.println("执行了buildHttpHeader");
 		return header;
 	}
 	//get set
