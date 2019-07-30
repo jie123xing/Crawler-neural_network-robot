@@ -1,12 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
-<%@ page import="mywebapi_tts.WebTTs" %>
 <html>
 <head>
     <meta charset="utf-8">
     <script>
         var showContent = $(".myDiv");
         showContent[0].scrollTop = showContent[0].scrollHeight;
+        function txttowav(text123) {
+            var robotresponse;
+            if (window.XMLHttpRequest)
+            {
+                // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                robotresponse=new XMLHttpRequest();
+            }
+            else
+            {
+                // IE6, IE5 浏览器执行代码
+                robotresponse=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            robotresponse.onreadystatechange=function()
+            {
+                if (robotresponse.readyState==4 && robotresponse.status==200)
+                {
+                    var x=robotresponse.responseText;
+                }
+            }
+            robotresponse.open("GET","getrobotresponse.jsp?text="+text123,true);
+            //xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            robotresponse.send();
+        }
         function loadXMLDoc()
         {
             var xmlhttp;
@@ -25,18 +47,10 @@ pageEncoding="UTF-8"%>
                 if (xmlhttp.readyState==4 && xmlhttp.status==200)
                 {
                     document.getElementById("myDiv").innerHTML+="我："+document.getElementById("quest").value+"<br>"
-                    document.getElementById("myDiv").innerHTML+=xmlhttp.responseText+"<br>";
-                    var response=xmlhttp.responseText;
-                    var jsParamValue='aaaa';
-                    form1.jsParam.value=jsParamValue;
+                    document.getElementById("myDiv").innerHTML+="机器人："+xmlhttp.responseText+"<br>";
+                    txttowav(xmlhttp.responseText);
                     document.getElementById("quest").value=""
                     var x=document.getElementById("myDiv")
-                    <%!String[] args;%>
-                    <%
-                        WebTTs a=new WebTTs();
-                        a.setTEXT(request.getPrameter("jsPrama"));
-                        WebTTs.main(args);
-                    %>
                     x.scrollTop =x.scrollHeight;
                 }
             }
@@ -69,14 +83,18 @@ pageEncoding="UTF-8"%>
 <br>
 
 <div class="col-md-10 offset-md-1">
-    <from action="robot.jsp" onsubmit="loadXMLDoc()">
+    <from>
     <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="输入" id="quest">
+        <input type="text" name="robotresponse"class="form-control" placeholder="输入" id="quest">
         <div class="input-group-append">
             <button class="btn btn-success" type="submit" onclick="loadXMLDoc()">发送</button>
         </div>
     </div>
     </from>
 </div>
+<audio autoplay>
+    <source src=sid type="audio/mpeg">
+    您的浏览器不支持 audio 元素。
+</audio>
 </body>
 </html>

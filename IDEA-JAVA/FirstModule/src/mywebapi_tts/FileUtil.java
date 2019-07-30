@@ -55,10 +55,8 @@ public class FileUtil {
 				System.out.println("mkdirs");
 			}
 			File file = new File(filedir, fileName);
-			System.out.println("开始写文件");
 			OutputStream os = new FileOutputStream(file);
 			os.write(content, 0, content.length);
-			System.out.println("filesava");
 			os.flush();
 			os.close();
 		} catch (FileNotFoundException e) {

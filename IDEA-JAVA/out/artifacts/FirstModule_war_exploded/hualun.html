@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><!DOCTYPE html>
-    <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Title</title>
@@ -20,22 +18,24 @@
             3
         </div>
     </div>
-
-</div>
-</body>
-</html>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 <script>
-    var x=document.getElementById("ins")
-    x.scrollTop =x.scrollHeight;
+    var nameAttrValue="audio\\ceshiyin.wav"
+    function addDynamicNameAttr_audio() {
+        $(function () {
+            $('#audio').attr('src',nameAttrValue);
+            var fry_audio=$('#audio').get('0');
+            fry_audio.load();
+        });
+    }
+    function f() {
+        audio.setAtrribute("src","audio\\ceshiyin.wav");
+        audio.load;
+    }
 </script>
-
-<audio autoplay>
-    <source src="audio/ceshiyin.wav" type="audio/mpeg">
-    您的浏览器不支持 audio 元素。
+<audio autoplay id="audio">
+    <source src="audio\bj_weather.wav" type="audio/mpeg">
 </audio>
+<input type="button" value="改变声音" onclick="f()">
+</div>
 </body>
 </html>

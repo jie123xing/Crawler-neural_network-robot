@@ -14,13 +14,6 @@
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>robot</title>
-</head>
-<body>
 
 <%!
 public class Util {
@@ -102,11 +95,9 @@ String myquest;
 String myresponse;
 %>
 <%myquest=request.getParameter("teststring");%>
-<%myresponse=util.getMessage(myquest)+"<br>";%>
+<%myresponse=util.getMessage(myquest);%>
 <%--<%myresponse=new String(util.getMessage(myquest).getBytes("gbk"),"utf-8");%>
 已经gbk解码，再gdk编码后用utf-8解码任然错误
 --%>
-<%="机器人："+myresponse+"<br>"%>
+<%=myresponse%>
 
-</body>
-</html>
