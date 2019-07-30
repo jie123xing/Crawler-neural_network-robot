@@ -4,8 +4,12 @@ pageEncoding="UTF-8"%>
 <head>
     <meta charset="utf-8">
     <script>
+        var ssid=0;
         var showContent = $(".myDiv");
         showContent[0].scrollTop = showContent[0].scrollHeight;
+        function f(ssid) {
+            document.getElementById("myAudio").src="audio\\response\\"+ssid+".wav";
+        }
         function txttowav(text123) {
             var robotresponse;
             if (window.XMLHttpRequest)
@@ -23,9 +27,10 @@ pageEncoding="UTF-8"%>
                 if (robotresponse.readyState==4 && robotresponse.status==200)
                 {
                     var x=robotresponse.responseText;
+                    ssid+=1;
                 }
             }
-            robotresponse.open("GET","getrobotresponse.jsp?text="+text123,true);
+            robotresponse.open("GET","getrobotresponse.jsp?text="+text123+"&ssid="+ssid,true);
             //xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
             robotresponse.send();
         }
@@ -49,6 +54,7 @@ pageEncoding="UTF-8"%>
                     document.getElementById("myDiv").innerHTML+="我："+document.getElementById("quest").value+"<br>"
                     document.getElementById("myDiv").innerHTML+="机器人："+xmlhttp.responseText+"<br>";
                     txttowav(xmlhttp.responseText);
+                    f(ssid);
                     document.getElementById("quest").value=""
                     var x=document.getElementById("myDiv")
                     x.scrollTop =x.scrollHeight;
@@ -93,8 +99,7 @@ pageEncoding="UTF-8"%>
     </from>
 </div>
 <audio autoplay>
-    <source src=sid type="audio/mpeg">
-    您的浏览器不支持 audio 元素。
+    <source src="audio\response\1.wav" type="audio/mpeg">
 </audio>
 </body>
 </html>

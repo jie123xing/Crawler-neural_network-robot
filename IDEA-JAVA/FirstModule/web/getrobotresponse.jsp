@@ -1,10 +1,13 @@
-<%@ page import="mywebapi_tts.HttpUtil" %>
 <%@ page import="java.util.Map" %>
 <%@ page import="org.apache.commons.codec.binary.Base64" %>
 <%@ page import="org.apache.commons.codec.digest.DigestUtils" %>
 <%@ page import="java.util.HashMap" %>
 <%@ page import="java.net.URLEncoder" %>
 <%@ page import="java.io.*" %>
+<%@ page import="java.net.URL" %>
+<%@ page import="java.net.URLConnection" %>
+<%@ page import="java.net.HttpURLConnection" %>
+<%@ page import="static org.apache.commons.io.IOUtils.toByteArray" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
@@ -37,6 +40,8 @@
     // 文本类型（webapi是单次只支持1000个字节，具体看您的编码格式，计算一下具体支持多少文字）
     private static final String TEXT_TYPE = "text";
 
+    int ssid=0;
+
     public Map<String, String> buildHttpHeader() throws UnsupportedEncodingException {
         String curTime = System.currentTimeMillis() / 1000L + "";
         String param = "{\"auf\":\"" + AUF + "\",\"aue\":\"" + AUE + "\",\"voice_name\":\"" + VOICE_NAME + "\",\"speed\":\"" + SPEED + "\",\"volume\":\"" + VOLUME + "\",\"pitch\":\"" + PITCH + "\",\"engine_type\":\"" + ENGINE_TYPE + "\",\"text_type\":\"" + TEXT_TYPE + "\"}";
@@ -63,19 +68,71 @@
             e.printStackTrace();
         }
     }
+    public static Map<String, Object> doPost2(String url, Map<String, String> header, String body) {
+        Map<String, Object> resultMap = new HashMap<String, Object>();
+        PrintWriter out = null;
+        try {
+            // 设置 url
+            URL realUrl = new URL(url);
+            URLConnection connection = realUrl.openConnection();
+            HttpURLConnection httpURLConnection = (HttpURLConnection) connection;
+            // 设置 header
+            for (String key : header.keySet()) {
+                httpURLConnection.setRequestProperty(key, header.get(key));
+            }
+            // 设置请求 body
+            httpURLConnection.setDoOutput(true);
+            httpURLConnection.setDoInput(true);
+            out = new PrintWriter(httpURLConnection.getOutputStream());
+            // 保存body
+            out.print(body);
+            // 发送body
+            out.flush();
+            if (HttpURLConnection.HTTP_OK != httpURLConnection.getResponseCode()) {
+                System.out.println("Http 请求失败，状态码：" + httpURLConnection.getResponseCode());
+                return null;
+            }
+            // 获取响应header
+            String responseContentType = httpURLConnection.getHeaderField("Content-Type");
+            if ("audio/mpeg".equals(responseContentType)) {
+                // 获取响应body
+                byte[] bytes = toByteArray(httpURLConnection.getInputStream());
+                resultMap.put("Content-Type", "audio/mpeg");
+                resultMap.put("sid", httpURLConnection.getHeaderField("sid"));
+                resultMap.put("body", bytes);
+                return resultMap;
+            } else {
+                // 设置请求 body
+                BufferedReader in = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
+                String line;
+                String result = "";
+                while ((line = in.readLine()) != null) {
+                    result += line;
+                }
+                resultMap.put("Content-Type", "text/plain");
+                resultMap.put("body", result);
+
+                return resultMap;
+            }
+        } catch (Exception e) {
+            return null;
+        }
+    }
 %>
 
 <%
     TEXT=request.getParameter("text");
+    ssid=int(request.getParameter(ssid));
+    System.out.println(TEXT);
     Map<String, String> header = buildHttpHeader();
-    Map<String, Object> resultMap = HttpUtil.doPost2(WEBTTS_URL, header, "text=" + URLEncoder.encode(TEXT, "utf-8"));
+    Map<String, Object> resultMap = doPost2(WEBTTS_URL, header, "text=" + URLEncoder.encode(TEXT, "utf-8"));
     if ("audio/mpeg".equals(resultMap.get("Content-Type"))) { // 合成成功
         if ("raw".equals(AUE)) {
-            save(request.getRealPath("./"), resultMap.get("sid") + ".wav", (byte[]) resultMap.get("body"));
-            System.out.println("合成 WebAPI 调用成功，音频保存位置：" +request.getRealPath("./")+ resultMap.get("sid") + ".wav");
+            save("F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\audio\\response" , ssid + ".wav", (byte[]) resultMap.get("body"));
+            System.out.println("合成 WebAPI 调用成功，音频保存位置：F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\audio\\response\\" + ssid + ".wav");
         } else {
-            save(request.getRealPath("./"), resultMap.get("sid") + ".mp3", (byte[]) resultMap.get("body"));
-            System.out.println("合成 WebAPI 调用成功，音频保存位置：audio\\response\\" + resultMap.get("sid") + ".mp3");
+            save("F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\audio\\response", ssid + ".mp3", (byte[]) resultMap.get("body"));
+            System.out.println("合成 WebAPI 调用成功，音频保存位置：F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\audio\\response\\" + ssid + ".mp3");
         }
     } else { // 合成失败
         System.out.println("合成 WebAPI 调用失败，错误信息：" + resultMap.get("body").toString());//返回code为错误码时，请查询https://www.xfyun.cn/document/error-code解决方案

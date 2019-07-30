@@ -7,30 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f587498f-6ae7-4365-89bd-56a63fc56865" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/FirstModule/src/testfilesava/testfilesave.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/filesave.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/xxx.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/成功保存文件.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/src/mywebapi_tts/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/src/mywebapi_tts/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/WEB-INF/classes/mywebapi_tts/FileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/WEB-INF/classes/mywebapi_tts/FileUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/audio/response/hts0019b580@dx2b31109a577d6f2b00.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/audio/response/hts0019b5c1@dx2786109a578f6f2300.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/audio/response/hts0019b5c9@dx2b31109a57a96f2b00.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/audio/response/hts0019b6f9@dxe9ce109a58156f1a00.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstModule/web/audio/bj_weather.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstModule/web/audio/ceshiyin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstModule/web/audio/response/hts001b0f58@dxe9ce109b024c6f1a00.wav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstModule/web/chat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/chat.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstModule/web/getrobotresponse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/getrobotresponse.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstModule/web/hualun.html" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/hualun.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/robot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/robot.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/audio/response/hts00198071@dxe9ce109a3f306f1a00.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/audio/response/hts001994dd@dxe9ce109a486d6f1a00.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/audio/response/hts0019b580@dx2b31109a577d6f2b00.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/audio/response/hts0019b5c1@dx2786109a578f6f2300.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/audio/response/hts0019b5c9@dx2b31109a57a96f2b00.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/audio/response/hts0019b6f9@dxe9ce109a58156f1a00.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/audio/bj_weather.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/audio/ceshiyin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/audio/response/hts001b0f58@dxe9ce109b024c6f1a00.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/chat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/chat.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/getrobotresponse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/getrobotresponse.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/hello123.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/hts001c6b42@dx2b31109b4ce66f2b00.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/hts001c6e19@dx2786109b4d786f2300.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/hts001c6f73@dx2786109b4dc06f2300.wav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/hualun.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/hualun.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/result.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/xxx.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,46 +63,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FirstModule/web/getrobotresponse.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-283">
-              <caret line="68" column="38" lean-forward="true" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FirstModule/web/robot.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FirstModule/web/chat.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3395">
-              <caret line="97" column="8" lean-forward="true" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+            <state relative-caret-position="121">
+              <caret line="125" column="29" lean-forward="true" selection-start-line="125" selection-start-column="29" selection-end-line="125" selection-end-column="29" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#1721#2583#0#JAVA" />
+                <element signature="e#3147#4754#0#JAVA" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/FirstModule/web/hualun.html">
+        <entry file="file://$PROJECT_DIR$/FirstModule/web/chat.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="1230">
+              <caret line="101" column="40" lean-forward="true" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -169,10 +139,11 @@
         <option value="$PROJECT_DIR$/FirstModule/src/mywebapi_tts/WebTTs.java" />
         <option value="$PROJECT_DIR$/FirstModule/web/filesave.jsp" />
         <option value="$PROJECT_DIR$/FirstModule/src/mywebapi_tts/FileUtil.java" />
-        <option value="$PROJECT_DIR$/FirstModule/web/getrobotresponse.jsp" />
         <option value="$PROJECT_DIR$/FirstModule/web/robot.jsp" />
+        <option value="$PROJECT_DIR$/FirstModule/web/getrobotresponse.jsp" />
         <option value="$PROJECT_DIR$/FirstModule/web/chat.jsp" />
         <option value="$PROJECT_DIR$/FirstModule/web/hualun.html" />
+        <option value="$PROJECT_DIR$/src/hualun.html" />
       </list>
     </option>
   </component>
@@ -228,19 +199,32 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="audio" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="IDEA-JAVA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEA-JAVA" type="462c0819:PsiDirectoryNode" />
+              <item name="FirstModule" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="audio" type="462c0819:PsiDirectoryNode" />
+              <item name="response" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDEA-JAVA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEA-JAVA" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/FirstModule/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -248,18 +232,18 @@
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\weather\weather1\IDEA-JAVA\FirstModule\src" />
-      <recent name="F:\weather\weather1\IDEA-JAVA\FirstModule\web\audio" />
-      <recent name="F:\weather\weather1\IDEA-JAVA\src\前端" />
-      <recent name="I:\程序集\weather1\IDEA-JAVA\src\AIUI" />
-      <recent name="I:\程序集\weather1\IDEA-JAVA\src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="I:\程序集\weather1\IDEA-JAVA\FirstModule\web" />
       <recent name="I:\程序集\weather1\IDEA-JAVA\FirstModule\web\WEB-INF" />
       <recent name="I:\程序集\weather1\IDEA-JAVA\resource" />
       <recent name="I:\程序集\weather1\IDEA-JAVA" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\weather\weather1\IDEA-JAVA\src" />
+      <recent name="F:\weather\weather1\IDEA-JAVA\FirstModule\web\audio" />
+      <recent name="F:\weather\weather1\IDEA-JAVA\FirstModule\src" />
+      <recent name="F:\weather\weather1\IDEA-JAVA\src\前端" />
+      <recent name="I:\程序集\weather1\IDEA-JAVA\src\AIUI" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -279,7 +263,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.testfilesave">
+  <component name="RunManager" selected="Tomcat Server.Tomcat8">
     <configuration name="StudentsBean" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.runoob.StudentsBean" />
       <module name="FirstModule" />
@@ -433,10 +417,10 @@
       <item itemvalue="Application.hello" />
       <item itemvalue="Application.WebTTs (1)" />
       <item itemvalue="Application.StudentsBean" />
+      <item itemvalue="Application.testfilesave" />
+      <item itemvalue="JavaScript Debug.filesave.jsp" />
       <item itemvalue="Tomcat Server.Tomcat8" />
       <item itemvalue="Tomcat Server.Tomcat9" />
-      <item itemvalue="JavaScript Debug.filesave.jsp" />
-      <item itemvalue="Application.testfilesave" />
     </list>
     <recent_temporary>
       <list>
@@ -461,17 +445,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27363896" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27760968" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32614556" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928367" weight="0.32614556" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928367" weight="0.28688523" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39892185" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -526,11 +509,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/前端/test.html" />
-    <entry file="file://$PROJECT_DIR$/src/前端/business_center.html" />
-    <entry file="file://$PROJECT_DIR$/src/前端/Favorites.html" />
-    <entry file="file://$PROJECT_DIR$/src/前端/mytrace.html" />
-    <entry file="file://$PROJECT_DIR$/src/前端/service_center.html" />
     <entry file="file://$PROJECT_DIR$/FirstModule/web/robotchat.html" />
     <entry file="file://$PROJECT_DIR$/FirstModule/web/audio/ceshi.wav" />
     <entry file="file://$PROJECT_DIR$/FirstModule/web/audio/ceshiyin.wav" />
@@ -622,13 +600,6 @@
     <entry file="file://$PROJECT_DIR$/untitled/web/index.jsp" />
     <entry file="file://$PROJECT_DIR$/FirstModule/web/1" />
     <entry file="file://$PROJECT_DIR$/FirstModule/web/audio/response/hts001609c7@dx2b311098cd536f2b00.wav" />
-    <entry file="file://$PROJECT_DIR$/FirstModule/src/mywebapi_tts/HttpUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FirstModule/web/JavaBean.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
@@ -644,9 +615,7 @@
         <state relative-caret-position="-1155" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FirstModule/web/test">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/FirstModule/web/test" />
     <entry file="file://$PROJECT_DIR$/FirstModule/src/com/runoob/StudentsBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-326">
@@ -672,16 +641,8 @@
     <entry file="file://$PROJECT_DIR$/FirstModule/web/chat.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hello.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.txt" />
+    <entry file="file://$PROJECT_DIR$/hello.txt" />
     <entry file="file://$PROJECT_DIR$/FirstModule/web/xxx.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -692,16 +653,8 @@
     <entry file="file://$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/result.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/FirstModule/src/testfilesava/testfilesave.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/a.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/FirstModule/src/testfilesava/testfilesave.java" />
+    <entry file="file://$PROJECT_DIR$/a.txt" />
     <entry file="file://$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/a.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -733,35 +686,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FirstModule/web/getrobotresponse.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-283">
-          <caret line="68" column="38" lean-forward="true" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FirstModule/web/robot.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="305">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FirstModule/web/chat.jsp">
+    <entry file="file://$PROJECT_DIR$/FirstModule/src/mywebapi_tts/HttpUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3395">
-          <caret line="97" column="8" lean-forward="true" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+        <state relative-caret-position="211">
+          <caret line="71" column="5" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="71" selection-end-column="5" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="method#doPost2#0;class#HttpUtil#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FirstModule/web/audio/1.wav">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FirstModule/web/audio/2.wav">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FirstModule/web/getrobotresponse.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="125" column="29" lean-forward="true" selection-start-line="125" selection-start-column="29" selection-end-line="125" selection-end-column="29" />
+          <folding>
+            <element signature="e#1721#2583#0#JAVA" />
+            <element signature="e#3147#4754#0#JAVA" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FirstModule/web/hualun.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        <state relative-caret-position="-17">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
@@ -769,6 +731,26 @@
             <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/1.wav">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/2.wav">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hualun.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FirstModule/web/chat.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="101" column="40" lean-forward="true" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
         </state>
       </provider>
     </entry>

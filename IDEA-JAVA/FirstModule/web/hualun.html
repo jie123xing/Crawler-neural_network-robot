@@ -19,21 +19,12 @@
         </div>
     </div>
 <script>
-    var nameAttrValue="audio\\ceshiyin.wav"
-    function addDynamicNameAttr_audio() {
-        $(function () {
-            $('#audio').attr('src',nameAttrValue);
-            var fry_audio=$('#audio').get('0');
-            fry_audio.load();
-        });
-    }
     function f() {
-        audio.setAtrribute("src","audio\\ceshiyin.wav");
-        audio.load;
+        document.getElementById("myAudio").src="audio\\2.wav";
     }
 </script>
-<audio autoplay id="audio">
-    <source src="audio\bj_weather.wav" type="audio/mpeg">
+<audio autoplay id="myAudio">
+    <source src="audio\\1.wav" type="audio/mpeg">
 </audio>
 <input type="button" value="改变声音" onclick="f()">
 </div>
