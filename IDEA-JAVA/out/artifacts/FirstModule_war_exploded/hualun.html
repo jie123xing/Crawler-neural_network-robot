@@ -18,15 +18,23 @@
             3
         </div>
     </div>
-<script>
-    function f() {
-        document.getElementById("myAudio").src="audio\\2.wav";
-    }
-</script>
+<div id="ceshi">
+    ceshiyinpingssid
+</div>
+
 <audio autoplay id="myAudio">
-    <source src="audio\1.wav" type="audio/mpeg">
+    <source src="response\\3.wav" type="audio/mpeg">
 </audio>
 <input type="button" value="改变声音" onclick="f()">
 </div>
+<script>
+    var ssid=0;
+    function f() {
+        //ssid+=1;
+        //var src="response\\"+String(ssid)+".wav";
+        document.getElementById("myAudio").src="response\\2.wav";
+        //document.getElementById("ceshi").innerHTML=src;
+    }
+</script>
 </body>
 </html>

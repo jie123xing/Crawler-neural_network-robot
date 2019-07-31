@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+
+</head>
+
+<body>
+
+<div class="fixed top">固定手懒</div>
+
+
+
+<div style=" overflow-y:auto; overflow-x:hidden; width:400px; height:400px;background-color:#dddddd;" id="ins">
+
+    <div style=" width:200px; height:200px; background-color:#A9A9A9" >
+
+        1
+
+    </div>
+
+    <div style=" width:200px; height:200px; background-color:#A9A9A9" >
+
+        2
+
+    </div>
+
+    <div style=" width:200px; height:200px; background-color:#A9A9A9" >
+
+        3
+
+    </div>
+
+</div>
+
+<script>
+
+    function f() {
+        document.getElementById("myAudio").src="response\\5.wav";
+    }
+
+</script>
+
+<audio autoplay id="myAudio">
+
+    <source src="response\\2.wav" type="audio/mpeg">
+
+</audio>
+
+<input type="button" value="改变声音" onclick="f()">
+
+</div>
+
+</body>
+
+</html>

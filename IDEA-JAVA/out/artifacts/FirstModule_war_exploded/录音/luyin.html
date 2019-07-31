@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyin</title>
+
+    {{--录音编辑--}}
+    <script src="{{asset('ad')}}/assets/recorder.js"></script>复制代码
+    <script>
+
+        //时间函数,用于计算时间
+
+        function timecode(ms) {
+
+            var hms = {
+
+                h: Math.floor(ms/(60*60*1000)),
+
+                m: Math.floor((ms/60000) % 60),
+
+                s: Math.floor((ms/1000) % 60)
+
+            };
+
+            var tc = []; // Timecode array to be joined with '.'
+
+
+
+            if (hms.h > 0) {
+
+                tc.push(hms.h);
+
+            }
+
+
+
+            tc.push((hms.m < 10 && hms.h > 0 ? "0" + hms.m : hms.m));
+
+            tc.push((hms.s < 10  ? "0" + hms.s : hms.s));
+
+
+
+            return tc.join(':');
+
+        }
+
+
+
+        //初始化录音函数
+
+        Recorder.initialize({
+
+            //这里的地址需要填写对应swf地址
+
+            swfSrc: "{{asset('ad')}}/assets/recorder.swf"
+
+        });
+
+
+
+        //录音调用方法
+
+        function record(){
+
+            Recorder.record({
+
+                start: function(){
+
+                    //开始录音时可以执行的方法
+
+                    //alert("recording starts now. press stop when youre done. and then play or upload if you want.");
+
+                },
+
+                progress: function(milliseconds){
+
+                    //录音过程中调用对应时间函数
+
+                    document.getElementById("time").innerHTML = timecode(milliseconds);
+
+                }
+
+            });
+
+        }
+
+        //播放方法
+
+        function play(){
+
+            Recorder.stop();
+
+            Recorder.play({
+
+                progress: function(milliseconds){
+
+                    document.getElementById("time").innerHTML = timecode(milliseconds);
+
+                }
+
+            });
+
+        }
+
+        //停止方法
+
+        function stop(){
+
+            Recorder.stop();
+
+        }
+
+        //上传回调方法
+
+        function upload(){
+
+            Recorder.upload({
+
+                method: "POST",
+
+                url: "/service/up_record",
+
+                audioParam: "video",//这个字段就是需要接收文件的字段
+
+                params: { // 这里构造你需要的参数
+
+                    "_token": '{{csrf_token()}}',
+
+                    'id':'{{$topic->id}}',
+
+                    'type':'40',
+
+                    'name':'{{$topic->get_order_topic->title}}-{{$topic->get_order_info->ord_number}}'
+
+                },
+
+                success: function(msg){
+
+                    //对应的返回的操作回调
+
+                    if(msg=="ok"){
+
+                        //根据不同信息展示对应的提示信息
+
+                        var $loding = $('#my-modal-loading');
+
+                        $loding.modal('close');
+
+                        var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+
+                        parent.layer.close(index); //再执行关闭
+
+                    }else{
+
+                        var $loding = $('#my-modal-loading');
+
+                        $loding.modal('close');
+
+                        alertshow('faile',msg)
+
+                    }
+
+                }
+
+            });
+
+        }
+
+    </script>复制代码
+</head>
+<body>
+
+<div class="am-u-sm-10 am-u-sm-push-1">
+
+    <div class="am-btn-group">
+
+        <button type="button" class="am-btn am-btn-primary am-radius" οnclick="record()">开始录音</button>
+
+    </div>
+
+    <div class="am-btn-group">
+
+        <button type="button" class="am-btn am-btn-primary am-radius" οnclick="play()">播放录音</button>
+
+    </div>
+
+    <div class="am-btn-group">
+
+        <button type="button" class="am-btn am-btn-primary am-radius" οnclick="stop()">停止录音</button>
+
+    </div>
+
+    <div class="am-btn-group">
+
+        <button type="button" class="am-btn am-btn-primary am-radius" οnclick="upload()">上传录音</button>
+
+    </div>
+
+    <span id="time">0:00</span>
+
+</div>
+</body>
+</html>

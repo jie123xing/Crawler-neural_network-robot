@@ -15,6 +15,9 @@ import java.util.HashMap;
 import java.util.Map;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.digest.DigestUtils;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * AIUI WebAPI V2接口调用示例
@@ -43,7 +46,15 @@ public class WebaiuiDemo {
 		Map<String, String> header = buildHeader();
 		byte[] dataByteArray = readFile(FILE_PATH);
 		String result = httpPost(URL, header, dataByteArray);
-		System.out.println(result);		
+		//已经声明了会抛异常,那么在调用这个方法的时候,就必须做异常处理,
+		try {
+			JSONObject jsonObj = new JSONObject(result);
+			String ss=jsonObj.getJSONArray("data").getJSONObject(0).getString("text");
+			System.out.println(ss);
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		//System.out.println(result);
 	}
 
 	private static Map<String, String> buildHeader() throws UnsupportedEncodingException, ParseException {
