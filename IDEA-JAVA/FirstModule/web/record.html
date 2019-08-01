@@ -12,6 +12,9 @@
         <input onclick="playRecording()" type="button" value="播放" />
         <input onclick="uploadAudio()" type="button" value="提交" />
         <input onclick="cancelAudio()" type="button" value="取消" />
+
+        <div id="ceshi"> blog</div>
+        <input onclick="cancelAudio()" type="button" value="getblog" />
     </div>
 
     <script>
@@ -154,7 +157,10 @@
                 audioData.buffer=[];
                 audioData.size=0;
             }
-
+            //
+            this.bytess=function(){
+                document.getElementById("ceshi").innerHTML=this.getBlob()+"---"+typeof(this.getBlob());
+            }
             //上传
             this.upload = function (url, callback) {
                 var fd = new FormData();
@@ -249,11 +255,15 @@
         function playRecording() {
             recorder.play(audio);
         }
+        function seshi(){
+            recorder.bytess();
+        }
 
         function cancelAudio(){
             recorder.stop();
             recorder.clear();
         }
+
 
         function uploadAudio() {
             recorder.upload("audiototext.jsp", function (state, e) {

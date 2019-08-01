@@ -5,10 +5,6 @@
     <meta charset="utf-8">
     <script>
     var ssid=0;
-    function f(ssid) {
-    document.getElementById("myAudio").src="response\\"+String(ssid)+".wav";
-    document.getElementById("ceshi").innerHTML="response\\"+String(ssid)+".wav";
-    }
     function txttowav(text123) {
     var robotresponse;
     ssid+=1;
@@ -49,7 +45,6 @@
                     document.getElementById("myDiv").innerHTML += "机器人：" + xmlhttp.responseText + "<br>";
                     txttowav(xmlhttp.responseText);
                     document.getElementById("quest").value = "";
-
                     document.getElementById("ceshi").innerHTML="jieshuf()"+"response\\"+String(ssid)+".wav";
                     var x = document.getElementById("myDiv");
                     x.scrollTop = x.scrollHeight;
@@ -60,7 +55,6 @@
             xmlhttp.send();
     }
     function xxx(){
-        loadXMLDoc();
         document.getElementById("myAudio").src="response\\"+String(ssid)+".wav";
     }
     </script>
@@ -92,7 +86,8 @@
     <div class="input-group mb-3">
     <input type="text" name="robotresponse"class="form-control" placeholder="输入" id="quest">
     <div class="input-group-append">
-    <button class="btn btn-success" type="submit" onclick="xxx()">发送</button>
+    <button class="btn btn-success" type="submit" onclick="loadXMLDoc()">发送</button>
+        <button class="btn btn-success" type="submit" onclick="xxx()">语音播报</button>
     </div>
     </div>
     </from>
@@ -101,7 +96,7 @@
         </div>
     </div>
     <audio autoplay id="myAudio">
-    <source src="response\\1.wav" type="audio/mpeg">
+    <source src="response\\0.wav" type="audio/mpeg">
     </audio>
 
     </body>

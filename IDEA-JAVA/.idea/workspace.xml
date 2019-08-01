@@ -7,132 +7,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f587498f-6ae7-4365-89bd-56a63fc56865" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/app-support-sample/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/app-support-sample/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/app-support-sample/ios-weixin-config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/app-debug-190228.apk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/app/libs/tbs_sdk_thirdapp_v4.3.0.1020_43633_sharewithdownload_withoutGame_obfs_20190111_105200.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/app/src/main/java/com/github/xiangyuecn/recorder/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/app/src/main/java/com/github/xiangyuecn/recorder/X5Activity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/app/src/main/jniLibs/armeabi/liblbs.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/app/src/main/res/drawable/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/app/src/main/res/drawable/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/app/src/main/res/layout/activity_x5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/app/src/main/res/layout/menu_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/android_test/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/audio/rec-4000ms-12.8kbps-8000hz.amr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/audio/rec-4000ms-64kbps-16000hz.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/audio/rec-4000ms-64kbps-16000hz.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/audio/rec-4000ms-64kbps-16000hz.webm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/audio/rec-4000ms-8kbps-16000hz.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/demo-recordapp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/demo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/donate-alipay.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/donate-weixin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/jiebian.life-web.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/jiebian.life-xcx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/use_pcm_tool.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/use_wave.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/ztest_apple_developer_forums_getusermedia.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/ztext_collab-project_videojs-record.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/assets/工具-裸PCM转WAV播放测试.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/dist/app-support/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/dist/engine/beta-amr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/dist/engine/beta-ogg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/dist/engine/beta-webm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/dist/engine/mp3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/dist/engine/wav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/dist/extensions/waveview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/dist/recorder-core.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/recorder.mp3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/recorder.wav.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/src/app-support/app-ios-weixin-support.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/src/app-support/app-native-support.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/src/app-support/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/src/engine/beta-amr-engine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/src/engine/beta-amr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/src/engine/beta-ogg-engine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/src/engine/beta-ogg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/src/engine/beta-webm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/src/engine/mp3-engine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/src/engine/mp3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/src/engine/wav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/src/extensions/waveview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/src/package-build.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/src/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/Recorder/src/recorder-core.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/record.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/recording/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/recording/AudioRecorder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/recording/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/recording/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/recording/cert.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/recording/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/recording/key.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/recording/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/recording/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/recording/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/录音/record.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/hualun1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/WEB-INF/classes/com/runoob/StudentsBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/WEB-INF/classes/com/runoob/StudentsBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/WEB-INF/classes/mywebapi_tts/HttpUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/WEB-INF/classes/mywebapi_tts/HttpUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/WEB-INF/classes/mywebapi_tts/WebTTs.class" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/WEB-INF/classes/mywebapi_tts/WebTTs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/WEB-INF/classes/testfilesava/testfilesave.class" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/WEB-INF/classes/testfilesava/testfilesave.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstModule/web/audiototext.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/audiototext.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstModule/web/chat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/chat.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/getrobotresponse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/getrobotresponse.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/hualun.html" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/hualun.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstModule/web/record.html" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/record.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstModule/web/response/1.wav" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/response/1.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstModule/web/response/2.wav" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/response/2.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstModule/web/response/3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/response/3.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstModule/web/response/4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/response/4.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/response/5.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/response/6.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/response/7.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/response/8.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/response/9.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/成功保存文件.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/成功保存文件.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/WEB-INF/classes/com/runoob/StudentsBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/WEB-INF/classes/com/runoob/StudentsBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/WEB-INF/classes/mywebapi_tts/HttpUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/WEB-INF/classes/mywebapi_tts/HttpUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/WEB-INF/classes/mywebapi_tts/WebTTs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/WEB-INF/classes/mywebapi_tts/WebTTs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/WEB-INF/classes/testfilesava/testfilesave.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/WEB-INF/classes/testfilesava/testfilesave.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/audiototext.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/audiototext.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/chat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/chat.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/getrobotresponse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/getrobotresponse.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/hualun.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/hualun.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/response/1.wav" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/response/1.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/response/2.wav" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/response/2.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/response/3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/response/3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/response/4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/response/4.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/response/5.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/response/6.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/response/7.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/response/8.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/response/9.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/成功保存文件.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/成功保存文件.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/AIUI/WebaiuiDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/HELLOWORLD/hello.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/webapi_tts/FileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/webapi_tts/HttpUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/webapi_tts/WebTTs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/图灵机器人/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/图灵机器人/tulingrobut.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/科大讯飞语音听写/WebIATWS$Cw.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/科大讯飞语音听写/WebIATWS$Data.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/科大讯飞语音听写/WebIATWS$Decoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/科大讯飞语音听写/WebIATWS$ResponseData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/科大讯飞语音听写/WebIATWS$Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/科大讯飞语音听写/WebIATWS$Text.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/科大讯飞语音听写/WebIATWS$Ws.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/科大讯飞语音听写/WebIATWS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/科大讯飞语音听写/util/FileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/科大讯飞语音听写/util/HttpUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IDEA-JAVA/科大讯飞语音听写/util/HttpUtil2.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -170,31 +69,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FirstModule/web/getrobotresponse.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="123" column="38" lean-forward="true" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FirstModule/web/record.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="804">
-              <caret line="177" column="28" selection-start-line="177" selection-start-column="28" selection-end-line="177" selection-end-column="28" />
-              <folding>
-                <element signature="n#head#0;n#html#0;n#!!top" />
-                <element signature="e#7978#8103#0" />
-                <element signature="e#8258#9821#0" />
-              </folding>
+            <state relative-caret-position="4305">
+              <caret line="123" column="38" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FirstModule/web/record.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="691">
+              <caret line="239" column="20" selection-start-line="239" selection-start-column="20" selection-end-line="239" selection-end-column="20" />
+              <folding>
+                <element signature="n#head#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FirstModule/web/chat.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="45" column="51" lean-forward="true" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FirstModule/web/audiototext.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="100" column="44" selection-start-line="100" selection-start-column="44" selection-end-line="100" selection-end-column="44" />
+            <state relative-caret-position="376">
+              <caret line="105" column="9" lean-forward="true" selection-start-line="105" selection-start-column="9" selection-end-line="105" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -202,29 +108,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FirstModule/web/Recorder/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
+            <state relative-caret-position="14980">
               <caret line="428" column="34" selection-start-line="428" selection-start-column="34" selection-end-line="428" selection-end-column="34" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#9;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#iframe#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -233,7 +122,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FirstModule/web/录音/record.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
+            <state relative-caret-position="5075">
               <caret line="145" column="23" selection-start-line="145" selection-start-column="23" selection-end-line="145" selection-end-column="23" />
             </state>
           </provider>
@@ -277,7 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/FirstModule/chat.html" />
         <option value="$PROJECT_DIR$/FirstModule/web/WEB-INF/robot.jsp" />
         <option value="$PROJECT_DIR$/FirstModule/web/chat.html" />
         <option value="$PROJECT_DIR$/FirstModule/web/jqueryajax.html" />
@@ -323,11 +211,12 @@
         <option value="$PROJECT_DIR$/src/AIUI/WebaiuiDemo.java" />
         <option value="$PROJECT_DIR$/FirstModule/web/getrobotresponse.jsp" />
         <option value="$PROJECT_DIR$/FirstModule/web/hualun.html" />
-        <option value="$PROJECT_DIR$/FirstModule/web/chat.jsp" />
         <option value="$PROJECT_DIR$/FirstModule/web/成功保存文件.jsp" />
         <option value="$PROJECT_DIR$/FirstModule/web/index.jsp" />
         <option value="$PROJECT_DIR$/FirstModule/web/录音/record.html" />
         <option value="$PROJECT_DIR$/FirstModule/web/audiototext.jsp" />
+        <option value="$PROJECT_DIR$/FirstModule/web/chat.jsp" />
+        <option value="$PROJECT_DIR$/FirstModule/web/record.html" />
       </list>
     </option>
   </component>
@@ -358,6 +247,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -377,11 +267,17 @@
               <item name="FirstModule" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="IDEA-JAVA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDEA-JAVA" type="462c0819:PsiDirectoryNode" />
+              <item name="FirstModule" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="response" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -612,9 +508,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2987897" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30332828" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -780,22 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FirstModule/web/hualun.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="28" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FirstModule/web/recording/key.pem">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-329">
@@ -817,26 +696,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FirstModule/web/chat.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="94" column="64" selection-start-line="94" selection-start-column="64" selection-end-line="94" selection-end-column="64" />
-          <folding>
-            <element signature="e#1075#2419#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FirstModule/web/录音/record.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="145" column="23" selection-start-line="145" selection-start-column="23" selection-end-line="145" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FirstModule/web/request/1.wav">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/FirstModule/web/request/1.wav" />
     <entry file="file://$PROJECT_DIR$/FirstModule/web/Recorder/assets/ztext_collab-project_videojs-record.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-175" />
@@ -856,42 +716,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FirstModule/web/Recorder/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="428" column="34" selection-start-line="428" selection-start-column="34" selection-end-line="428" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#9;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FirstModule/webresult.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="31" selection-start-column="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/FirstModule/webresult.txt" />
     <entry file="file://$PROJECT_DIR$/FirstModule/web/成功保存文件.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -908,27 +733,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FirstModule/web/getrobotresponse.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="123" column="38" lean-forward="true" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="38" />
+        <state relative-caret-position="4305">
+          <caret line="123" column="38" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FirstModule/web/record.html">
+    <entry file="file://$PROJECT_DIR$/FirstModule/web/Recorder/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="804">
-          <caret line="177" column="28" selection-start-line="177" selection-start-column="28" selection-end-line="177" selection-end-column="28" />
+        <state relative-caret-position="14980">
+          <caret line="428" column="34" selection-start-line="428" selection-start-column="34" selection-end-line="428" selection-end-column="34" />
           <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-            <element signature="e#7978#8103#0" />
-            <element signature="e#8258#9821#0" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#9;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FirstModule/web/录音/record.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5075">
+          <caret line="145" column="23" selection-start-line="145" selection-start-column="23" selection-end-line="145" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FirstModule/web/hualun.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FirstModule/web/audiototext.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="100" column="44" selection-start-line="100" selection-start-column="44" selection-end-line="100" selection-end-column="44" />
+        <state relative-caret-position="376">
+          <caret line="105" column="9" lean-forward="true" selection-start-line="105" selection-start-column="9" selection-end-line="105" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FirstModule/web/chat.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="45" column="51" lean-forward="true" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FirstModule/web/record.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="691">
+          <caret line="239" column="20" selection-start-line="239" selection-start-column="20" selection-end-line="239" selection-end-column="20" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

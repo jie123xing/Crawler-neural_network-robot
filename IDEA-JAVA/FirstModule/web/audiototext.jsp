@@ -98,7 +98,7 @@
     Map<String, String> header = buildHeader();
     SmartUpload su = new SmartUpload();//新建一个SmartUpload对象
     su.getRequest().getParameterValues();取数组值
-    su.getRequest().getParameter( );取单个参数单个值
+    su.getRequest().getParameter( );取单个参数单个值，
     byte[] dataByteArray=request.getParameter(fd);
     //byte[] dataByteArray = readFile(FILE_PATH);
     String result = httpPost(URL, header, dataByteArray);
