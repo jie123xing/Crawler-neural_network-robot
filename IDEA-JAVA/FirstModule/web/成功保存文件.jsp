@@ -7,7 +7,7 @@
     <FONT SIZE = 5 COLOR = blue>将数据写入文件</FONT>
 </CENTER>
 <%
-    String path = request.getRealPath("./"); //取得目录在服务器端的实际位置
+    String path ="F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web"; //取得目录在服务器端的实际位置
     //out.println(path+"");
     File result =new File("result.txt");
     FileWriter fw = new FileWriter(path + result); //建立FileWrite对象,并设定由fw对象变量引用

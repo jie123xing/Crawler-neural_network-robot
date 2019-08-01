@@ -32,5 +32,8 @@
 返回发送请求的客户端IP地址:<%=request.getRemoteAddr()%><br>
 
 返回上下文路径:<%=request.getContextPath()%><br>
+getRequestURL<%=request.getRequestURL()%><br>
+//realPath:D:\apache-tomcat-6.0.13\webapps\WebDemo\<%=request.getRealPath("/")%><br>
+<%=request.getSession().getServletContext().getRealPath("")%><br>
 </body>
 </html>

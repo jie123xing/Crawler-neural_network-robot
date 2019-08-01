@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<title>裸(RAW、WAV)PCM转WAV播放测试和转码</title>
+
+<style>
+html,body{
+	height:100%;
+}
+</style>
+</head>
+
+<body>
+<div style="padding-top:30px;font-size:24px;font-weight:bold;text-align:center;color:#0b1;">把裸(RAW、WAV)PCM数据文件拖入此页面即可生成.wav文件，然后可转码成其他格式</div>
+<div style="text-align:center;padding-top:15px;">
+	<input type="file" onchange="choiceFile(this)" style="width:80%;line-height:60px;font-size:24px;color:#fff; background:#0b1;">
+	<div style="color:#0b1;">本工具用来对原始的PCM音频数据进行封装、播放、转码，操作极其简单，免去了动用二进制编辑工具操作的麻烦。比如加工一下Android AudioRecord(44100)采集的音频。</div>
+	<div style="color:#F90;">.wav（raw pcm format）文件可以反复拖入，只不过前44字节wav头会被删除而已</div>
+	<div style="color:#F00">乱填采样率、位数，会变声</div>
+	<div style="color:#F0f">除了PCM数据文件外，其他格式文件拖入可能导致惊悚的播放效果</div>
+	<div><a href="https://github.com/xiangyuecn/Recorder">https://github.com/xiangyuecn/Recorder</a></div>
+</div>
+
+<div><audio id="recPlayAudio" style="width:100%"></audio></div>
+
+<div id="list"></div>
+
+<div id="mockTransformDiv" style="display:none;width:98%; border:4px solid #0B1;margin:20px 0;">
+	<div id="mockTransformMsg"></div>
+	<iframe id="mockTransformIframe" style="width:100%;height:400px;"></iframe>
+</div>
+
+<script>
+document.body.ondragover=function(e){
+	e.preventDefault();
+};
+document.body.ondrop=function(e){
+	e.preventDefault();
+	
+	readFile(e.dataTransfer.files);
+};
+function choiceFile(elem){
+	if(!elem.files.length){
+		return;
+	};
+	readFile(elem.files);
+};
+function readFile(files){
+	var div=document.createElement("div");
+	list.prepend(div);
+	div.append(new Date().toLocaleTimeString()+" ");
+	
+	if(files.length!=1){
+		div.append("请只拖入一个文件");
+		return;
+	}
+	var fileObj = files[0];
+	var fileReader = new FileReader();
+	fileReader.onload = function(e){
+		createWav(e.target.result,div,fileObj);
+	}
+	fileReader.readAsArrayBuffer(fileObj);
+};
+
+
+
+
+
+
+
+var createWav=function(arr,div,fileObj){
+	var instr=prompt("请输入 "+fileObj.name+" 的\"采样率.位数-新采样率:结束毫秒:开始毫秒\"(默认16位)，如：16000（8位的需填位数16000.8，新采样16000-8000）");
+	
+	var sampleRate=0,bitRate=16,sampleRateNew=0,subA=0,subB=0;
+	if(/^(\d+)(?:\.(\d+))?(?:\-(\d+))?(?:\:(\d+))?(?:\:(\d+))?$/.test(instr)){
+		sampleRate=+RegExp.$1;
+		bitRate=+RegExp.$2==8?8:16;
+		sampleRateNew=+RegExp.$3||sampleRate;
+		
+		subB=+RegExp.$4||0;
+		subA=+RegExp.$5||0;
+	};
+	if(sampleRate<6000||sampleRateNew<6000){
+		div.append("乱填采样率："+sampleRate+" "+sampleRateNew);
+		return;
+	};
+	
+	//处理wav头
+	if(/\.wav$/i.test(fileObj.name)){
+		var arrView=new Uint8Array(arr);
+		var eq=function(p,s){
+			for(var i=0;i<s.length;i++){
+				if(arrView[p+i]!=s.charCodeAt(i)){
+					return false;
+				};
+			};
+			return true;
+		};
+		console.log("发现wav文件");
+		
+		if(eq(0,"RIFF")&&eq(8,"WAVEfmt ")){
+			console.log("    wav 格式");
+			if(arrView[20]==1){
+				console.log("    raw pcm format wav");
+				arr=arr.slice(44);
+			};
+		};
+	};
+	
+	if(bitRate==16){
+		var res=new Int16Array(arr,0,(arr.byteLength-arr.byteLength%2)/2);
+	}else{
+		var res=new Uint8Array(arr);
+	};
+	function sampleData(data, newSampleRate, oldSampleRate) {
+		var step=oldSampleRate/newSampleRate;
+		var fitCount = Math.floor(data.length / step);
+		var newData = bitRate==16?new Int16Array(fitCount):new Uint8Array(fitCount);
+		for (var i = 0; i < fitCount; i++) {
+			var tmp = i * step;
+			var before = Math.floor(tmp);
+			var after = Math.ceil(tmp);
+			var atPoint = tmp - before;
+			
+			newData[i] = data[before]+(data[after]-data[before])*atPoint;
+		}
+		return newData;
+	};
+	//对比直接抽样的音质
+	function sampleData2(data, newSampleRate, oldSampleRate) {
+		var step=oldSampleRate/newSampleRate;
+		var size=Math.floor(data.length/step);
+		var newData = bitRate==16?new Int16Array(size):new Uint8Array(size);
+		var i=0,il=data.length,idx=0;
+		while(i<il){
+			newData[idx]=data[Math.round(i)];
+			idx++;
+			i+=step;
+		};
+		return newData;
+	};
+	if(sampleRate>sampleRateNew){
+		res=sampleData(res,sampleRateNew,sampleRate);
+		sampleRate=sampleRateNew;
+	};
+	
+	//截取
+	if(subA||subB){
+		res=res.subarray(Math.round(subA*sampleRate/1000),subB?Math.round(subB*sampleRate/1000):res.length);
+	};
+	size=res.length;
+	var duration=Math.floor(size/sampleRate*1000);
+	
+	//编码数据 https://github.com/mattdiamond/Recorderjs https://www.cnblogs.com/blqw/p/3782420.html https://www.cnblogs.com/xiaoqi/p/6993912.html
+	var dataLength=size*(bitRate/8);
+	var buffer=new ArrayBuffer(44+dataLength);
+	var data=new DataView(buffer);
+	
+	var offset=0;
+	var writeString=function(str){
+		for (var i=0;i<str.length;i++,offset++) {
+			data.setUint8(offset,str.charCodeAt(i));
+		};
+	};
+	var write16=function(v){
+		data.setUint16(offset,v,true);
+		offset+=2;
+	};
+	var write32=function(v){
+		data.setUint32(offset,v,true);
+		offset+=4;
+	};
+	
+	/* RIFF identifier */
+	writeString('RIFF');
+	/* RIFF chunk length */
+	write32(36+dataLength);
+	/* RIFF type */
+	writeString('WAVE');
+	/* format chunk identifier */
+	writeString('fmt ');
+	/* format chunk length */
+	write32(16);
+	/* sample format (raw) */
+	write16(1);
+	/* channel count */
+	write16(1);
+	/* sample rate */
+	write32(sampleRate);
+	/* byte rate (sample rate * block align) */
+	write32(sampleRate*(bitRate/8));
+	/* block align (channel count * bytes per sample) */
+	write16(bitRate/8);
+	/* bits per sample */
+	write16(bitRate);
+	/* data chunk identifier */
+	writeString('data');
+	/* data chunk length */
+	write32(dataLength);
+	// 写入采样数据
+	if(bitRate==8) {
+		for(var i=0;i<size;i++,offset++) {
+			data.setInt8(offset,res[i],true);
+		};
+	}else{
+		for (var i=0;i<size;i++,offset+=2){
+			data.setInt16(offset,res[i],true);
+		};
+	};
+	
+	
+	var blob=new Blob([data],{type:"audio/wav"});
+	var name=fileObj.name+"-"+duration+"ms"+"-"+bitRate+"bit-"+sampleRate+"hz.wav";
+	var url=URL.createObjectURL(blob);
+	
+	var id=++rnd;
+	pcms[id]={
+		name:fileObj.name
+		,pcm:res
+		,sampleRate:sampleRate
+		,bitRate:bitRate
+		,duration:duration
+		
+		,blob:blob
+	};
+	console.log(pcms[id]);
+	
+	div.innerHTML=id+". "+div.innerHTML+" 【"+name+'】'+blob.size+'b <a download="'+name+'" href="'+url+'">下载</a> <button onclick="mockTransform('+id+')">转码</button> <button onclick="recplay('+id+',\''+url+'\')">播放</button> <span id="playc'+id+'" style="color:#0b1;"></span>';
+};
+var rnd=0;
+var pcms={};
+
+
+
+
+
+
+
+
+function recplay(id,url){
+	var c=window["playc"+id];
+	c.innerHTML=(+c.innerHTML||0)+1;
+	
+	var audio=recPlayAudio;
+	audio.controls=true;
+	if(!(audio.ended || audio.paused)){
+		audio.pause();
+	};
+	audio.src=url;
+	audio.play();
+};
+
+
+
+
+
+
+var isSetIframe=false;
+function mockTransform(id){
+	mockTransformDiv.style.display="block";
+	if(location.protocol.indexOf("http")!=0){
+		mockTransformMsg.innerHTML='<span style="color:red">因为转码需要写配置输入界面，就拿测试页面来用了（懒），所以需要在http环境下才能加载同域页面</span>';
+		return;
+	};
+	
+	if(isSetIframe){
+		var msg="";
+		try{
+			var win=mockTransformIframe.contentWindow;
+			if(win.Recorder){
+				var wav=pcms[id];
+				
+				win.rec=win.Recorder();
+				win.rec.mock(wav.pcm,wav.sampleRate);
+				
+				mockTransformMsg.innerHTML='<span style="color:#0b1;">'+id+". 已注入pcm数据，请点击批量编码进行转换。"+(new Date().toLocaleTimeString())+"</span> 因为转码需要写配置输入界面，就拿测试页面来用了（懒）";
+				return;
+			};
+		}catch(e){
+			console.error(e)
+			msg="注入异常：也许还没有准备好..."+e.stack;
+		};
+		mockTransformMsg.innerHTML='<span style="color:red">'+(msg||"页面未准备好，请稍后再试...")+'</span>'
+	}else{
+		isSetIframe=true;
+		
+		mockTransformIframe.src="../index.html?ispcm=1";
+		mockTransformIframe.onload=function(){
+			mockTransform(id);
+		};
+		mockTransformMsg.innerHTML="请稍后，正在加载页面...";
+	};
+};
+</script>
+</body>
+</html>

@@ -49,8 +49,7 @@
                     document.getElementById("myDiv").innerHTML += "机器人：" + xmlhttp.responseText + "<br>";
                     txttowav(xmlhttp.responseText);
                     document.getElementById("quest").value = "";
-                    document.getElementById("ceshi").innerHTML="kaishif()"+ssid+typeof(ssid);
-                    document.getElementById("myAudio").src="I:\\程序集\\weather1\\IDEA-JAVA\\FirstModule\\web\\response\\"+String(ssid)+".wav";
+
                     document.getElementById("ceshi").innerHTML="jieshuf()"+"response\\"+String(ssid)+".wav";
                     var x = document.getElementById("myDiv");
                     x.scrollTop = x.scrollHeight;
@@ -59,6 +58,10 @@
             xmlhttp.open("GET", "robot.jsp?teststring=" + document.getElementById("quest").value, true);
             //xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
             xmlhttp.send();
+    }
+    function xxx(){
+        loadXMLDoc();
+        document.getElementById("myAudio").src="response\\"+String(ssid)+".wav";
     }
     </script>
     <title>智能应答</title>
@@ -89,7 +92,7 @@
     <div class="input-group mb-3">
     <input type="text" name="robotresponse"class="form-control" placeholder="输入" id="quest">
     <div class="input-group-append">
-    <button class="btn btn-success" type="submit" onclick="loadXMLDoc()">发送</button>
+    <button class="btn btn-success" type="submit" onclick="xxx()">发送</button>
     </div>
     </div>
     </from>
@@ -97,8 +100,8 @@
             ceshiyinpinqingkong
         </div>
     </div>
-    <audio autoplay>
-    <source src="audio\response\0.wav" type="audio/mpeg">
+    <audio autoplay id="myAudio">
+    <source src="response\\1.wav" type="audio/mpeg">
     </audio>
 
     </body>
