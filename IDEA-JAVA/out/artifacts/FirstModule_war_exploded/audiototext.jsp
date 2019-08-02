@@ -8,6 +8,8 @@
 <%@ page import="java.net.HttpURLConnection" %>
 <%@ page import="org.json.JSONObject" %>
 <%@ page import="org.json.JSONException" %>
+<%@ page import="com.sun.net.httpserver.HttpContext" %>
+<%@ page import="sun.misc.Request" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
@@ -23,7 +25,7 @@
     private static final String SAMPLE_RATE = "16000";
     private static final String AUTH_ID = "cbdbacac792b7b2ff4e8821758d7019d";
     private static final String AUE = "raw";
-    private static final String FILE_PATH = "F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\response\\1.wav";
+    private static final String FILE_PATH = "I:\\程序集\\weather1\\IDEA-JAVA\\FirstModule\\web\\response\\1.wav";
     // 个性化参数，需转义
     private static final String PERS_PARAM = "{\\\"auth_id\\\":\\\"2894c985bf8b1111c6728db79d3479ae\\\"}";
 
@@ -96,11 +98,7 @@
 %>
 <%
     Map<String, String> header = buildHeader();
-    SmartUpload su = new SmartUpload();//新建一个SmartUpload对象
-    su.getRequest().getParameterValues();取数组值
-    su.getRequest().getParameter( );取单个参数单个值，
-    byte[] dataByteArray=request.getParameter(fd);
-    //byte[] dataByteArray = readFile(FILE_PATH);
+    byte[] dataByteArray = readFile(FILE_PATH);
     String result = httpPost(URL, header, dataByteArray);
     //已经声明了会抛异常,那么在调用这个方法的时候,就必须做异常处理,
     try {
@@ -110,6 +108,15 @@
     } catch (JSONException e) {
         e.printStackTrace();
     }
+
+%>
+<%=
+45%>
+<%=
+request.getParameter("audioData")
+%>
+<%=45
+//HttpContext.Current.Request
 %>
 </body>
 </html>

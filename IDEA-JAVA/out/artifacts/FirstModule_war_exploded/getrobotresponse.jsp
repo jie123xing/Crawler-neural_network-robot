@@ -128,7 +128,7 @@
     Map<String, Object> resultMap = doPost2(WEBTTS_URL, header, "text=" + URLEncoder.encode(TEXT, "utf-8"));
     if ("audio/mpeg".equals(resultMap.get("Content-Type"))) { // 合成成功
         if ("raw".equals(AUE)) {
-            save("F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\response" , ssid + ".wav", (byte[]) resultMap.get("body"));
+            save("I:\\程序集\\weather1\\IDEA-JAVA\\FirstModule\\web\\response" , ssid + ".wav", (byte[]) resultMap.get("body"));
             System.out.println("合成 WebAPI 调用成功，音频保存位置：F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\audio\\response\\" + ssid + ".wav");
         } else {
             save("F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\audio\\response\\", ssid + ".mp3", (byte[]) resultMap.get("body"));

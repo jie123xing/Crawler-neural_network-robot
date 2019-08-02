@@ -14,8 +14,14 @@
         <input onclick="cancelAudio()" type="button" value="取消" />
 
         <div id="ceshi"> blog</div>
+        <div id="ceshi1"> blog1</div>
         <input onclick="cancelAudio()" type="button" value="getblog" />
+        <a download="data.wav" id="getData">下载</a>
     </div>
+    <script>
+        document.querySelector("#getData").href = URL.createObjectURL(recorder.getBlob());
+        //document.querySelector("#getData").href = URL.createObjectURL(recorder.getBlob());
+    </script>
 
     <script>
         /**
@@ -126,8 +132,8 @@
                             data.setInt16(offset, s < 0 ? s * 0x8000 : s * 0x7FFF, true);
                         }
                     }
-
-                    return new Blob([data], { type: 'audio/mp3' });
+                    document.getElementById("ceshi").innerHTML=data+"--type---"+typeof(data);
+                    return new Blob([data], { type: 'audio/wav' });
                 }
             };
 
@@ -151,20 +157,21 @@
             //回放
             this.play = function (audio) {
                 audio.src = window.URL.createObjectURL(this.getBlob());
+                document.getElementById("ceshi1").innerHTML=audio.src;
             }
             //清除
             this.clear = function(){
                 audioData.buffer=[];
                 audioData.size=0;
             }
-            //
-            this.bytess=function(){
-                document.getElementById("ceshi").innerHTML=this.getBlob()+"---"+typeof(this.getBlob());
+            //下载
+            this.download=function(){
+                document.querySelector("#getData").href = URL.createObjectURL(this.getBlob());
             }
             //上传
             this.upload = function (url, callback) {
                 var fd = new FormData();
-                fd.append("audioData", this.getBlob(),"recorder.wav");
+                fd.append("audioData", this.getBlob());
                 var xhr = new XMLHttpRequest();
                 if (callback) {
                     xhr.upload.addEventListener("progress", function (e) {
@@ -180,7 +187,7 @@
                         callback('cancel', e);
                     }, false);
                 }
-                xhr.open("POST", url,true);
+                xhr.open("POST", url);
                 xhr.send(fd);
             }
 
@@ -251,7 +258,11 @@
         function stopRecording() {
             recorder.stop();
         }
-
+        function downloadAudio()  {
+            window.URL = window.URL || window.webkitURL;
+            document.querySelector("#getData").href = URL.createObjectURL(recorder.getBlob());
+        }
+        //downloadAudio();
         function playRecording() {
             recorder.play(audio);
         }
