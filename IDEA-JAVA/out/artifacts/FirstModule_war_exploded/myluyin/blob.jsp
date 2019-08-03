@@ -13,7 +13,6 @@
 <body>
 <%
     String name = request.getParameter("fname");
-
 %>
 <%=
 name

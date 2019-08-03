@@ -25,7 +25,7 @@
     private static final String SAMPLE_RATE = "16000";
     private static final String AUTH_ID = "cbdbacac792b7b2ff4e8821758d7019d";
     private static final String AUE = "raw";
-    private static final String FILE_PATH = "I:\\程序集\\weather1\\IDEA-JAVA\\FirstModule\\web\\response\\1.wav";
+    private static String FILE_PATH = "I:\\程序集\\weather1\\IDEA-JAVA\\FirstModule\\web\\response\\1.wav";
     // 个性化参数，需转义
     private static final String PERS_PARAM = "{\\\"auth_id\\\":\\\"2894c985bf8b1111c6728db79d3479ae\\\"}";
 
@@ -97,6 +97,7 @@
     }
 %>
 <%
+    FILE_PATH=request.getSession().getServletContext().getRealPath("")+"\\response\\2.wav";
     Map<String, String> header = buildHeader();
     byte[] dataByteArray = readFile(FILE_PATH);
     String result = httpPost(URL, header, dataByteArray);
@@ -112,8 +113,8 @@
 %>
 <%=
 45%>
-<%=
-request.getParameter("audioData")
+<%
+System.out.println(request.getParameter("fname"));
 %>
 <%=45
 //HttpContext.Current.Request

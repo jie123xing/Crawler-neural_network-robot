@@ -5,29 +5,34 @@
     <title>blob</title>
 </head>
 <body>
+
 <div id="ceshi">
     ceshi
 </div>
+<div>
+    <a download="data.wav" id="getData">下载</a>
+    <form>
+        <div>
+            <label for="profile_pic">Choose file to upload</label>
+            <input type="file" id="profile_pic" name="profile_pic">
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+</div>
 <input onclick="submit()" type="button" value="blob" />
+<br>
+<div><img src="F:\weather\weather1\IDEA-JAVA\FirstModule\web\myluyin\blob.jpg"></div>
+
 <script>
-    /*
-    <a download="data.txt" id="getData">下载</a>
-<form>
-    <div>
-        <label for="profile_pic">Choose file to upload</label>
-        <input type="file" id="profile_pic" name="profile_pic">
-    </div>
-    <div>
-        <button>Submit</button>
-    </div>
-</form>
+
     var data= 'Hello world!';
     var blob = new Blob([data], {
         type: 'text/html,charset=UTF-8'
     });
     window.URL = window.URL || window.webkitURL;
     document.querySelector("#getData").href = URL.createObjectURL(blob);
-    */
 
         document.getElementById("ceshi").innerHTML = "kaishixeshi";
         var formData = new FormData();
@@ -57,6 +62,28 @@
         request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         request.send("fname=Henry");
         }
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\myluyin\\blob.jpg', true);
+    xhr.responseType = 'blob';
+
+    xhr.onload = function(e) {
+        if (this.status == 200) {
+            var blob = this.response;
+
+            var img = document.createElement('img');
+            var URL = window.URL || window.webkitURL;  //兼容处理
+            var objectUrl = URL.createObjectURL(blob);
+            img.onload = function(e) {
+                window.URL.revokeObjectURL(img.src); // 释放 url.
+            };
+
+            img.src = objectUrl;
+            document.body.appendChild(img);
+            document.getElementById("ceshi").innerHTML=img.src;
+        }
+    };
+
+    xhr.send();
 
 </script>
 
