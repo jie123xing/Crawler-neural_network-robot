@@ -13,15 +13,7 @@
         <input onclick="uploadAudio()" type="button" value="提交" />
         <input onclick="cancelAudio()" type="button" value="取消" />
 
-        <div id="ceshi"> blog</div>
-        <div id="ceshi1"> blog1</div>
-        <input onclick="cancelAudio()" type="button" value="getblog" />
-        <a download="data.wav" id="getData">下载</a>
     </div>
-    <script>
-        document.querySelector("#getData").href = URL.createObjectURL(recorder.getBlob());
-        //document.querySelector("#getData").href = URL.createObjectURL(recorder.getBlob());
-    </script>
 
     <script>
         /**
@@ -132,7 +124,6 @@
                             data.setInt16(offset, s < 0 ? s * 0x8000 : s * 0x7FFF, true);
                         }
                     }
-                    document.getElementById("ceshi").innerHTML=data+"--type---"+typeof(data);
                     return new Blob([data], { type: 'audio/wav' });
                 }
             };
@@ -157,16 +148,12 @@
             //回放
             this.play = function (audio) {
                 audio.src = window.URL.createObjectURL(this.getBlob());
-                document.getElementById("ceshi1").innerHTML=audio.src;
+                document.getElementById("ceshi").innerHTML=audio.src;
             }
             //清除
             this.clear = function(){
                 audioData.buffer=[];
                 audioData.size=0;
-            }
-            //下载
-            this.download=function(){
-                document.querySelector("#getData").href = URL.createObjectURL(this.getBlob());
             }
             //上传
             this.upload = function (url, callback) {
@@ -241,7 +228,6 @@
         };
     </script>
 
-
     <script>
 
         var recorder;
@@ -258,16 +244,9 @@
         function stopRecording() {
             recorder.stop();
         }
-        function downloadAudio()  {
-            window.URL = window.URL || window.webkitURL;
-            document.querySelector("#getData").href = URL.createObjectURL(recorder.getBlob());
-        }
-        //downloadAudio();
+
         function playRecording() {
             recorder.play(audio);
-        }
-        function seshi(){
-            recorder.bytess();
         }
 
         function cancelAudio(){
@@ -275,9 +254,8 @@
             recorder.clear();
         }
 
-
         function uploadAudio() {
-            recorder.upload("audiototext.jsp", function (state, e) {
+            recorder.upload("", function (state, e) {
                 switch (state) {
                     case 'uploading':
                         //var percentComplete = Math.round(e.loaded * 100 / e.total) + '%';
@@ -297,6 +275,5 @@
         }
 
     </script>
-
 </body>
 </html>

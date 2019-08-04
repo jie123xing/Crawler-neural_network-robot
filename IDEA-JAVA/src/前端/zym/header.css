@@ -1,0 +1,73 @@
+.mynav{
+    background-color:black;
+    height: 70px;
+    color:white;
+}
+
+.mybutton:focus{
+    background-color:rgb(49,126,243)!important;
+}
+
+.mybutton:visited {
+    background-color:rgb(49,126,243);
+}
+
+.mybutton:hover {
+    background-color:rgb(49,126,243) !important;
+}
+
+.nav>li>a:hover{
+    color: white;
+}
+
+.nav>li>a:active{
+    color: white;
+}
+
+.mypresentation-first{
+    width: 10%;
+    margin-left: 5%;
+    height: 70px;
+    text-align: center;
+    display: table !important;
+}
+
+.mypresentation{
+    width: 10%;
+    height: 100%;
+    text-align: center;
+    display: table !important;
+}
+
+.mya{
+    width: 100%;
+    height: 100%;
+    display: table-cell !important;
+    vertical-align:middle;
+    color:white;
+}
+
+.logo{
+    width: 65px;
+    height: 50px;
+}
+
+.a-join:link{
+    color: yellow;
+    text-decoration: none;
+}
+
+.a-join:visited{
+    color: yellow;
+    text-decoration: none;
+}
+
+.a-join:hover{
+    color: yellow;
+    text-decoration: none;
+}
+
+.a-join:active{
+    color: yellow;
+    text-decoration: none;
+}

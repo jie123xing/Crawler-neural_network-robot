@@ -1,0 +1,138 @@
+div.settle1{
+    border:1px solid black;
+}
+div.settle2{
+    margin-top:5%;
+    border:1px solid black;
+}
+div.settle3{
+    font-size:12px;
+    border:1px solid black;
+}
+div.settle3-title{
+    background-color:grey;
+}
+div.settle3-content1{
+    margin-top:5%;
+    margin-bottom: 5%;
+    border:1px solid black;
+}
+div.settle3-content1 form{
+    margin-top:30%;
+    margin-bottom:30%;
+}
+div.settle3-content1 form input[type=text]{
+    width:60%;
+    display:inline-block;
+    border:1px solid black;
+    border-radius:4px;
+}
+div.settle3-content1 form input[type=button]{
+    width:30%;
+    margin-left:5%;
+    background-color: blue;
+    color:white;
+    border-radius:4px;
+}
+div.slip-box1{
+  position:fixed;
+  top:30%;
+  right:35%;
+  height:200px;
+  display:none;
+  background-color:grey;
+  font-size:8px;
+}
+div.slip-box1-header{
+    padding-left:5%;
+    height:15%;
+}
+div.slip-box1-content{
+    padding-left:5%;
+    height:60%;
+    background-color: white;
+}
+
+ul.slip-box1-ul1{
+    list-style-type: none;
+    height:70px;
+    width:100%;
+    overflow:auto;
+    margin:0;
+    padding:0;
+    border:1px solid black;
+}
+ul.slip-box1-ul1 li:active{
+    background-color:#555;
+}
+ul.slip-box1-ul2{
+    list-style-type: none;
+    height:70px;
+    width:100%;
+    overflow:auto;
+    margin:0;
+    padding:0;
+    border:1px solid black;
+}
+.slip-box1-record{
+    padding-left:5%;
+    border-bottom-style:solid;
+    border-color:grey;
+}
+.slip-box1-record span{
+    display:inline-block;
+}
+.slip-box1-footer{
+    padding-left:5%;
+    height:25%;
+    background-color:red;
+}
+.slip-box1-footer input#footer-next{
+    color:white;
+    background-color:blue;
+    margin-left:5%;
+    display:inline-block;
+}
+.slip-box1-footer input#footer-cancel{
+    color:white;
+    background-color:blue;
+    margin-right:5%;
+    display:inline-block;
+}
+
+div.settle3-content2{
+    margin-top:5%;
+    margin-bottom: 5%;
+    border:1px solid black;
+    display:none;
+}
+div.settle3-content2 span{
+    display:inline-block;
+}
+div.settle3-content2 input[type=button]{
+    display:inline-block;
+    color:white;
+    background-color: blue;
+}
+
+div.settle4{
+    font-size:12px;
+    border:1px solid black;
+}
+div.settle4-title{
+    background-color:grey;
+}
+div.qualification{
+    margin-left: 5%;
+    margin-right:5%;
+    background-color:grey;
+    border:1px solid black;
+}
+div.settle4-content1 button{
+    margin-top:5%;
+    margin-bottom:5%;
+}
+button.btn{
+    background-color:blue;
+    color:white;
+}

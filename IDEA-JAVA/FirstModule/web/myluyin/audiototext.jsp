@@ -51,9 +51,12 @@
         byte[] buffer = new byte[1024 * 4];
         int n = 0;
         while ((n = in.read(buffer)) != -1) {
+            System.out.println(buffer);
             out.write(buffer, 0, n);
         }
+        System.out.println(out);
         byte[] data = out.toByteArray();
+        System.out.println(data);
         in.close();
         return data;
     }
@@ -105,7 +108,7 @@
     try {
         JSONObject jsonObj = new JSONObject(result);
         String ss=jsonObj.getJSONArray("data").getJSONObject(0).getString("text");
-        System.out.println(ss);
+        System.out.println("转的文本是："+ss);
     } catch (JSONException e) {
         e.printStackTrace();
     }
@@ -114,7 +117,15 @@
 <%=
 45%>
 <%
-System.out.println(request.getParameter("fname"));
+System.out.println("t:"+request.getParameter("t"));
+String t=request.getParameter("t");
+String[] tbase=t.split(",");
+System.out.println(tbase[1]);
+
+//byte[] base64data= java.util.Base64.getDecoder().decode(tbase[1]);
+//System.out.println(base64data);
+//String str=new String(base64data,"utf-8");
+ //   System.out.println(str);
 %>
 <%=45
 //HttpContext.Current.Request

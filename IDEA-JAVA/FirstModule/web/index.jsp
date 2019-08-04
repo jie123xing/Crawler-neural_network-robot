@@ -35,5 +35,8 @@
 getRequestURL<%=request.getRequestURL()%><br>
 //realPath:D:\apache-tomcat-6.0.13\webapps\WebDemo\<%=request.getRealPath("/")%><br>
 <%=request.getSession().getServletContext().getRealPath("")%><br>
+<%=request.getParameter("data")%><br>
+<%=request.getParameter("name")%><br>
+<%=request.getParameter("upfile_b64")%><br>
 </body>
 </html>

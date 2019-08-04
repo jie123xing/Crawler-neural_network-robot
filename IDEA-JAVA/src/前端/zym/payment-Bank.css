@@ -1,0 +1,62 @@
+.information-title{
+    margin-top: 10px;
+    width:100%;
+    height: 45px;
+    display: table;
+    background-color: rgb(215,215,215);
+}
+
+.vertical-middle{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.paymentarea{
+    margin-top: 20px;
+    height: 550px;
+    padding-left:0;
+    padding-right: 0;
+}
+
+.paymentarea-in{
+    height: 500px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    display: table;
+    text-align: center;
+}
+
+.payment-selection{
+    width: 33.33%;
+    text-align: center;
+}
+
+.payment-a{
+    border: 1px solid black !important;
+}
+
+.payment-a:link{
+    background-color: deepskyblue;
+}
+
+.myselect{
+    width: 200px;
+    height: 30px;
+}
+
+.mysubmit{
+    width: 60px;
+    height: 30px;
+}
+
+.area-right{
+    margin-top: 20px;
+    margin-left:30px;
+    margin-right:-15px;
+    padding-left: 0;
+    padding-right: 0;
+    height: 542px;
+    border:1px solid black;
+    text-align: center;
+}

@@ -1,0 +1,68 @@
+form.release1-form span{
+    display:inline-block;
+}
+form.release1-form input{
+    display:inline-block;
+}
+form.release1-form input[type=button]{
+    color:white;
+    background-color: blue;
+}
+div.release2-content{
+    padding-top:10%;
+    padding-bottom: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    border:1px solid black;
+}
+ul#release2-kind1{
+    list-style-type:none;
+    height:150px;
+    overflow:auto;
+    margin:0;
+    padding:0;
+    border:1px solid black;
+}
+ul#release2-kind2{
+    list-style-type:none;
+    height:150px;
+    overflow:auto;
+    margin:0;
+    padding:0;
+    border:1px solid black;
+    display:none;
+}
+ul#release2-kind3{
+    list-style-type:none;
+    height:150px;
+    overflow:auto;
+    margin:0;
+    padding:0;
+    border:1px solid black;
+    display:none;
+}
+div.release2-content-confirm{
+    padding-top:10%;
+    padding-bottom:10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color:blanchedalmond;
+    border:1px solid black;
+}
+div.release2-content-confirm span{
+    display:inline-block;
+}
+div.release3{
+    position: relative;
+    height:30px;
+}
+div.release3 input[type=button]{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    background-color:blue;
+}
+
+
