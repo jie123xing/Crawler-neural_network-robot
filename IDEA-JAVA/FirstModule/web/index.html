@@ -1,54 +1,33 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<html>
 <head>
     <meta charset="utf-8">
-    <title>智能应答</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
-    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
-</head>
-<body>
-<br>
-<br>
-<div class="max-height:60%">
-    <div style="background-color:#A9A9A9">
-        <h3 class="mx-auto col-md-3 text-white" >图灵机器人</h3>
-    </div>
-    <br>
-    <div id="myDiv" class="col-md-10 offset-md-1 pre-scrollable" style="background-color:#ddd;height:60%;">
-
-    </div>
-
-</div>
-<br>
-
-<div class="col-md-10 offset-md-1">
-    <from>
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="输入" id="quest">
-            <div class="input-group-append">
-                <button class="btn btn-success" type="submit" onclick="torobot()">发送</button>
-            </div>
-        </div>
-    </from>
-    <button class="btn btn-success" type="button" onclick="startRecording()">录音</button>
-    <button class="btn btn-success" type="button" onclick="stopRecording()">停止</button>
-    <button class="btn btn-success" type="button" onclick="playRecording()">播放</button>
-    <button class="btn btn-success" type="button" onclick="cancelAudio()">取消</button>
-    <button class="btn btn-success" type="button" onclick="down64()">上传</button>
-</div>
-<div id="ceshi">
-    ceshiyinpinqingkong
-</div>
-
-<audio autoplay id="myAudio">
-    <source src="0.wav" type="audio/mpeg">
-</audio>
-
-<script>
+    <script>
     var ssid=0;
-    function txttowav(text123) {//将图灵机器人的回复文字通过robotrobot---转化为语音储存
+    function loadXMLDoc() {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {
+                // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                xmlhttp = new XMLHttpRequest();
+            } else {
+                // IE6, IE5 浏览器执行代码
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("myDiv").innerHTML += "我：" + document.getElementById("quest").value + "<br>"
+                    document.getElementById("myDiv").innerHTML += "机器人：" + xmlhttp.responseText + "<br>";
+                    txttowav(xmlhttp.responseText)
+                    document.getElementById("quest").value = "";
+                    document.getElementById("ceshi").innerHTML="jieshuf()"+"response\\"+String(ssid)+".wav";
+                    var x = document.getElementById("myDiv");
+                    x.scrollTop = x.scrollHeight;
+                }
+            }
+            xmlhttp.open("GET", "robot.jsp?teststring=" + document.getElementById("quest").value, true);
+            //xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            xmlhttp.send();
+        }
+    function txttowav(text123) {//将图灵机器人的回复文字通过robotrobotresponse.jsp转化为语音储存
         var robotresponse;
         ssid+=1;
         if (window.XMLHttpRequest)
@@ -66,41 +45,61 @@
         {
             if (robotresponse.readyState==4 && robotresponse.status==200)
             {
-                var x=robotresponse.responseText;
+                var audiosrc=robotresponse.responseText;
             }
         }
         robotresponse.open("GET","getrobotresponse.jsp?text="+text123+"&ssid="+ssid,true);
         //xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         robotresponse.send();
     }
-    function torobot() {
-        var xmlhttp;
-        if (window.XMLHttpRequest) {
-            // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
-            xmlhttp = new XMLHttpRequest();
-        } else {
-            // IE6, IE5 浏览器执行代码
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange = function () {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("myDiv").innerHTML += "我：" + document.getElementById("quest").value + "<br>"
-                document.getElementById("myDiv").innerHTML += "机器人：" + xmlhttp.responseText + "<br>";
-                txttowav(xmlhttp.responseText);
-                document.getElementById("quest").value = "";
-                document.getElementById("ceshi").innerHTML="jieshuf()"+"response\\"+String(ssid)+".wav";
-                var x = document.getElementById("myDiv");
-                x.scrollTop = x.scrollHeight;
-            }
-        }
-        xmlhttp.open("GET", "robot.jsp?teststring=" + document.getElementById("quest").value, true);
-        //xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-        xmlhttp.send();
+    function myaduio(){//播放robot回复语音
+        document.getElementById("myAudio").src="F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\response\\"+String(ssid)+".wav";
     }
-    function xxx(){//播放robot回复语音
-        document.getElementById("myAudio").src=<%=request.getSession().getServletContext().getRealPath("")+"\\response"%>+String(ssid)+".wav";
-    }
-</script>
+    </script>
+    <title>智能应答</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<br>
+<br>
+<div class="max-height:60%">
+    <div style="background-color:#A9A9A9">
+        <h3 class="mx-auto col-md-3 text-white" >智能应答机器人</h3>
+    </div>
+    <br>
+    <div id="myDiv" class="col-md-10 offset-md-1 pre-scrollable" style="background-color:#ddd;height:60%;">
+
+    </div>
+
+</div>
+<br>
+
+<div class="col-md-10 offset-md-1">
+    <from>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="输入" id="quest">
+            <div class="input-group-append">
+                <button class="btn btn-success" type="submit" onclick="loadXMLDoc()">发送</button>
+            </div>
+        </div>
+    </from>
+    <br>
+    <button class="btn btn-success" type="button" onclick="startRecording()">录音</button>
+    <button class="btn btn-success" type="button" onclick="stopRecording()">停止</button>
+    <button class="btn btn-success" type="button" onclick="playRecording()">播放</button>
+    <button class="btn btn-success" type="button" onclick="cancelAudio()">取消</button>
+    <button class="btn btn-success" type="button" onclick="down64()">上传</button>
+</div>
+
+<audio autoplay id="myAudio">
+    <source src="0.wav" type="audio/mpeg">
+</audio>
+
 <script>
     /**
      * Created by chenhao on 8/25/16.

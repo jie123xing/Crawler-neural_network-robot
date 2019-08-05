@@ -23,6 +23,7 @@
     private static final String API_KEY = "ec20a25c274fc66d3fbb6a604a4cc41f";
     // 待合成文本
     private static String TEXT = "上海明天的天气怎么样";
+    private static String ssid = "0";
     // 音频编码(raw合成的音频格式pcm、wav,lame合成的音频格式MP3)
     private static final String AUE = "raw";
     // 采样率
@@ -39,8 +40,6 @@
     private static final String ENGINE_TYPE = "intp65";
     // 文本类型（webapi是单次只支持1000个字节，具体看您的编码格式，计算一下具体支持多少文字）
     private static final String TEXT_TYPE = "text";
-
-    int ssid=0;
 
     public Map<String, String> buildHttpHeader() throws UnsupportedEncodingException {
         String curTime = System.currentTimeMillis() / 1000L + "";
@@ -119,17 +118,17 @@
         }
     }
 %>
-
 <%
     TEXT=request.getParameter("text");
-    ssid=Integer.valueOf(request.getParameter("ssid"));
-    System.out.println(TEXT);
+    ssid=request.getParameter("ssid");
+    System.out.println(TEXT+"****"+ssid);
     Map<String, String> header = buildHttpHeader();
     Map<String, Object> resultMap = doPost2(WEBTTS_URL, header, "text=" + URLEncoder.encode(TEXT, "utf-8"));
     if ("audio/mpeg".equals(resultMap.get("Content-Type"))) { // 合成成功
         if ("raw".equals(AUE)) {
-            save("I:\\程序集\\weather1\\IDEA-JAVA\\FirstModule\\web\\response" , ssid + ".wav", (byte[]) resultMap.get("body"));
-            System.out.println("合成 WebAPI 调用成功，音频保存位置：F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\audio\\response\\" + ssid + ".wav");
+            //save(request.getSession().getServletContext().getRealPath("")+"\\response\\" , ssid + ".wav", (byte[]) resultMap.get("body"));
+            save("F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\response\\",ssid + ".wav",(byte[]) resultMap.get("body"));
+            System.out.println("合成 WebAPI 调用成功，音频保存位置:" + request.getSession().getServletContext().getRealPath("")+"\\response\\" + ssid + ".wav");
         } else {
             save("F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\audio\\response\\", ssid + ".mp3", (byte[]) resultMap.get("body"));
             System.out.println("合成 WebAPI 调用成功，音频保存位置：F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\audio\\response\\" + ssid + ".mp3");
@@ -137,6 +136,7 @@
     } else { // 合成失败
         System.out.println("合成 WebAPI 调用失败，错误信息：" + resultMap.get("body").toString());//返回code为错误码时，请查询https://www.xfyun.cn/document/error-code解决方案
     }
+    System.out.println(request.getSession().getServletContext().getRealPath(""));
 %>
 
 </body>
