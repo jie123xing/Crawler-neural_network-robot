@@ -9,23 +9,14 @@
 <body>
 <div class="fixed top">固定手懒</div>
 
-    <div style=" overflow-y:auto; overflow-x:hidden; width:400px; height:400px;background-color:#dddddd;" id="ins">
-        <div style=" width:200px; height:200px; background-color:#A9A9A9" >
-           1
-        </div>
-        <div style=" width:200px; height:200px; background-color:#A9A9A9" >
-            2
-        </div>
-        <div style=" width:200px; height:200px; background-color:#A9A9A9" >
-            3
-        </div>
-    </div>
+
+
 <div id="ceshi">
     ceshiyinpingssid
 </div>
 
 <audio autoplay id="myAudio">
-    <source src="F:\weather\weather1\IDEA-JAVA\out\artifacts\FirstModule_war_exploded\response\1.wav" type="audio/mpeg">
+    <source src="F:\weather\weather1\IDEA-JAVA\FirstModule\web\response\3.wav" type="audio/mpeg">
 </audio>
 <input type="button" value="改变声音" onclick="f()">
 </div>
@@ -33,8 +24,8 @@
     var ssid=0;
     function f() {
         ssid+=1;
-        document.getElementById("ceshi").innerHTML=<%=request.getSession().getServletContext().getRealPath("")+"\\response"%>+"1.wav";
-        document.getElementById("myAudio").src=<%=request.getSession().getServletContext().getRealPath("")+"\\response"%>+"1.wav";
+        document.getElementById("ceshi").innerHTML="F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\response\\3.wav";
+        document.getElementById("myAudio").src="F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\response\\3.wav";
     }
 </script>
 

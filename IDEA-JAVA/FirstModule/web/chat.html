@@ -2,13 +2,13 @@
 <head>
     <meta charset="utf-8">
     <script>
-        function myFunction()
-        {
-
+        function myFunction() {
             alert("你好，我是一个警告框！");
         }
         var showContent = $(".myDiv");
         showContent[0].scrollTop = showContent[0].scrollHeight;
+        var x = document.getElementById("myDiv");
+        x.scrollTop = x.scrollHeight;
         function loadXMLDoc() {
             var xmlhttp;
             if (window.XMLHttpRequest) {
