@@ -7,78 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f587498f-6ae7-4365-89bd-56a63fc56865" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/FileReader/readAsDataURL.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/myluyin/src/recorder-core.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstModule/web/myluyin/src/waveview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/categorytrain.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/goodstrain.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/mainpagetrain.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/personaltrain.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/personaltrain.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/release1train.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/release1train.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/release1train.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/release2train.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/release2train.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/seller10train.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/seller1train.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/seller2train.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/seller3train.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/seller4train.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/seller9train.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/settledin1train.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/settledin1train.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/settledin2train.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/settledin3train.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/settledin3train.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/ly/settledin3train.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/order-all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/order-all.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/order-payment.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/order-payment.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/order-waittopay.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/order-waittopay.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/order-waittoreceive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/order-waittoreceive.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/payment-Alipay.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/payment-Alipay.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/payment-Bank.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/payment-Bank.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/payment-Wechat.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/payment-Wechat.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/payment-confirm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/payment-confirm.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/shoppingcar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/前端/zym/shoppingcar.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstModule/src/base.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/audiototext.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/myluyin/audiototext.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstModule/web/chat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/chat.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstModule/web/myluyin/audiototext.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/audiototext.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstModule/web/myluyin/blob.html" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/myluyin/blob.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/myluyin/blob.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/myluyin/blob.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstModule/web/record.html" beforeDir="false" afterPath="$PROJECT_DIR$/FirstModule/web/record.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/audiototext.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/chat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/chat.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/myluyin/audiototext.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/myluyin/blob.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/myluyin/blob.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/myluyin/blob.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/myluyin/blob.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/record.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/record.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/前端/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/前端/jyx/pic/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/前端/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/前端/jyx/pic/2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/前端/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/前端/jyx/pic/3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/前端/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/前端/jyx/pic/4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/前端/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/前端/jyx/pic/5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/前端/6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/前端/jyx/pic/6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/前端/7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/前端/jyx/pic/7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/前端/8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/前端/jyx/pic/8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/前端/9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/前端/jyx/pic/9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/前端/Favorites.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/前端/jyx/pic/Favorites.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/前端/business_center.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/前端/mytrace.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/前端/jyx/pic/mytrace.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/前端/service_center.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/前端/jyx/pic/service_center.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/前端/weixin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/前端/jyx/pic/weixin.jpg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -113,31 +49,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FirstModule/web/myluyin/blob.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="297" column="34" selection-start-line="297" selection-start-column="34" selection-end-line="297" selection-end-column="34" />
+            <state relative-caret-position="-1534">
+              <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
               <folding>
                 <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="e#6475#7253#0" />
-                <element signature="e#10013#10139#0" />
-                <element signature="e#10169#10284#0" />
-                <element signature="e#10347#10549#0" />
-                <element signature="e#10061#10655#0" />
+                <element signature="e#10880#11474#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FirstModule/web/myluyin/audiototext.jsp">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FirstModule/web/chat.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="123" selection-start-line="123" selection-end-line="123" />
+            <state relative-caret-position="-17">
+              <caret line="98" column="52" lean-forward="true" selection-start-line="98" selection-start-column="52" selection-end-line="98" selection-end-column="52" />
               <folding>
-                <element signature="e#1499#2396#0#JAVA" />
-                <element signature="e#2959#4191#0#JAVA" />
+                <element signature="e#3546#3616#0#HTML" />
+                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#11130#12565#0#HTML" />
+                <element signature="n#script#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#13045#14243#0#HTML" />
+                <element signature="e#14272#14866#0#HTML" />
               </folding>
             </state>
           </provider>
@@ -148,12 +84,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTTP Request" />
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="Jsp File" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -163,7 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/FirstModule/web/1.html" />
         <option value="$PROJECT_DIR$/out/artifacts/FirstModule_war_exploded/main.jsp" />
         <option value="$PROJECT_DIR$/src/webapi_tts/hemain.java" />
         <option value="$PROJECT_DIR$/src/webapi_tts/WebTTs.java" />
@@ -197,7 +132,6 @@
         <option value="$PROJECT_DIR$/FirstModule/web/hualun.html" />
         <option value="$PROJECT_DIR$/FirstModule/web/成功保存文件.jsp" />
         <option value="$PROJECT_DIR$/FirstModule/web/录音/record.html" />
-        <option value="$PROJECT_DIR$/FirstModule/web/chat.jsp" />
         <option value="$PROJECT_DIR$/FirstModule/web/getrobotresponse.jsp" />
         <option value="$PROJECT_DIR$/FirstModule/web/录音/blob.jsp" />
         <option value="$PROJECT_DIR$/FirstModule/web/录音/blob.html" />
@@ -210,10 +144,12 @@
         <option value="$PROJECT_DIR$/src/前端/Favorites.html" />
         <option value="$PROJECT_DIR$/src/前端/service_center.html" />
         <option value="$PROJECT_DIR$/src/前端/ly/categorytrain.html" />
-        <option value="$PROJECT_DIR$/FirstModule/web/audiototext.jsp" />
         <option value="$PROJECT_DIR$/FirstModule/web/FileReader/readAsDataURL.html" />
+        <option value="$PROJECT_DIR$/FirstModule/src/base.java" />
         <option value="$PROJECT_DIR$/FirstModule/web/myluyin/audiototext.jsp" />
         <option value="$PROJECT_DIR$/FirstModule/web/myluyin/blob.html" />
+        <option value="$PROJECT_DIR$/FirstModule/web/audiototext.jsp" />
+        <option value="$PROJECT_DIR$/FirstModule/web/chat.jsp" />
       </list>
     </option>
   </component>
@@ -256,50 +192,12 @@
               <item name="IDEA-JAVA" type="462c0819:PsiDirectoryNode" />
               <item name="FirstModule" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="IDEA-JAVA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEA-JAVA" type="462c0819:PsiDirectoryNode" />
-              <item name="FirstModule" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEA-JAVA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEA-JAVA" type="462c0819:PsiDirectoryNode" />
-              <item name="FirstModule" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="FileReader" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEA-JAVA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEA-JAVA" type="462c0819:PsiDirectoryNode" />
-              <item name="FirstModule" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="myluyin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEA-JAVA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEA-JAVA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEA-JAVA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEA-JAVA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDEA-JAVA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDEA-JAVA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="zym" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,19 +213,19 @@
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\weather\weather1\IDEA-JAVA\FirstModule\web" />
+      <recent name="F:\weather\weather1\IDEA-JAVA\FirstModule\web\myluyin" />
+      <recent name="F:\weather\weather1\IDEA-JAVA\FirstModule\web\myluyin\src" />
+      <recent name="F:\weather\weather1\IDEA-JAVA\src\前端\jyx\pic" />
+      <recent name="F:\weather\weather1\IDEA-JAVA\src\前端\pic" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\weather\weather1\IDEA-JAVA\FirstModule\web" />
       <recent name="F:\weather\weather1\IDEA-JAVA\src\前端" />
       <recent name="F:\weather\weather1\IDEA-JAVA\FirstModule\web\myluyin\src" />
       <recent name="F:\weather\weather1\IDEA-JAVA\FirstModule\web\myluyin" />
       <recent name="I:\程序集\weather1\IDEA-JAVA\FirstModule\web" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\weather\weather1\IDEA-JAVA\FirstModule\web\myluyin" />
-      <recent name="F:\weather\weather1\IDEA-JAVA\FirstModule\web\myluyin\src" />
-      <recent name="F:\weather\weather1\IDEA-JAVA\src\前端\jyx\pic" />
-      <recent name="F:\weather\weather1\IDEA-JAVA\src\前端\pic" />
-      <recent name="F:\weather\weather1\IDEA-JAVA\FirstModule\web" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -369,15 +267,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="base" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="base" />
+      <module name="FirstModule" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="testfilesave" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="testfilesava.testfilesave" />
       <module name="FirstModule" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="filesave.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/FirstModule/filesave.jsp">
-      <method v="2" />
     </configuration>
     <configuration name="Tomcat8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.14" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER" value="false" />
@@ -503,17 +405,17 @@
       <item itemvalue="Application.testfilesave" />
       <item itemvalue="Application.WebaiuiDemo" />
       <item itemvalue="Application.WebIATWS" />
-      <item itemvalue="JavaScript Debug.filesave.jsp" />
+      <item itemvalue="Application.base" />
       <item itemvalue="Tomcat Server.Tomcat8" />
       <item itemvalue="Tomcat Server.Tomcat9" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.base" />
+        <item itemvalue="Application.WebTTs (1)" />
         <item itemvalue="Application.WebaiuiDemo" />
         <item itemvalue="Application.WebIATWS" />
         <item itemvalue="Application.testfilesave" />
-        <item itemvalue="Application.WebTTs (1)" />
-        <item itemvalue="JavaScript Debug.filesave.jsp" />
       </list>
     </recent_temporary>
   </component>
@@ -532,14 +434,14 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3214826" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33207262" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32614556" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49856734" visible="true" weight="0.352459" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49856734" weight="0.16885246" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39892185" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -549,7 +451,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32884097" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143266" side_tool="true" weight="0.2857143" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32786885" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32614556" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32459018" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -594,19 +496,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FirstModule/web/filesave.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/科大讯飞语音听写/WebIATWS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/实时语音转写/util/EncryptUtil.java" />
-    <entry file="file://$PROJECT_DIR$/src/实时语音转写/DraftWithOrigin.java" />
     <entry file="file://$PROJECT_DIR$/src/实时语音转写/RTASRTest.java" />
     <entry file="file://$PROJECT_DIR$/src/AIUI/WebaiuiDemo.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -636,13 +525,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FirstModule/web/myluyin/record.js" />
-    <entry file="file://$PROJECT_DIR$/FirstModule/web/chat.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="91" column="10" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FirstModule/web/hualun.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -758,37 +640,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/前端/1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#15;n#ul#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#18;n#ul#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#21;n#ul#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#24;n#ul#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/前端/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/前端/business_center.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/前端/1.html" />
+    <entry file="file://$PROJECT_DIR$/src/前端/header.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/前端/business_center.html" />
     <entry file="file://$PROJECT_DIR$/src/前端/jyx/pic/service_center.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="35">
@@ -841,23 +695,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FirstModule/web/zym/order-waittoreceive.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="5" column="63" lean-forward="true" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FirstModule/web/zym/order-payment.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FirstModule/web/zym/header.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/FirstModule/web/zym/order-waittoreceive.jsp" />
+    <entry file="file://$PROJECT_DIR$/FirstModule/web/zym/order-payment.jsp" />
+    <entry file="file://$PROJECT_DIR$/FirstModule/web/zym/header.css" />
     <entry file="file://$PROJECT_DIR$/src/前端/zym/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
@@ -874,33 +714,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FirstModule/web/FileReader/readAsDataURL.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+        <state relative-caret-position="542">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+          <folding>
+            <element signature="e#731#1528#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FirstModule/web/myluyin/audiototext.jsp">
+    <entry file="file://$PROJECT_DIR$/FirstModule/src/mywebapi_tts/WebTTs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        <state relative-caret-position="140">
+          <caret line="87" column="75" lean-forward="true" selection-start-line="87" selection-start-column="75" selection-end-line="87" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_152/src.zip!/java/util/Base64.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="713" selection-start-line="713" selection-end-line="713" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FirstModule/src/base.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
-            <element signature="e#1499#2396#0#JAVA" />
-            <element signature="e#2959#4191#0#JAVA" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_152/src.zip!/java/net/AbstractPlainSocketImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="187" column="49" lean-forward="true" selection-start-line="187" selection-start-column="49" selection-end-line="187" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FirstModule/web/myluyin/blob.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="297" column="34" selection-start-line="297" selection-start-column="34" selection-end-line="297" selection-end-column="34" />
+        <state relative-caret-position="-1534">
+          <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
           <folding>
             <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="e#6475#7253#0" />
-            <element signature="e#10013#10139#0" />
-            <element signature="e#10169#10284#0" />
-            <element signature="e#10347#10549#0" />
-            <element signature="e#10061#10655#0" />
+            <element signature="e#10880#11474#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FirstModule/web/audiototext.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3576">
+          <caret line="12" column="86" selection-start-line="12" selection-start-column="86" selection-end-line="12" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FirstModule/web/chat.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="98" column="52" lean-forward="true" selection-start-line="98" selection-start-column="52" selection-end-line="98" selection-end-column="52" />
+          <folding>
+            <element signature="e#3546#3616#0#HTML" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#11130#12565#0#HTML" />
+            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#13045#14243#0#HTML" />
+            <element signature="e#14272#14866#0#HTML" />
           </folding>
         </state>
       </provider>

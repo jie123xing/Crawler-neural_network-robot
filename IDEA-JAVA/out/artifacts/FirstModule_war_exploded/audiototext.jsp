@@ -11,11 +11,6 @@
 <%@ page import="com.sun.net.httpserver.HttpContext" %>
 <%@ page import="sun.misc.Request" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<html>
-<head>
-    <title>录音转文字</title>
-</head>
-<body>
 <%!
     private static final String URL = "http://openapi.xfyun.cn/v2/aiui";
     private static final String APPID = "5d2f15c5";
@@ -98,13 +93,15 @@
         }
         return result;
     }
+    String ss;
 %>
 <%
-    FILE_PATH=request.getSession().getServletContext().getRealPath("")+"\\response\\2.wav";
+    //FILE_PATH=request.getSession().getServletContext().getRealPath("")+"\\response\\2.wav";
     Map<String, String> header = buildHeader();
-    byte[] dataByteArray = readFile(FILE_PATH);
-    String result = httpPost(URL, header, dataByteArray);
+    //byte[] dataByteArray = readFile(FILE_PATH);
+    //String result = httpPost(URL, header, dataByteArray);
     //已经声明了会抛异常,那么在调用这个方法的时候,就必须做异常处理,
+    /*
     try {
         JSONObject jsonObj = new JSONObject(result);
         String ss=jsonObj.getJSONArray("data").getJSONObject(0).getString("text");
@@ -112,23 +109,26 @@
     } catch (JSONException e) {
         e.printStackTrace();
     }
+     */
 
-%>
-<%=
-45%>
-<%
 System.out.println("t:"+request.getParameter("t"));
 String t=request.getParameter("t");
 String[] tbase=t.split(",");
 System.out.println(tbase[1]);
+System.out.println(tbase[1].length());
+    tbase[1] = tbase[1].replaceAll(" ","+");
+byte[] base64= java.util.Base64.getDecoder().decode(tbase[1]);
+    System.out.println(base64);
+String result1 = httpPost(URL, header,base64 );
 
-//byte[] base64data= java.util.Base64.getDecoder().decode(tbase[1]);
-//System.out.println(base64data);
-//String str=new String(base64data,"utf-8");
- //   System.out.println(str);
+System.out.println(result1);
+    try {
+        JSONObject jsonObj = new JSONObject(result1);
+        ss=jsonObj.getJSONArray("data").getJSONObject(0).getString("text");
+        System.out.println("转的文本是："+ss);
+    } catch (JSONException e) {
+        e.printStackTrace();
+    }
 %>
-<%=45
-//HttpContext.Current.Request
-%>
-</body>
-</html>
+<%=ss%>
+
