@@ -1,0 +1,23 @@
+.confirmarea{
+    height: 800px;
+    border:1px solid black;
+    display: table;
+    text-align: center;
+}
+
+.vertical-middle{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.return:link{
+    text-decoration: none;
+}
+
+.return:visited{
+    text-decoration: none;
+}
+
+.return:hover{
+    text-decoration: none;
+}

@@ -1,0 +1,59 @@
+div.show-list{
+    border:1px solid black;
+}
+.list-title{
+    background-color: brown;
+    color:white;
+    margin-top:5%;
+    margin-bottom:5%;
+    padding:5px 0;
+    width:25%;
+}
+div.sort-list{
+    border:1px solid black;
+}
+div.sort-list-content{
+    padding-top:5%;
+    padding-bottom:5%;
+    background-color: white;
+}
+div.content-element1{
+    padding-top:5%;
+    padding-bottom:5%;
+}
+div.content-element1 img{
+    display:inline-block;
+}
+div.content-element1 span.img-name{
+    display:inline-block;
+}
+div.procedure-list{
+    border:1px solid black;
+}
+div.procedure-list-content{
+    padding-top:5%;
+    padding-bottom:5%;
+    background-color: white;
+}
+div.choice-list{
+    border:1px solid black;
+}
+div.choice-list-content{
+    padding-top:5%;
+    padding-bottom:5%;
+    background-color:white;
+}
+div.choice-list-content button{
+    margin-left:15%;
+    color:white;
+    background-color: aqua;
+}
+div.choice-list-content button.hover{
+    margin-left:15%;
+    color:white;
+    background-color: aqua;
+}
+
+
+
+

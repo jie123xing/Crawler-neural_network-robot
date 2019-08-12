@@ -1,0 +1,164 @@
+span.release1-category{
+    font-size:12px;
+    margin-left:5%;
+}
+div.release1-content a{
+    font-size:12px;
+    color:blue; 
+}
+div.release2-content{
+    font-size:12px;
+    border:1px solid black;
+}
+div.release2-content-form{
+    padding-left:5%;
+    border:1px solid black;
+}
+form.goods-kind-content{
+    display:inline-block;
+}
+div.release2-content-topic input{
+    display:inline-block;
+}
+div.release2-content-topic span{
+    display:inline-block;
+}
+div.release2-content-hotpoint textarea{
+    display:inline-block;
+    margin-left: 15%;
+    height:80px;
+    width:300px;
+    resize:none;
+}
+div.release2-content-hotpoint span{
+    display:inline-block;
+}
+
+div.goods-attribute-warning{
+    font-size:8px;
+    color:grey;
+}
+div.goods-attribute-detail{
+    border:1px solid black;
+}
+span.goods-picture{
+    float:left;
+}
+div.goods-picture-warning{
+    float:left;
+    font-size:8px;
+    color:grey;
+}
+div.release2-content-picture img{
+    margin-left:10%;
+}
+div.release2-content-specification{
+}
+div.goods-specification-detail{
+    border:1px solid black;
+}
+div.s1-row1 input{
+    margin-left: 5%;
+}
+div.s1-row1 input[type=button]{
+    background-color: grey;
+}
+form.s2-row1 input{
+    margin-left: 5%;
+}
+form.s2-row2{
+    margin-left:5%;
+    margin-right:5%;
+    border:1px solid black;
+}
+form.s2-row2 input{
+    margin-left:7%;
+}
+div.specification3 div.s3-row1 span{
+    display:inline-block;
+    margin-left:5%;
+}
+div.specification3 div.s3-row1 input{
+    display:inline-block;
+    margin-left:5%;
+}
+div.specification3 div.s3-row1 input[type=button]{
+    background-color:grey;
+}
+div.release2-content-issue span.goods-issue{
+    display:inline-block;
+}
+div.release2-content-issue div.goods-issue-detail{
+    display:inline-block;
+    margin-left:5%;
+}
+div.release2-content-source span{
+    display:inline-block;
+}
+div.release2-content-source form{
+    display:inline-block;
+}
+div.release2-content-advanceBooking span{
+    display:inline-block;
+}
+div.release2-content-advanceBooking form{
+    display:inline-block;
+}
+div.release2-content-video span.goods-video{
+    display:inline-block;
+}
+div.release2-content-video div.goods-video-content{
+    display:inline-block;
+}
+
+div.release2-content-description div.goods-description-content{
+    margin-left:15%;
+}
+div.release2-content-description textarea#goods-description-textarea{
+    height:80px;
+    width:300px;
+    resize:none;
+}
+div.release3-content{
+    font-size:12px;
+    border:1px solid black;
+}
+div.release3-content-extraction span{
+    display:inline-block;
+}
+div.release3-content-extraction form{
+    display:inline-block;
+}
+div.goods-extraction-extra{
+    margin-left:10%;
+}
+div.goods-extraction-extra span{
+    display:inline-block;
+}
+div.goods-extraction-extra div.logistic-distribution-set-warning{
+    display:inline-block;
+    font-size:8px;
+    color:grey;
+}
+div.goods-set-show{
+    background-color: grey;
+} 
+ 
+form.goods-set-template select{
+} 
+form.goods-set-template input{
+    background-color: grey;
+    border:1px solid black;
+} 
+div.release4-content-service span{
+    display:inline-block;
+}
+div.release4-content-service form{
+    display:inline-block;
+}
+div.release4-content-other span{
+    display:inline-block;
+}
+div.release4-content-other form{
+    display:inline-block;
+}

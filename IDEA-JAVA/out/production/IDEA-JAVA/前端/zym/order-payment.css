@@ -1,0 +1,118 @@
+.information-title{
+    margin-top: 10px;
+    width:100%;
+    height: 45px;
+    display: table;
+    background-color: rgb(215,215,215);
+}
+
+.vertical-middle{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.address{
+    margin-top: 20px;
+    height: 135px;
+    background-color: rgb(215,215,215);
+    border: 1px solid black;
+}
+
+.address-item{
+    width: 100%;
+    height: 33.33%;
+    display: table;
+}
+
+.address-manage{
+    margin-top: 20px;
+}
+
+.myattribute{
+    margin-top: 20px;
+    height: 45px;
+    background-color: rgb(215,215,215);
+}
+
+.mylabel{
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-right: black 1px solid;
+}
+
+.mylabel-last{
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+}
+
+.mylist-order{
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: rgb(242,242,242);
+}
+
+.img-div{
+    display: table;
+    height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.myimg{
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align:middle;
+    color:white;
+}
+
+.information-quest{
+    height: 180px;
+    margin-top: 20px;
+}
+
+.information-border{
+    height: 100%;
+    border:1px solid red;
+}
+
+.information-item{
+    width: 100%;
+    height: 33.33%;
+    display: table;
+    text-align: right;
+}
+
+.button-account{
+    width: 100%;
+    height: 100%;
+    border: unset;
+    background-color: red;
+}
+
+.button-account:visited{
+    background-color: red !important;
+}
+
+.button-account:hover{
+    background-color: red !important;
+}
+
+.operator{
+    height: 45px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.return-shoppingcar{
+    height:100%;
+    display: table
+}
+
+.set-order{
+    padding: unset;
+    height: 100%;
+}

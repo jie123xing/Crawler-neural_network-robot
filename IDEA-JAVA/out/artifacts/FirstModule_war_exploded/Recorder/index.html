@@ -121,6 +121,7 @@ RandomKey.idx=0;
 		
 		<button onclick="recpause()" style="margin-left:60px">暂停</button>
 		<button onclick="recresume()">继续</button>
+        <button onclick="recdown64()">down64</button>
 	</div>
 	<div class="pd recpower">
 		<div style="height:40px;width:300px;background:#999;position:relative;">
@@ -438,7 +439,7 @@ function recdown64(key, cls){
 		var id=RandomKey(16);
 		$("."+cls).append('<textarea class="'+id+'"></textarea>');
 		$("."+id).val(reader.result);
-	};
+	};1
 	reader.readAsDataURL(o.blob);
 };
 $(".recinfo").html(BuildHtml($(".tp_recinfo").html()));

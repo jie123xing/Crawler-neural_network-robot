@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>情感伴随——机器人</title>
+    <style>
+        .div-left{ float:left;width:50%; height:900px;border:0px solid #FFCC67; background-color:#FFCC67; margin-right:0;}
+        .div-right{ float:left;width:49.7%; height:900px;border:0px solid #FFF0D1; background-color:#FFF0D1;position: relative;margin-left:0;left: 0px;}
+
+        .text{
+            width: 980px;
+            height: 40px;
+            outline: none;
+            margin-top:20px;
+            font: 16px "microsoft yahei",Helvetica,Tahoma,Arial,"Microsoft jhengHei";
+            padding:0 15px;
+            line-height: 36px;
+            border: 1px solid #DADADA;
+            background:#FFFFFF;
+            color: #6F6F6F !important;
+            vertical-align: middle;
+        }
+    </style>
+    <script language="javascript" type="text/javascript">
+        function bntShow() {
+            if(document.getElementById("content").style.display === 'none' ){
+                document.getElementById('content').style.display = '';
+                document.getElementById('record').style.display = 'none';
+            } else {
+                document.getElementById('content').style.display = 'none';
+                document.getElementById('record').style.display = '';
+            }
+        }
+        function down(){
+            document.getElementById('myDiv').innerHTML = 'down';
+            document.getElementById('recoding').style.display = '';
+        }
+        function up(){
+            document.getElementById('myDiv').innerHTML = 'up';
+            document.getElementById('recoding').style.display = 'none';
+        }
+    </script>
+</head>
+<script language="javascript" type="text/javascript">
+    function bntShow()
+    {
+        if(document.getElementById("content").style.display === 'none' ){
+            document.getElementById('content').style.display = '';
+            document.getElementById('button1').style='background-image:url(img/speech.png);width:38px; height:38px; border:0px; margin-top:20px; margin-left:20px;vertical-align: middle;'
+            document.getElementById('record').style.display = 'none';
+        } else {
+            document.getElementById('button1').style='background-image:url(img/keyboard.png);width:38px; height:38px; border:0px; margin-top:20px; margin-left:20px;vertical-align: middle;'
+            document.getElementById('content').style.display = 'none';
+            document.getElementById('record').style.display = '';
+        }
+    }
+</script>
+<body  style="margin:10px;">
+<div style="text-align: center;  width:100%;height:900px;position: relative; top: 10px; left: 0px;">
+    <div class="div-left" align="right"><img src="img/left.png" /></div>
+    <div class="div-right" align="left"> <img src="img/right.png" /></div>
+    <center>
+        <div style="left: calc(100vw/2 - 600px);top:160px; width:1200px; background-color:#FFFFFF;  position: absolute; z-index: 2; height: 470px;text-align: center;">
+            <div id="myDiv" style="width: 1200px; height:390px; text-align: left; overflow:auto">
+                <div id="recoding" style="text-align:center;"><img src="img/audio.gif" style="width: 200px; height:50px;"></div>
+            </div>
+            <div style="width: 1200px; height:80px; text-align: left; background-color:#DADADA; " >
+                <input id="button1" type="button" onclick="bntShow()" style="background-image:url(img/speech.png); width:38px; height:38px; border:0px; margin-top:20px; margin-left:20px;vertical-align: middle;"/>&nbsp;&nbsp;<input id="content" class="text" type="text" name="content" /><input id="record" type="button" value="按下录音  抬起发送" onmousedown="down()"  onmouseup="up()" style="background-color:rgba(255,255,255,0.99); width:1011px; height:40px; border:0px; margin-top:20px;vertical-align: middle;display:none"/>&nbsp;&nbsp;<input id="button2" onclick="loadXMLDoc()" type="button" style="background-image:url(img/send.png);position: relative; width:88px; height:40px; border:0px; margin-top:20px;vertical-align: middle;"/></div>
+        </div>
+    </center>
+</div>
+
+</body>
+</html>

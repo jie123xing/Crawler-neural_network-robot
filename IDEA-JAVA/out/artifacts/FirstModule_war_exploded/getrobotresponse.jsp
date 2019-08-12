@@ -8,12 +8,8 @@
 <%@ page import="java.net.URLConnection" %>
 <%@ page import="java.net.HttpURLConnection" %>
 <%@ page import="static org.apache.commons.io.IOUtils.toByteArray" %>
+<%@ page import="java.util.Arrays" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<html>
-<head>
-    <title>文字转音频</title>
-</head>
-<body>
 <%!
     // 合成webapi接口地址
     private static final String WEBTTS_URL = "http://api.xfyun.cn/v1/service/v1/tts";
@@ -24,6 +20,10 @@
     // 待合成文本
     private static String TEXT = "上海明天的天气怎么样";
     private static String ssid = "0";
+    private static String folder = "folder";
+    private static String audiobase="";
+    private static byte [] byte1;
+    private static byte [] byte2;
     // 音频编码(raw合成的音频格式pcm、wav,lame合成的音频格式MP3)
     private static final String AUE = "raw";
     // 采样率
@@ -56,6 +56,11 @@
     }
     public static void save(String filePath, String fileName, byte[] content) {
         try {
+            File filedir = new File(filePath);
+            if (!filedir.exists()) {
+                filedir.mkdirs();
+                //System.out.println("mkdirs");
+            }
             File file = new File(filePath, fileName);
             OutputStream os = new FileOutputStream(file);
             os.write(content, 0, content.length);
@@ -121,23 +126,27 @@
 <%
     TEXT=request.getParameter("text");
     ssid=request.getParameter("ssid");
-    System.out.println(TEXT+"****"+ssid);
+    folder =request.getParameter("folder");
+    System.out.println(TEXT+"****"+ folder +"****"+ssid);
     Map<String, String> header = buildHttpHeader();
     Map<String, Object> resultMap = doPost2(WEBTTS_URL, header, "text=" + URLEncoder.encode(TEXT, "utf-8"));
     if ("audio/mpeg".equals(resultMap.get("Content-Type"))) { // 合成成功
         if ("raw".equals(AUE)) {
-            save(request.getSession().getServletContext().getRealPath("")+"\\response\\" , ssid + ".wav", (byte[]) resultMap.get("body"));
-            //save("F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\response\\",ssid + ".wav",(byte[]) resultMap.get("body"));
-            System.out.println("合成 WebAPI 调用成功，音频保存位置:" + request.getSession().getServletContext().getRealPath("")+"\\response\\" + ssid + ".wav");
+            audiobase=java.util.Base64.getEncoder().encodeToString((byte[]) resultMap.get("body"));//1编码
+            System.out.println(audiobase);
+            //save(request.getSession().getServletContext().getRealPath("")+"\\"+folder+"\\" , ssid + ".wav", (byte[]) resultMap.get("body"));
+            //linux;save(request.getSession().getServletContext().getRealPath("")+folder+"\/" , ssid + ".wav", (byte[]) resultMap.get("body"));
+            //save("F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\"+folder+"\\",ssid + ".wav",byte2);//idea中调试的地址
+            //System.out.println("合成 WebAPI 调用成功，音频保存位置:" + request.getSession().getServletContext().getRealPath("")+"\\"+folder+"\\" + ssid + ".wav");
         } else {
             save("F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\audio\\response\\", ssid + ".mp3", (byte[]) resultMap.get("body"));
             System.out.println("合成 WebAPI 调用成功，音频保存位置：F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\audio\\response\\" + ssid + ".mp3");
         }
-    } else { // 合成失败
+    }
+    else { // 合成失败
         System.out.println("合成 WebAPI 调用失败，错误信息：" + resultMap.get("body").toString());//返回code为错误码时，请查询https://www.xfyun.cn/document/error-code解决方案
     }
-    System.out.println(request.getSession().getServletContext().getRealPath(""));
 %>
 
-</body>
-</html>
+<%=audiobase%>
+

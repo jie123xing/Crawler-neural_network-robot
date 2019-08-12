@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>情感伴随——机器人</title>
+<style>
+.div-left{ float:left;width:50%; height:900px;border:0px solid #FFCC67; background-color:#FFCC67; margin-right:0;} 
+.div-right{ float:left;width:49.7%; height:900px;border:0px solid #FFF0D1; background-color:#FFF0D1;position: relative;margin-left:0;left: 0px;} 
+
+.text{
+	width: 980px;
+	height: 40px;
+	outline: none;	
+	margin-top:20px;
+	font: 16px "microsoft yahei",Helvetica,Tahoma,Arial,"Microsoft jhengHei";
+	padding:0 15px;
+	line-height: 36px;
+	border: 1px solid #DADADA;
+	background:#FFFFFF;
+	color: #6F6F6F !important;
+	vertical-align: middle;
+}
+</style>
+<script language="javascript" type="text/javascript">
+	function bntShow()
+	{
+		if(document.getElementById("content").style.display === 'none' ){
+			document.getElementById('content').style.display = '';
+			document.getElementById('record').style.display = 'none';
+        } else {
+            document.getElementById('content').style.display = 'none';
+			document.getElementById('record').style.display = '';
+        }
+	}
+</script>
+</head>
+
+<body  style="margin:10px;">
+<div style="text-align: center;  width:100%;height:900px;position: relative; top: 10px; left: 0px;">
+<div class="div-left" align="right"><img src="img/left.png" /></div>
+<div class="div-right" align="left"> <img src="img/right.png" /></div>
+<center>
+<div style="left: calc(100vw/2 - 600px);top:160px; width:1200px; background-color:#FFFFFF;  position: absolute; z-index: 2; height: 470px;text-align: center;">
+	<div id="myDiv" style="width: 1200px; height:390px; text-align: left; overflow:auto">
+	
+	</div>
+	<div style="width: 1200px; height:80px; text-align: left; background-color:#DADADA; " >
+		<input id="button1" type="button" onmousedown="startRecording()" onmouseup="upload64()" style="background-image:url(img/speech.png); width:38px; height:38px; border:0px; margin-top:20px; margin-left:20px;vertical-align: middle;"/>&nbsp;&nbsp;<input id="quest" class="text" type="text" name="content" /><input id="record" type="button" style="background-image:url(img/record.png); width:1011px; height:40px; border:0px; margin-top:20px;vertical-align: middle;display:none"/>&nbsp;&nbsp;<input id="button2" onclick="loadXMLDoc()" type="button" style="background-image:url(img/send.png);position: relative; width:88px; height:40px; border:0px; margin-top:20px;vertical-align: middle;"/></div>
+    </div>
+</center>
+</div>
+<audio  autoplay  id="myAudio">
+    <source src="">
+</audio>
+<script>
+    var ssid=0;
+    var mybotton1=0;
+    var audiobase="";
+    var folder=String(new Date().getTime())+"8888"+String(Math.floor(Math.random()*(1000+1)));
+    function loadXMLDoc() {
+        var xmlhttp;
+        if (window.XMLHttpRequest) {
+            // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // IE6, IE5 浏览器执行代码
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("myDiv").innerHTML += "我：" + document.getElementById("quest").value+"<br>" ;
+                document.getElementById("myDiv").innerHTML += "机器人：" + xmlhttp.responseText+"<br>";
+                /*var div=document.getElementById("myDiv")
+                var br = document.createElement("br");
+                var p=document.createElement("p");
+                var robotimg=document.createElement("img");
+                robotimg.src="img/robot.png"
+                robotimg.style="float:left";
+                var userimg=document.createElement("img");
+                userimg.src="img/user.png"
+                userimg.style="float:left ";
+                var div2=document.createElement("div");//robot
+                div2.id ="robot";
+                div2.innerHTML=xmlhttp.responseText;
+                div2.style="fontsize：38px";
+                div2.appendChild(robotimg)
+                var div3=document.createElement("div");//user
+                div3.id ="user";
+                div3.innerHTML=document.getElementById("quest").value;
+                div3.style="fontsize：38px ";
+                div3.appendChild(userimg)
+                div.appendChild(div3);div.appendChild(br);div.appendChild(div2);div.appendChild(br);*/
+                txttowav(xmlhttp.responseText)
+                document.getElementById("quest").value = "";
+                var x = document.getElementById("myDiv");
+                x.scrollTop = x.scrollHeight;
+                //myaudio()
+            }
+        }
+        xmlhttp.open("GET", "robot.jsp?teststring=" + document.getElementById("quest").value, true);
+        //xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send();
+    }
+    function sleep(delay) {
+        var start = (new Date()).getTime();
+        while ((new Date()).getTime() - start < delay) {
+            continue;
+        }
+    }
+    function txttowav(text123) {//将图灵机器人的回复文字通过robotrobotresponse.jsp转化为语音储存
+        var robotresponse;
+        ssid+=1;
+        if (window.XMLHttpRequest)
+        {
+            // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+            robotresponse=new XMLHttpRequest();
+        }
+        else
+        {
+            // IE6, IE5 浏览器执行代码
+            robotresponse=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        robotresponse.onreadystatechange=function()
+        {
+            if (robotresponse.readyState==4 && robotresponse.status==200)
+            {
+                audiobase=robotresponse.responseText;
+                document.getElementById("myAudio").src="data:audio/wav;base64,"+audiobase;
+            }
+        }
+        robotresponse.open("GET","getrobotresponse.jsp?text="+text123+"&ssid="+ssid+"&folder="+folder,true);
+        //xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        robotresponse.send();
+    }
+    function myaudio(){//播放robot回复语音
+        document.getElementById("myAudio").src="data:audio/wav;base64,"+ audiobase;
+    }
+</script>
+<script>
+    //兼容
+    window.URL = window.URL || window.webkitURL;
+    //获取计算机的设备：摄像头或者录音设备
+    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+    var HZRecorder = function (stream, config) {
+        config = config || {};
+        config.sampleBits = config.sampleBits || 16;      //采样数位 8, 16
+        config.sampleRate = config.sampleRate || (16000);   //采样率(1/6 44100)
+
+        //创建一个音频环境对象
+        var audioContext = window.AudioContext || window.webkitAudioContext;
+        var context = new audioContext();
+        var audioInput = context.createMediaStreamSource(stream);
+        // 第二个和第三个参数指的是输入和输出都是单声道,2是双声道。
+        var recorder = context.createScriptProcessor(4096, 1, 1);
+
+        var audioData = {
+            size: 0          //录音文件长度
+            , buffer: []     //录音缓存
+            , inputSampleRate: context.sampleRate    //输入采样率
+            , inputSampleBits: 16       //输入采样数位 8, 16
+            , outputSampleRate: config.sampleRate    //输出采样率
+            , outputSampleBits: config.sampleBits       //输出采样数位 8, 16
+            , input: function (data) {
+                this.buffer.push(new Float32Array(data));
+                this.size += data.length;
+            }
+            , compress: function () { //合并压缩
+                //合并
+                var data = new Float32Array(this.size);
+                var offset = 0;
+                for (var i = 0; i < this.buffer.length; i++) {
+                    data.set(this.buffer[i], offset);
+                    offset += this.buffer[i].length;
+                }
+                //压缩
+                var compression = parseInt(this.inputSampleRate / this.outputSampleRate);
+                var length = data.length / compression;
+                var result = new Float32Array(length);
+                var index = 0, j = 0;
+                while (index < length) {
+                    result[index] = data[j];
+                    j += compression;
+                    index++;
+                }
+                return result;
+            }
+            , encodeWAV: function () {
+                var sampleRate = Math.min(this.inputSampleRate, this.outputSampleRate);
+                var sampleBits = Math.min(this.inputSampleBits, this.outputSampleBits);
+                var bytes = this.compress();
+                var dataLength = bytes.length * (sampleBits / 8);
+                var buffer = new ArrayBuffer(44 + dataLength);
+                var data = new DataView(buffer);
+
+                var channelCount = 1;//单声道
+                var offset = 0;
+
+                var writeString = function (str) {
+                    for (var i = 0; i < str.length; i++) {
+                        data.setUint8(offset + i, str.charCodeAt(i));
+                    }
+                }
+
+                // 资源交换文件标识符
+                writeString('RIFF'); offset += 4;
+                // 下个地址开始到文件尾总字节数,即文件大小-8
+                data.setUint32(offset, 36 + dataLength, true); offset += 4;
+                // WAV文件标志
+                writeString('WAVE'); offset += 4;
+                // 波形格式标志
+                writeString('fmt '); offset += 4;
+                // 过滤字节,一般为 0x10 = 16
+                data.setUint32(offset, 16, true); offset += 4;
+                // 格式类别 (PCM形式采样数据)
+                data.setUint16(offset, 1, true); offset += 2;
+                // 通道数
+                data.setUint16(offset, channelCount, true); offset += 2;
+                // 采样率,每秒样本数,表示每个通道的播放速度
+                data.setUint32(offset, sampleRate, true); offset += 4;
+                // 波形数据传输率 (每秒平均字节数) 单声道×每秒数据位数×每样本数据位/8
+                data.setUint32(offset, channelCount * sampleRate * (sampleBits / 8), true); offset += 4;
+                // 快数据调整数 采样一次占用字节数 单声道×每样本的数据位数/8
+                data.setUint16(offset, channelCount * (sampleBits / 8), true); offset += 2;
+                // 每样本数据位数
+                data.setUint16(offset, sampleBits, true); offset += 2;
+                // 数据标识符
+                writeString('data'); offset += 4;
+                // 采样数据总数,即数据总大小-44
+                data.setUint32(offset, dataLength, true); offset += 4;
+                // 写入采样数据
+                if (sampleBits === 8) {
+                    for (var i = 0; i < bytes.length; i++, offset++) {
+                        var s = Math.max(-1, Math.min(1, bytes[i]));
+                        var val = s < 0 ? s * 0x8000 : s * 0x7FFF;
+                        val = parseInt(255 / (65535 / (val + 32768)));
+                        data.setInt8(offset, val, true);
+                    }
+                } else {
+                    for (var i = 0; i < bytes.length; i++, offset += 2) {
+                        var s = Math.max(-1, Math.min(1, bytes[i]));
+                        data.setInt16(offset, s < 0 ? s * 0x8000 : s * 0x7FFF, true);
+                    }
+                }
+                return new Blob([data], { type: 'audio/wav' });
+            }
+        };
+
+        //开始录音
+        this.start = function () {
+            audioInput.connect(recorder);
+            recorder.connect(context.destination);
+        }
+
+        //停止
+        this.stop = function () {
+            recorder.disconnect();
+        }
+
+        //获取音频文件
+        this.getBlob = function () {
+            this.stop();
+            return audioData.encodeWAV();
+        }
+
+        //回放
+        this.play = function (audio) {
+            audio.src = window.URL.createObjectURL(this.getBlob());
+        }
+        //清除
+        this.clear = function(){
+            audioData.buffer=[];
+            audioData.size=0;
+        }
+        //上传
+        this.upload = function (url, callback) {
+            var fd = new FormData();
+            fd.append("audioData", this.getBlob());
+            var xhr = new XMLHttpRequest();
+            if (callback) {
+                xhr.upload.addEventListener("progress", function (e) {
+                    callback('uploading', e);
+                }, false);
+                xhr.addEventListener("load", function (e) {
+                    callback('ok', e);
+                }, false);
+                xhr.addEventListener("error", function (e) {
+                    callback('error', e);
+                }, false);
+                xhr.addEventListener("abort", function (e) {
+                    callback('cancel', e);
+                }, false);
+            }
+            xhr.open("POST", url);
+            xhr.send(fd);
+        }
+
+        //音频采集
+        recorder.onaudioprocess = function (e) {
+            audioData.input(e.inputBuffer.getChannelData(0));
+            //record(e.inputBuffer.getChannelData(0));
+        }
+
+    };
+    //抛出异常
+    HZRecorder.throwError = function (message) {
+        alert(message);
+        throw new function () { this.toString = function () { return message; } }
+    }
+    //是否支持录音
+    HZRecorder.canRecording = (navigator.getUserMedia != null);
+    //获取录音机
+    HZRecorder.get = function (callback, config) {
+        if (callback) {
+            if (navigator.getUserMedia) {
+                navigator.getUserMedia(
+                    { audio: true } //只启用音频
+                    , function (stream) {
+                        var rec = new HZRecorder(stream, config);
+                        callback(rec);
+                    }
+                    , function (error) {
+                        switch (error.code || error.name) {
+                            case 'PERMISSION_DENIED':
+                            case 'PermissionDeniedError':
+                                HZRecorder.throwError('用户拒绝提供信息。');
+                                break;
+                            case 'NOT_SUPPORTED_ERROR':
+                            case 'NotSupportedError':
+                                HZRecorder.throwError('浏览器不支持硬件设备。');
+                                break;
+                            case 'MANDATORY_UNSATISFIED_ERROR':
+                            case 'MandatoryUnsatisfiedError':
+                                HZRecorder.throwError('无法发现指定的硬件设备。');
+                                break;
+                            default:
+                                HZRecorder.throwError('无法打开麦克风。异常信息:' + (error.code || error.name));
+                                break;
+                        }
+                    });
+            } else {
+                HZRecorder.throwErr('当前浏览器不支持录音功能。'); return;
+            }
+        }
+    };
+</script>
+<script>
+
+    var recorder;
+
+    var audio = document.querySelector('audio');
+
+    function startRecording() {
+        HZRecorder.get(function (rec) {
+            recorder = rec;
+            recorder.start();
+        });
+    }
+
+    function stopRecording() {
+        recorder.stop();
+    }
+
+    function playRecording() {
+        recorder.play(audio);
+    }
+
+    function cancelAudio(){
+        recorder.stop();
+        recorder.clear();
+    }
+    function upload64() {
+        recorder.stop();
+        var reader = new FileReader();
+        reader.onloadend = function() {
+            var t=reader.result;
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                // IE6, IE5 浏览器执行代码
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("quest").value =xmlhttp.responseText;
+                    loadXMLDoc()
+                }
+            }
+            xmlhttp.open("POST","audiototext.jsp",true);
+            xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            xmlhttp.send("t="+t);
+        };
+        reader.readAsDataURL(recorder.getBlob());
+    }
+    var Base64 = {
+        _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+        encode: function(e) {
+            var t = "";
+            var n, r, i, s, o, u, a;
+            var f = 0;
+            e = Base64._utf8_encode(e);
+            while (f < e.length) {
+                n = e.charCodeAt(f++);
+                r = e.charCodeAt(f++);
+                i = e.charCodeAt(f++);
+                s = n >> 2;
+                o = (n & 3) << 4 | r >> 4;
+                u = (r & 15) << 2 | i >> 6;
+                a = i & 63;
+                if (isNaN(r)) {
+                    u = a = 64
+                } else if (isNaN(i)) {
+                    a = 64
+                }
+                t = t + this._keyStr.charAt(s) + this._keyStr.charAt(o) + this._keyStr.charAt(u) + this._keyStr.charAt(a)
+            }
+            return t
+        },
+        decode: function(e) {
+            var t = "";
+            var n, r, i;
+            var s, o, u, a;
+            var f = 0;
+            e = e.replace(/[^A-Za-z0-9+/=]/g, "");
+            while (f < e.length) {
+                s = this._keyStr.indexOf(e.charAt(f++));
+                o = this._keyStr.indexOf(e.charAt(f++));
+                u = this._keyStr.indexOf(e.charAt(f++));
+                a = this._keyStr.indexOf(e.charAt(f++));
+                n = s << 2 | o >> 4;
+                r = (o & 15) << 4 | u >> 2;
+                i = (u & 3) << 6 | a;
+                t = t + String.fromCharCode(n);
+                if (u != 64) {
+                    t = t + String.fromCharCode(r)
+                }
+                if (a != 64) {
+                    t = t + String.fromCharCode(i)
+                }
+            }
+            t = Base64._utf8_decode(t);
+            return t
+        },
+        _utf8_encode: function(e) {
+            e = e.replace(/rn/g, "n");
+            var t = "";
+            for (var n = 0; n < e.length; n++) {
+                var r = e.charCodeAt(n);
+                if (r < 128) {
+                    t += String.fromCharCode(r)
+                } else if (r > 127 && r < 2048) {
+                    t += String.fromCharCode(r >> 6 | 192);
+                    t += String.fromCharCode(r & 63 | 128)
+                } else {
+                    t += String.fromCharCode(r >> 12 | 224);
+                    t += String.fromCharCode(r >> 6 & 63 | 128);
+                    t += String.fromCharCode(r & 63 | 128)
+                }
+            }
+            return t
+        },
+        _utf8_decode: function(e) {
+            var t = "";
+            var n = 0;
+            var r = c1 = c2 = 0;
+            while (n < e.length) {
+                r = e.charCodeAt(n);
+                if (r < 128) {
+                    t += String.fromCharCode(r);
+                    n++
+                } else if (r > 191 && r < 224) {
+                    c2 = e.charCodeAt(n + 1);
+                    t += String.fromCharCode((r & 31) << 6 | c2 & 63);
+                    n += 2
+                } else {
+                    c2 = e.charCodeAt(n + 1);
+                    c3 = e.charCodeAt(n + 2);
+                    t += String.fromCharCode((r & 15) << 12 | (c2 & 63) << 6 | c3 & 63);
+                    n += 3
+                }
+            }
+            return t
+        }
+    }
+
+    function uploadAudio() {
+        recorder.upload("blob.jsp", function (state, e) {
+            switch (state) {
+                case 'uploading':
+                    //var percentComplete = Math.round(e.loaded * 100 / e.total) + '%';
+                    break;
+                case 'ok':
+                    alert(e.target.responseText);
+                    alert("上传成功");
+                    break;
+                case 'error':
+                    alert("上传失败");
+                    break;
+                case 'cancel':
+                    alert("上传被取消");
+                    break;
+            }
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+.mytable{
+    height: 100%;
+    display: table;
+}
+
+.vertical-middle{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.nav>.active>a {
+    color: rgb(255, 102, 0) !important;
+    background-color: unset !important;
+    border-bottom: 1px solid rgb(255, 102, 0);
+}
+
+.myattribute{
+    margin-top: 20px;
+    height: 45px;
+    text-align: center;
+    background-color: rgb(215,215,215);
+}
+
+.mylabel{
+    height: 45px;
+    line-height: 45px;
+    border-right: black 1px solid;
+}
+
+.mylabel-last{
+    height: 45px;
+    line-height: 45px;
+}
+
+.order-one{
+    margin-top: 20px;
+}
+
+.mylist-order{
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: rgb(242,242,242);
+}
+
+.order-imformation{
+    background-color: rgb(174,174,174);
+    height: 30px;
+    line-height: unset;
+}
+
+.img-div{
+    display: table;
+    height: 100%;
+}
+
+.myimg{
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align:middle;
+    color:white;
+}
+
+.mylist-operator{
+    height: 45px;
+    line-height: 100%;
+    text-align: center;
+    background-color: rgb(215,215,215);
+}
+
+.mylabel-button{
+    height: 45px;
+    line-height: 45px;
+    display: table;
+}
+
+.button-account{
+    width: 100%;
+    height: 100%;
+    border: unset;
+    background-color: red;
+}
+
+.button-account:visited{
+    background-color: red !important;
+}
+
+.button-account:hover{
+    background-color: red !important;
+}

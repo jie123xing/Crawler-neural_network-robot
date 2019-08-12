@@ -21,6 +21,7 @@
     private static final String AUTH_ID = "cbdbacac792b7b2ff4e8821758d7019d";
     private static final String AUE = "raw";
     private static String FILE_PATH = "I:\\程序集\\weather1\\IDEA-JAVA\\FirstModule\\web\\response\\1.wav";
+    private static String ss;
     // 个性化参数，需转义
     private static final String PERS_PARAM = "{\\\"auth_id\\\":\\\"2894c985bf8b1111c6728db79d3479ae\\\"}";
 
@@ -46,12 +47,9 @@
         byte[] buffer = new byte[1024 * 4];
         int n = 0;
         while ((n = in.read(buffer)) != -1) {
-            System.out.println(buffer);
             out.write(buffer, 0, n);
         }
-        System.out.println(out);
         byte[] data = out.toByteArray();
-        System.out.println(data);
         in.close();
         return data;
     }
@@ -93,35 +91,29 @@
         }
         return result;
     }
-    String ss;
 %>
 <%
     //FILE_PATH=request.getSession().getServletContext().getRealPath("")+"\\response\\2.wav";
     Map<String, String> header = buildHeader();
-    //byte[] dataByteArray = readFile(FILE_PATH);
-    //String result = httpPost(URL, header, dataByteArray);
-    //已经声明了会抛异常,那么在调用这个方法的时候,就必须做异常处理,
-    /*
-    try {
-        JSONObject jsonObj = new JSONObject(result);
-        String ss=jsonObj.getJSONArray("data").getJSONObject(0).getString("text");
-        System.out.println("转的文本是："+ss);
-    } catch (JSONException e) {
-        e.printStackTrace();
-    }
-     */
-
-System.out.println("t:"+request.getParameter("t"));
+//    byte[] dataByteArray = readFile("F:\\weather\\weather1\\IDEA-JAVA\\FirstModule\\web\\18810067738\\2016211959.wav");
+//    String audiobase=java.util.Base64.getEncoder().encodeToString(dataByteArray);//1编码
+//    byte[] byte2=java.util.Base64.getDecoder().decode(base64);//2解码
+//    System.out.println("audiobase音频转文字####"+audiobase);
+//    String result = httpPost(URL, header, byte2);
+//    //已经声明了会抛异常,那么在调用这个方法的时候,就必须做异常处理,
+//    try {
+//        JSONObject jsonObj = new JSONObject(result);
+//        ss=jsonObj.getJSONArray("data").getJSONObject(0).getString("text");
+//        System.out.println("转的文本是："+ss);
+//    } catch (JSONException e) {
+//        e.printStackTrace();
+//    }
 String t=request.getParameter("t");
 String[] tbase=t.split(",");
+tbase[1] = tbase[1].replaceAll(" ","+");
 System.out.println(tbase[1]);
-System.out.println(tbase[1].length());
-    tbase[1] = tbase[1].replaceAll(" ","+");
 byte[] base64= java.util.Base64.getDecoder().decode(tbase[1]);
-    System.out.println(base64);
 String result1 = httpPost(URL, header,base64 );
-
-System.out.println(result1);
     try {
         JSONObject jsonObj = new JSONObject(result1);
         ss=jsonObj.getJSONArray("data").getJSONObject(0).getString("text");
@@ -131,4 +123,5 @@ System.out.println(result1);
     }
 %>
 <%=ss%>
+
 

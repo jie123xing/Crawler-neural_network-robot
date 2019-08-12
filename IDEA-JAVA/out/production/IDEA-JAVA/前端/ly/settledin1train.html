@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="settledin1train.css">
+    <link rel="stylesheet" href="header.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </head>
+    <body>
+      <div id="site-nav">
+          <ul class="nav nav-pills row mynav">
+              <li class="mypresentation-first" role="presentation">
+                  <a class="mya mybutton" href="index.jsp">
+                      <img src="${pageContext.request.contextPath}/src/cat.bmp" class="logo">
+                  </a>
+          
+              </li>
+              <li class="mypresentation" role="presentation"><a class="mya mybutton" href="index.jsp">北邮淘首页</a></li>
+              <li class="mypresentation" role="presentation"><a class="mya mybutton" href="shoppingcar.jsp">购物车</a></li>
+              <li class="mypresentation" role="presentation"><a class="mya mybutton" href="#">收藏夹</a></li>
+              <li role="presentation" class="dropdown mypresentation" style="width: 10%">
+                  <a class="dropdown-toggle mya mybutton" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                      商品分类 <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu " style="width: 110%">
+                      <li><a>电子</a></li>
+                      <li><a>日用</a></li>
+                      <li><a>服装</a></li>
+                  </ul>
+              </li>
+              <li class="mypresentation" role="presentation"><a class="mya mybutton" href="#">联系我们</a></li>
+              <li class="mypresentation" role="presentation"><a class="mya mybutton" href="#">个人中心</a></li>
+              <li class="mypresentation" role="presentation"><a class="mya mybutton" href="#">卖家中心</a></li>
+              <li class="mypresentation" role="presentation">
+                  <div class="mya">
+                      <div>
+                          还没有入坑？
+                      </div>
+                      <br/>
+                      <a class="a-join" href="#">
+                          点击这里加入我们
+                      </a>
+                  </div>
+              </li>
+            </ul>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="wang.png" class="img-responsive" alt="Responsive Image" width="150">
+          </div>
+          <div class="col-sm-8">
+            <form class="form-inline" role="form">
+              <div class="form-group">
+                <label class="sr-only" for="searchbox">搜索框</label>
+                <input type="text" class="form-control" id="searchbox" placeholder="please input!" width="200">
+              </div>
+              <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <ul class="list-group">
+              <li class="list-group-item" style="color:white;background-color: black">
+                所有产品分类
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-9" style="background-color:yellow;">
+            <div class="show-list">
+
+            </div>
+            <div class="sort-list">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2" style="background-color: grey;">
+                        <div class="list-title">
+                            <span>商品分类</span>
+                        </div>
+                        <div class="sort-list-content">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="content-element1">
+                                        <img src="" class="img-responsive" alt="">
+                                        <span class="img-name">二手市场</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="procedure-list">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2" style="background-color: grey;">
+                            <div class="list-title">
+                                <span>入驻流程</span>
+                            </div>
+                            <div class="procedure-list-content">
+                                <img src="" class="img-responsive" alt="Settle In Procedure"
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="choice-list">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2" style="background-color: grey;">
+                        <div class="list-title">
+                            <span>入驻选择</span>
+                        </div>
+                        <div class="choice-list-content">
+                            <button type="submit" class="btn btn-default">
+                                <a href="">入驻标准</a>
+                            </button><br>
+                            <button type="submit" class="btn btn-default">
+                                <a href="">入驻申请</a>
+                            </button><br>
+                            <button type="submit" class="btn btn-default">
+                                <a href="">入驻进展</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <body>
+  </head>
+</html>
