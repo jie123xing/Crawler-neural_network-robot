@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FirstModule/FirstModule.iml" filepath="$PROJECT_DIR$/FirstModule/FirstModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/IDEA-JAVA.iml" filepath="$PROJECT_DIR$/IDEA-JAVA.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/Java_iat1021_lfasr4.0_tts_online1021_5d2f15c5/Java_iat1021_lfasr4.0_tts_online1021_5d2f15c5.iml" filepath="$USER_HOME$/Downloads/Java_iat1021_lfasr4.0_tts_online1021_5d2f15c5/Java_iat1021_lfasr4.0_tts_online1021_5d2f15c5.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/Java_iat1021_lfasr4.0_tts_online1021_5d2f15c5/sample/MscDemo/MscDemo.iml" filepath="$USER_HOME$/Downloads/Java_iat1021_lfasr4.0_tts_online1021_5d2f15c5/sample/MscDemo/MscDemo.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/Java_iat1021_lfasr4.0_tts_online1021_5d2f15c5/sample/MscInvisibleDemo/MscInvisibleDemo.iml" filepath="$USER_HOME$/Downloads/Java_iat1021_lfasr4.0_tts_online1021_5d2f15c5/sample/MscInvisibleDemo/MscInvisibleDemo.iml" />
     </modules>
   </component>
 </project>

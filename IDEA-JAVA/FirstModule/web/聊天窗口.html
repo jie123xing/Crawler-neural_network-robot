@@ -4,6 +4,25 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>情感伴随——机器人</title>
     <style>
+        .pp1 span1{
+            background-color: rgba(92, 197, 181, 0.69);
+            padding: 12px 8px;
+            display: inline-block;
+            border-radius: 4px;
+            margin:0px 10px 0px 5%;
+            position: relative;
+            font-size:18px;
+            float:right;
+        }
+        .pp1 span2{
+            background-color: rgba(197, 132, 12, 0.47);
+            padding: 12px 8px;
+            display: inline-block;
+            border-radius: 4px;
+            margin:0px 5% 0px 0px;
+            position: relative;
+            font-size:18px;
+        }
         .div-left{ float:left;width:50%; height:900px;border:0px solid #FFCC67; background-color:#FFCC67; margin-right:0;}
         .div-right{ float:left;width:49.7%; height:900px;border:0px solid #FFF0D1; background-color:#FFF0D1;position: relative;margin-left:0;left: 0px;}
 
@@ -22,22 +41,15 @@
         }
     </style>
     <script language="javascript" type="text/javascript">
-        function bntShow() {
-            if(document.getElementById("content").style.display === 'none' ){
-                document.getElementById('content').style.display = '';
-                document.getElementById('record').style.display = 'none';
-            } else {
-                document.getElementById('content').style.display = 'none';
-                document.getElementById('record').style.display = '';
-            }
-        }
+
         function down(){
-            document.getElementById('myDiv').innerHTML = 'down';
             document.getElementById('recoding').style.display = '';
         }
         function up(){
-            document.getElementById('myDiv').innerHTML = 'up';
+            document.getElementById('myDiv').innerHTML +="<div><div style=\"width:5%;float:right;\"><img src=\"img/user.png\"></div>"+"<div style=\"width:95%;float:right;\"><span1>"+456+"</span1></div></div>";
+            document.getElementById('myDiv').innerHTML +="<div><div style=\"width:5%;float:left;\"><img src=\"img/robot.png\"></div>"+"<div style=\"width:95%;float:left;\"><span>机器人</span><p><span2>"+123+"</span2></p></div></div>";
             document.getElementById('recoding').style.display = 'none';
+            document.getElementById('myDiv').scrollTop = document.getElementById('myDiv').scrollHeight;
         }
     </script>
 </head>
@@ -61,14 +73,40 @@
     <div class="div-right" align="left"> <img src="img/right.png" /></div>
     <center>
         <div style="left: calc(100vw/2 - 600px);top:160px; width:1200px; background-color:#FFFFFF;  position: absolute; z-index: 2; height: 470px;text-align: center;">
-            <div id="myDiv" style="width: 1200px; height:390px; text-align: left; overflow:auto">
-                <div id="recoding" style="text-align:center;"><img src="img/audio.gif" style="width: 200px; height:50px;"></div>
+            <div id="myDiv" class="pp1" style="width: 1200px; height:390px; text-align: left; overflow:auto;position: relative;">
+                <!--在此处显示聊天界面-->
+                <div ><div style="width:5%;float:left;"><img src="img/robot.png"></div><div style="width:95%;float:left;"><span>机器人</span><p><span2>文本文本文本文本文本文本文本文本文本文文本文本文本文本文本文本文本文本文本文本文本文本文本文文本文本文本文本文本文本文本文本文本文本文本文本文文本文本文本文本文本文本文本文文本文本文本文本文本文本文本文本文本文本文本文本文文本文本</span2></p></div></div>
+                <div ><div style="width:5%;float:right;"><img src="img/user.png"></div><div style="width:95%;float:right;"><span1>文本文本文本文本文本文本文本文本文本文文本文本文文本文本文本文本文本文本文本文文本文本文本文本文本文本文本文本文本文本文本文本文本文文本文本文本文本文本文本文本文本文本文本文本文本文本文文本文本文本文本文本文本文本文本文本文本文本文本文本文文本文本文本文本文本文本本文本文本文本文本文本</span1></div></div>
+                <div ><div style="width:5%;float:left;"><img src="img/robot.png"></div><div style="width:95%;float:left;"><span>机器人</span><p><span2>文本文本文本文本文本文本文本文本文本文文本文本文本文本文本文文本文本文本文本文本文本文本文文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文文本文本文本文本文本文本文本文本文本文本文本文本文文本文本文本文本文本文本</span2></p></div></div>
+
             </div>
             <div style="width: 1200px; height:80px; text-align: left; background-color:#DADADA; " >
-                <input id="button1" type="button" onclick="bntShow()" style="background-image:url(img/speech.png); width:38px; height:38px; border:0px; margin-top:20px; margin-left:20px;vertical-align: middle;"/>&nbsp;&nbsp;<input id="content" class="text" type="text" name="content" /><input id="record" type="button" value="按下录音  抬起发送" onmousedown="down()"  onmouseup="up()" style="background-color:rgba(255,255,255,0.99); width:1011px; height:40px; border:0px; margin-top:20px;vertical-align: middle;display:none"/>&nbsp;&nbsp;<input id="button2" onclick="loadXMLDoc()" type="button" style="background-image:url(img/send.png);position: relative; width:88px; height:40px; border:0px; margin-top:20px;vertical-align: middle;"/></div>
+                <input id="button1" type="button" onclick="bntShow()" style="background-image:url(img/speech.png); width:38px; height:38px; border:0px; margin-top:20px; margin-left:20px;vertical-align: middle;"/>&nbsp;
+                &nbsp;<input id="content" class="text" type="text" onkeydown='if(event.keyCode==13){up();}' name="content" /><input id="record" type="button" value="按下录音  抬起发送" onmousedown="down()"  onmouseup="up()" style="background-color:rgba(255,255,255,0.99); width:1011px; height:40px; border:0px; margin-top:20px;vertical-align: middle;display:none"/>&nbsp;&nbsp;<input id="button2" onclick="loadXMLDoc()" type="button" style="background-image:url(img/send.png);position: relative; width:88px; height:40px; border:0px; margin-top:20px;vertical-align: middle;"/>
+            </div>
+            <div id="recoding" style="text-align:center;display: none"><img src="img/audio.gif" style="width: 60px; height:60px;"></div>
         </div>
     </center>
 </div>
-
 </body>
 </html>
+/*var div=document.getElementById("myDiv")
+var br = document.createElement("br");
+var p=document.createElement("p");
+var robotimg=document.createElement("img");
+robotimg.src="img/robot.png"
+robotimg.style="float:left";
+var userimg=document.createElement("img");
+userimg.src="img/user.png"
+userimg.style="float:left ";
+var div2=document.createElement("div");//robot
+div2.id ="robot";
+div2.innerHTML=xmlhttp.responseText;
+div2.style="fontsize：38px";
+div2.appendChild(robotimg)
+var div3=document.createElement("div");//user
+div3.id ="user";
+div3.innerHTML=document.getElementById("quest").value;
+div3.style="fontsize：38px ";
+div3.appendChild(userimg)
+div.appendChild(div3);div.appendChild(br);div.appendChild(div2);div.appendChild(br);*/

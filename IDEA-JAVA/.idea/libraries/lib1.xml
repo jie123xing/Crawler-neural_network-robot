@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/Java_iat1021_lfasr4.0_tts_online1021_5d2f15c5/lib/lib/json-jena-1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/Java_iat1021_lfasr4.0_tts_online1021_5d2f15c5/lib/lib/Msc.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib3">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/Java_iat1021_lfasr4.0_tts_online1021_5d2f15c5/lib/lfasr-sdk-client-2.0.0.1007.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/Java_iat1021_lfasr4.0_tts_online1021_5d2f15c5/lib/fastjson-1.2.21.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

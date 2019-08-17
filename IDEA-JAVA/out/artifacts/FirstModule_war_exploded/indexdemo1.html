@@ -4,6 +4,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>情感伴随——机器人</title>
 <style>
+    .pp1 span1{
+        background-color: rgba(92, 197, 181, 0.69);
+        padding: 12px 8px;
+        display: inline-block;
+        border-radius: 4px;
+        margin:0px 10px 0px 5%;
+        position: relative;
+        font-size:18px;
+        float:right;
+    }
+    .pp1 span2{
+        background-color: rgba(197, 132, 12, 0.47);
+        padding: 12px 8px;
+        display: inline-block;
+        border-radius: 4px;
+        margin:0px 5% 0px 0px;
+        position: relative;
+        font-size:18px;
+    }
 .div-left{ float:left;width:50%; height:900px;border:0px solid #FFCC67; background-color:#FFCC67; margin-right:0;} 
 .div-right{ float:left;width:49.7%; height:900px;border:0px solid #FFF0D1; background-color:#FFF0D1;position: relative;margin-left:0;left: 0px;} 
 
@@ -21,18 +40,6 @@
 	vertical-align: middle;
 }
 </style>
-<script language="javascript" type="text/javascript">
-	function bntShow()
-	{
-		if(document.getElementById("content").style.display === 'none' ){
-			document.getElementById('content').style.display = '';
-			document.getElementById('record').style.display = 'none';
-        } else {
-            document.getElementById('content').style.display = 'none';
-			document.getElementById('record').style.display = '';
-        }
-	}
-</script>
 </head>
 
 <body  style="margin:10px;">
@@ -41,11 +48,16 @@
 <div class="div-right" align="left"> <img src="img/right.png" /></div>
 <center>
 <div style="left: calc(100vw/2 - 600px);top:160px; width:1200px; background-color:#FFFFFF;  position: absolute; z-index: 2; height: 470px;text-align: center;">
-	<div id="myDiv" style="width: 1200px; height:390px; text-align: left; overflow:auto">
+	<div id="myDiv" class="pp1" style="width: 1200px; height:390px; text-align: left; overflow:auto;position: relative;">
 	
 	</div>
 	<div style="width: 1200px; height:80px; text-align: left; background-color:#DADADA; " >
-		<input id="button1" type="button" onmousedown="startRecording()" onmouseup="upload64()" style="background-image:url(img/speech.png); width:38px; height:38px; border:0px; margin-top:20px; margin-left:20px;vertical-align: middle;"/>&nbsp;&nbsp;<input id="quest" class="text" type="text" name="content" /><input id="record" type="button" style="background-image:url(img/record.png); width:1011px; height:40px; border:0px; margin-top:20px;vertical-align: middle;display:none"/>&nbsp;&nbsp;<input id="button2" onclick="loadXMLDoc()" type="button" style="background-image:url(img/send.png);position: relative; width:88px; height:40px; border:0px; margin-top:20px;vertical-align: middle;"/></div>
+		<input id="button1" onclick="bntShow()" type="button"  style="background-image:url(img/speech.png); width:38px; height:38px; border:0px; margin-top:20px; margin-left:20px;vertical-align: middle;"/>&nbsp;
+        &nbsp;<input id="quest" onkeydown='if(event.keyCode==13){loadXMLDoc();}' class="text" type="text" name="content" />
+        <input id="record" type="button"  value="按下录音  抬起发送" onmousedown="startRecording()" onmouseup="upload64()" style="background-color:rgba(255,255,255,0.99); width:1011px; height:40px; border:0px; margin-top:20px;vertical-align: middle;display:none"/>&nbsp;
+        &nbsp;<input id="button2" onclick="loadXMLDoc()" type="button" style="background-image:url(img/send.png);position: relative; width:88px; height:40px; border:0px; margin-top:20px;vertical-align: middle;"/>
+    </div>
+    <div id="recoding" style="text-align:center;display: none"><img src="img/audio.gif" style="width: 60px; height:60px;"></div>
     </div>
 </center>
 </div>
@@ -58,6 +70,7 @@
     var audiobase="";
     var folder=String(new Date().getTime())+"8888"+String(Math.floor(Math.random()*(1000+1)));
     function loadXMLDoc() {
+        if (document.getElementById("quest").value==""){return 0;}
         var xmlhttp;
         if (window.XMLHttpRequest) {
             // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
@@ -68,28 +81,8 @@
         }
         xmlhttp.onreadystatechange = function () {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("myDiv").innerHTML += "我：" + document.getElementById("quest").value+"<br>" ;
-                document.getElementById("myDiv").innerHTML += "机器人：" + xmlhttp.responseText+"<br>";
-                /*var div=document.getElementById("myDiv")
-                var br = document.createElement("br");
-                var p=document.createElement("p");
-                var robotimg=document.createElement("img");
-                robotimg.src="img/robot.png"
-                robotimg.style="float:left";
-                var userimg=document.createElement("img");
-                userimg.src="img/user.png"
-                userimg.style="float:left ";
-                var div2=document.createElement("div");//robot
-                div2.id ="robot";
-                div2.innerHTML=xmlhttp.responseText;
-                div2.style="fontsize：38px";
-                div2.appendChild(robotimg)
-                var div3=document.createElement("div");//user
-                div3.id ="user";
-                div3.innerHTML=document.getElementById("quest").value;
-                div3.style="fontsize：38px ";
-                div3.appendChild(userimg)
-                div.appendChild(div3);div.appendChild(br);div.appendChild(div2);div.appendChild(br);*/
+                document.getElementById("myDiv").innerHTML += "<div style=\"width:5%;float:right;\"><img src=\"img/user.png\"></div>"+"<div style=\"width:95%;float:right;\"><span1>"+document.getElementById("quest").value+"</span1></div>";
+                document.getElementById("myDiv").innerHTML += "<div style=\"width:5%;float:left;\"><img src=\"img/robot.png\"></div>"+"<div style=\"width:95%;float:left;\"><span>机器人</span><p><span2>"+xmlhttp.responseText+"</span2></p></div>";
                 txttowav(xmlhttp.responseText)
                 document.getElementById("quest").value = "";
                 var x = document.getElementById("myDiv");
@@ -135,6 +128,17 @@
     }
     function myaudio(){//播放robot回复语音
         document.getElementById("myAudio").src="data:audio/wav;base64,"+ audiobase;
+    }
+    function bntShow() {
+        if(document.getElementById("quest").style.display === 'none' ){
+            document.getElementById('button1').style='background-image:url(img/speech.png);width:38px; height:38px; border:0px; margin-top:20px; margin-left:20px;vertical-align: middle;'
+            document.getElementById('quest').style.display = '';
+            document.getElementById('record').style.display = 'none';
+        } else {
+            document.getElementById('button1').style='background-image:url(img/keyboard.png);width:38px; height:38px; border:0px; margin-top:20px; margin-left:20px;vertical-align: middle;'
+            document.getElementById('quest').style.display = 'none';
+            document.getElementById('record').style.display = '';
+        }
     }
 </script>
 <script>
@@ -352,6 +356,7 @@
     var audio = document.querySelector('audio');
 
     function startRecording() {
+        document.getElementById('recoding').style.display = '';
         HZRecorder.get(function (rec) {
             recorder = rec;
             recorder.start();
@@ -371,6 +376,7 @@
         recorder.clear();
     }
     function upload64() {
+        document.getElementById('recoding').style.display = 'none';
         recorder.stop();
         var reader = new FileReader();
         reader.onloadend = function() {
